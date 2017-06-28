@@ -26,7 +26,7 @@ if(! function_exists('alone_vc_load_custom_elements')) :
     /* fw_event */
     if (function_exists('fw_ext') && fw_ext('events')) {
       $new_elements[] = 'vc_events_slider';
-      // $new_elements[] = 'vc_events_listing';
+      $new_elements[] = 'vc_events_listing';
     }
 
     foreach($new_elements as $item) :

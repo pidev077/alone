@@ -27,7 +27,7 @@ class vcEventsListing extends WPBakeryShortCode {
             'base' => 'vc_events_listing',
             'description' => __('Events Listing', 'alone'),
             'category' => __('Events', 'alone'),
-            'icon' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/posts-slider-2.png',
+            'icon' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/event-listing.png',
             'params' => array(
               /* source */
               array(
@@ -118,7 +118,7 @@ class vcEventsListing extends WPBakeryShortCode {
                 'heading' => __( 'Select Layout', 'alone' ),
                 'param_name' => 'layout',
                 'value' => array(
-                  'default' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/event-slider-layout-default.jpg',
+                  'default' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/event-listing-default.jpg',
                   // 'block-image' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/posts-slider-layout-2.jpg',
                 ),
                 'std' => 'default',
@@ -237,14 +237,14 @@ class vcEventsListing extends WPBakeryShortCode {
           $output = implode('', array(
             '<div class="item-inner layout-{layout}">',
               '<div class="event-featured-image-wrap">',
-                '<div class="event-thumbnail-background" style="background: url({post_featured_image}) center center, #333; background-size: 200%;" data-stellar-background-ratio="0.8"></div>',
-                '{term_list}',
+                '<div class="event-thumbnail"><img src="{post_featured_image}" alt="{post_title}"></div>',
+                '<a class="readmore-link" href="{post_link}" title="'. __('View detail', 'alone') .'"><span class="ion-ios-arrow-right"></span></a>',
               '</div>',
               '<div class="content-entry">',
-                '<div class="circle-overlay"></div>',
-                '<a href="{post_link}" class="title-link" title="{post_title}"><h4 class="title">{post_title}</h4></a>',
+                '{term_list}',
+                '<div class="break-line"></div>',
+                '<a href="{post_link}" class="title-link" title="{post_title}"><div class="title">{post_title}</div></a>',
                 '<div class="event-start-time"><span class="ion-ios-location"></span> {venue}, <span class="ion-ios-timer"></span> {event_start_time}</div>',
-                '<a class="readmore-link" href="{post_link}" title="'. __('View detail', 'alone') .'"><span class="ion-ios-arrow-right"></span></a>',
               '</div>',
             '</div>',
           ));
