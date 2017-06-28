@@ -1050,7 +1050,7 @@
 			// options
 			var opts = $.extend({
 				selector: '.item',
-
+				thumbnail: false,
 				loadYoutubeThumbnail: true,
 				youtubeThumbSize: 'default',
 				loadVimeoThumbnail: true,

@@ -73,6 +73,7 @@ $masonry_hybrid_attr = array(
   )),
   'data-bears-lightgallery' => json_encode(array(
     'selector'  => '.zoom-item',
+		'thumbnail' => true,
   )),
 );
 

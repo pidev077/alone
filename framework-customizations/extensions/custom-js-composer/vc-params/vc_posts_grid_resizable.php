@@ -575,15 +575,21 @@ class vcPostsGridResizable extends WPBakeryShortCode {
 
         case 'image_gallery:default':
           # code...
+          $thumb_img = get_post( $item_data['id'] );
           $variable = array(
             '{id}' => $item_data['id'],
             '{medium_large_src}' => $item_data['medium-large'],
             '{large_src}' => $item_data['large'],
+            '{description}' => $thumb_img->post_content,
+            '{caption}' => $thumb_img->post_excerpt,
           );
 
           $temp_arr = array(
             '<div class="image-item" style="background: url({medium_large_src}) center center / cover, #333">',
-              '<a href="{large_src}" class="zoom-item"><span class="ion-ios-plus-empty"></span></a>',
+              '<a href="{large_src}" class="zoom-item" title="{description}">',
+                '<span class="ion-ios-plus-empty"></span>',
+                '<img src="{medium_large_src}" />',
+              '</a>',
             '</div>',
           );
 
