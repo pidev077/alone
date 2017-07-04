@@ -100,3 +100,20 @@ if(! function_exists('_alone_vc_image_picker_settings_field')) :
   }
 endif;
 vc_add_shortcode_param( 'vc_image_picker', '_alone_vc_image_picker_settings_field' );
+
+
+if(! function_exists('_alone_vc_load_default_templates')) :
+  /**
+   * _alone_vc_load_default_templates
+   * @since 0.0.7
+   */
+  function _alone_vc_load_default_templates($templates) {
+    $templates = array_merge($templates, alone_vc_load_templates(get_template_directory() . "/framework-customizations/extensions/custom-js-composer/vc-templates-default/*.php", 'alone'));
+
+    //Load additional templates from plugins or themes
+    //foreach($templates as $additional_location) $templates = array_merge($templates, alone_vc_load_templates( trailingslashit($additional_location) . '*.php', 'plugin'));
+
+    return $templates;
+  }
+endif;
+add_filter('vc_load_default_templates', '_alone_vc_load_default_templates', 12);
