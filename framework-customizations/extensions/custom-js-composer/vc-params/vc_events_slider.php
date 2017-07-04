@@ -386,7 +386,7 @@ class vcEventsSlider extends WPBakeryShortCode {
           $output = implode('', array(
             '<div class="item-inner layout-{layout}">',
               '<div class="event-featured-image-wrap">',
-                '<div class="event-thumbnail-background" style="background: url({post_featured_image}) center center, #333; background-size: 100%;"></div>',
+                '<div class="event-thumbnail-background" style="background: url({post_featured_image}) center center, #333; background-size: cover;"></div>',
                 '{term_list}',
               '</div>',
               '<div class="content-entry">',
