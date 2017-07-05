@@ -335,7 +335,7 @@
 							width: 228px;
 							border-bottom: none;
 							&:not(:last-child){
-								border-right: 1px solid fade_out($fw-sub-menu-color, 90%);
+								// border-right: 1px solid fade_out($fw-sub-menu-color, 90%);
 							}
 							.menu-item-has-icon{
 								> a{
@@ -346,10 +346,12 @@
 							}
 							> a{
 								span{
-									font-weight: bold;
+									// font-weight: bold;
 									// text-decoration: underline;
-									text-transform: uppercase;
+									// text-transform: uppercase;
 									font-family: $fw-menu-font-family;
+									font-size: 120%;
+									text-decoration: underline;
 								}
 							}
 							> div{
@@ -360,6 +362,14 @@
 								letter-spacing: $fw-sub-menu-letter-spacing;
 								font-style: $fw-sub-menu-font-style;
 								font-weight: $fw-sub-menu-font-weight;
+							}
+							.widget{
+								&.widget_media_image{
+									img{
+										width: 100%;
+										max-width: 100%;
+									}
+								}
 							}
 							&:hover{
 								> a{
