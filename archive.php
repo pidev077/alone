@@ -34,7 +34,7 @@ if ( $_FW ) {
 			<div class="bt-content-area <?php alone_get_content_class( $content_class, $alone_sidebar_position ); ?>">
 				<div class="bt-col-inner">
 					<?php // if( function_exists('fw_ext_breadcrumbs') && bearsthemes_check_is_bbpress() == '' ) fw_ext_breadcrumbs(); ?>
-					<div class="postlist" data-bears-masonryhybrid='{"col": <?php echo esc_attr($alone_general_posts_options['number_post_in_row']); ?>}'>
+					<div class="postlist" data-bears-masonryhybrid='{"col": <?php echo esc_attr($alone_general_posts_options['number_post_in_row']); ?>, "space": 40}'>
 						<div class="grid-sizer"></div>
 						<div class="gutter-sizer"></div>
 						<?php if ( have_posts() ) :
