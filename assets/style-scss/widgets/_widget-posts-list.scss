@@ -70,11 +70,14 @@
       width: calc(100% - 66px);
       a.post-title {
         font-family: $fw-widget-inner-title-font-family;
-        font-size: $fw-widget-inner-title-font-size;
-        font-weight: bold;
+        // font-size: $fw-widget-inner-title-font-size;
+        font-size: 15px;
+        // font-weight: bold;
         font-style: $fw-widget-inner-title-font-style;
-        line-height: $fw-widget-inner-title-line-height;
-        letter-spacing: $fw-widget-inner-title-letter-spacing;
+        // line-height: $fw-widget-inner-title-line-height;
+        line-height: 21px;
+        // letter-spacing: $fw-widget-inner-title-letter-spacing;
+        letter-spacing: -0.6px;
         color: $accent-color;
         display: block;
         margin-bottom: 10px;
