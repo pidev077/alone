@@ -1711,6 +1711,13 @@
   }
 }
 
+/* remove border gray map element */
+#page{
+  .wpb_gmaps_widget .wpb_wrapper{
+    padding: 0;
+  }
+}
+
 /* Start fix vc row - gap */
 #page{
   .vc_row.vc_column-gap-1 {
