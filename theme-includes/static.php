@@ -213,6 +213,23 @@ wp_enqueue_script(
 	true
 );
 
+// jquery.waypoints.js support jquery.counterup.min.js
+wp_enqueue_script(
+	'waypoints',
+	$alone_template_directory . '/assets/js/jquery.waypoints.js',
+	array('jquery'),
+	$alone_version,
+	true
+);
+// jquery.counterup.min.js
+wp_enqueue_script(
+	'counterup',
+	$alone_template_directory . '/assets/js/jquery.counterup.min.js',
+	array('jquery', 'waypoints'),
+	$alone_version,
+	true
+);
+
 // Load animate stylesheet.
 wp_enqueue_style(
 	'animate',
