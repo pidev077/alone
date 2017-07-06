@@ -1432,8 +1432,15 @@
             width: 100%;
             .featured-box-title{
               margin-top: 0;
-              font-size: 24px;
+              // font-size: 24px;
               line-height: 28px;
+              letter-spacing: -1px;
+	            font-size: 22px !important;
+            }
+            .featured-box-text{
+              font-size: 16px;
+            	line-height: 22px;
+            	font-weight: 300;
             }
             .featured-button{
               background: $accent-color;
