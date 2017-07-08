@@ -14,6 +14,7 @@ if(! function_exists('alone_vc_load_custom_elements')) :
       'vc_progressbar_svg',
       'vc_posts_grid_resizable',
       'vc_liquid_button',
+      'vc_counter_up',
     );
 
     /* check plugin Give (donations) exist  */
