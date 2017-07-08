@@ -136,6 +136,14 @@ wp_enqueue_script(
 );
 
 wp_enqueue_script(
+	'lg-thumbnail',
+	$alone_template_directory . '/assets/lightGallery/js/lg-thumbnail.min.js',
+	array('lightGallery'),
+	$alone_version,
+	true
+);
+
+wp_enqueue_script(
 	'lg-video',
 	$alone_template_directory . '/assets/lightGallery/js/lg-video.min.js',
 	array('lightGallery'),
@@ -201,6 +209,23 @@ wp_enqueue_script(
 	'progressbarjs',
 	$alone_template_directory . '/assets/js/progressbar.min.js',
 	array('jquery'),
+	$alone_version,
+	true
+);
+
+// jquery.waypoints.js support jquery.counterup.min.js
+wp_enqueue_script(
+	'waypoints',
+	$alone_template_directory . '/assets/js/jquery.waypoints.js',
+	array('jquery'),
+	$alone_version,
+	true
+);
+// jquery.counterup.min.js
+wp_enqueue_script(
+	'counterup',
+	$alone_template_directory . '/assets/js/jquery.counterup.min.js',
+	array('jquery', 'waypoints'),
 	$alone_version,
 	true
 );

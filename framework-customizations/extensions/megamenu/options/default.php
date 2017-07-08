@@ -11,9 +11,139 @@ $menu_type_data = array(
 
 $menu_type_arr = apply_filters( '_megamenu_filter_menu_type', $menu_type_data );
 
+$notification_center_settings = array(
+	'search_notification_settings' => array(
+		'type'  => 'multi',
+		'value' => array(
+			'display' => 'show',
+			'icon' => array(
+				'type' => 'icon-font',
+				'icon-class' => 'fa fa-search',
+				'icon-class-without-root' => false,
+				'pack-name' => 'font-awesome',
+				'pack-css-uri' => false
+			),
+		),
+		'label' => false,
+		// 'desc'  => __('Description', 'alone'),
+		// 'help'  => __('Help tip', 'alone'),
+		'inner-options' => array(
+			'display' => array(
+				'type'  => 'switch',
+				// 'value' => 'show',
+				'label' => __('Search Icon Display', 'alone'),
+				'desc'  => __('Option setting show/hide search notification', 'alone'),
+				'help'  => __('Show/Hide', 'alone'),
+				'left-choice' => array(
+						'value' => 'show',
+						'label' => __('Show', 'alone'),
+				),
+				'right-choice' => array(
+						'value' => 'hide',
+						'label' => __('Hide', 'alone'),
+				),
+			),
+			'icon' => array(
+				'type'  => 'icon-v2',
+				'preview_size' => 'medium',
+				'modal_size' => 'medium',
+				// 'attr'  => array( 'class' => 'custom-class', 'data-foo' => 'bar' ),
+				'label' => __('Search Icon', 'alone'),
+				'desc'  => __('Select a icon display for search', 'alone'),
+				// 'help'  => __('Help tip', 'alone'),
+			)
+		)
+	),
+	'login_notification_settings' => array(
+		'type'  => 'multi',
+		'value' => array(
+			'display' => 'show',
+			'icon' => array(
+				'type' => 'icon-font',
+				'icon-class' => 'entypo entypo-user',
+				'icon-class-without-root' => false,
+				'pack-name' => 'entypo',
+				'pack-css-uri' => false
+			),
+		),
+		'label' => false,
+		// 'desc'  => __('Description', 'alone'),
+		// 'help'  => __('Help tip', 'alone'),
+		'inner-options' => array(
+			'display' => array(
+				'type'  => 'switch',
+				// 'value' => 'show',
+				'label' => __('Login Icon Display', 'alone'),
+				'desc'  => __('Option setting show/hide login notification', 'alone'),
+				'help'  => __('Show/Hide', 'alone'),
+				'left-choice' => array(
+						'value' => 'show',
+						'label' => __('Show', 'alone'),
+				),
+				'right-choice' => array(
+						'value' => 'hide',
+						'label' => __('Hide', 'alone'),
+				),
+			),
+			'icon' => array(
+				'type'  => 'icon-v2',
+				'preview_size' => 'medium',
+				'modal_size' => 'medium',
+				// 'attr'  => array( 'class' => 'custom-class', 'data-foo' => 'bar' ),
+				'label' => __('Login Icon', 'alone'),
+				'desc'  => __('Select a icon display for login', 'alone'),
+				// 'help'  => __('Help tip', 'alone'),
+			)
+		)
+	)
+);
+
 // check WooCommerce exist
-if ( class_exists( 'WooCommerce' ) )
+if ( class_exists( 'WooCommerce' ) ) :
 	$menu_type_arr['woocommerce-mini-cart'] = esc_html__('WooCommerce Mini Cart', 'alone');
+	$notification_center_settings['cart_notification_settings'] = array(
+		'type'  => 'multi',
+		'value' => array(
+			'display' => 'show',
+			'icon' => array(
+				'type' => 'icon-font',
+				'icon-class' => 'unycon unycon-shopping-cart3',
+				'icon-class-without-root' => false,
+				'pack-name' => 'unycon',
+				'pack-css-uri' => false
+			),
+		),
+		'label' => false,
+		// 'desc'  => __('Description', 'alone'),
+		// 'help'  => __('Help tip', 'alone'),
+		'inner-options' => array(
+			'display' => array(
+				'type'  => 'switch',
+				// 'value' => 'show',
+				'label' => __('Cart Icon Display', 'alone'),
+				'desc'  => __('Option setting show/hide cart notification', 'alone'),
+				'help'  => __('Show/Hide', 'alone'),
+				'left-choice' => array(
+						'value' => 'show',
+						'label' => __('Show', 'alone'),
+				),
+				'right-choice' => array(
+						'value' => 'hide',
+						'label' => __('Hide', 'alone'),
+				),
+			),
+			'icon' => array(
+				'type'  => 'icon-v2',
+				'preview_size' => 'medium',
+				'modal_size' => 'medium',
+				// 'attr'  => array( 'class' => 'custom-class', 'data-foo' => 'bar' ),
+				'label' => __('Cart Icon', 'alone'),
+				'desc'  => __('Select a icon display for cart', 'alone'),
+				// 'help'  => __('Help tip', 'alone'),
+			)
+		)
+	);
+endif;
 
 // default (not MegaMenu) item options
 $options = array(
@@ -52,134 +182,7 @@ $options = array(
 			'notification_center' => array(
 				'notification_center_settings' => array(
 	        'type' => 'box',
-	        'options' => array(
-            'search_notification_settings' => array(
-					    'type'  => 'multi',
-					    'value' => array(
-				        'display' => 'show',
-				        'icon' => array(
-									'type' => 'icon-font',
-									'icon-class' => 'fa fa-search',
-					     		'icon-class-without-root' => false,
-					     		'pack-name' => 'font-awesome',
-					     		'pack-css-uri' => false
-								),
-					    ),
-					    'label' => false,
-					    // 'desc'  => __('Description', 'alone'),
-					    // 'help'  => __('Help tip', 'alone'),
-					    'inner-options' => array(
-				        'display' => array(
-							    'type'  => 'switch',
-							    // 'value' => 'show',
-							    'label' => __('Search Icon Display', 'alone'),
-							    'desc'  => __('Option setting show/hide search notification', 'alone'),
-							    'help'  => __('Show/Hide', 'alone'),
-							    'left-choice' => array(
-							        'value' => 'show',
-							        'label' => __('Show', 'alone'),
-							    ),
-							    'right-choice' => array(
-							        'value' => 'hide',
-							        'label' => __('Hide', 'alone'),
-							    ),
-								),
-				        'icon' => array(
-							    'type'  => 'icon-v2',
-							    'preview_size' => 'medium',
-							    'modal_size' => 'medium',
-							    // 'attr'  => array( 'class' => 'custom-class', 'data-foo' => 'bar' ),
-							    'label' => __('Search Icon', 'alone'),
-							    'desc'  => __('Select a icon display for search', 'alone'),
-							    // 'help'  => __('Help tip', 'alone'),
-								)
-					    )
-						),
-						'login_notification_settings' => array(
-					    'type'  => 'multi',
-					    'value' => array(
-				        'display' => 'show',
-				        'icon' => array(
-									'type' => 'icon-font',
-									'icon-class' => 'entypo entypo-user',
-					     		'icon-class-without-root' => false,
-					     		'pack-name' => 'entypo',
-					     		'pack-css-uri' => false
-								),
-					    ),
-					    'label' => false,
-					    // 'desc'  => __('Description', 'alone'),
-					    // 'help'  => __('Help tip', 'alone'),
-					    'inner-options' => array(
-				        'display' => array(
-							    'type'  => 'switch',
-							    // 'value' => 'show',
-							    'label' => __('Login Icon Display', 'alone'),
-							    'desc'  => __('Option setting show/hide login notification', 'alone'),
-							    'help'  => __('Show/Hide', 'alone'),
-							    'left-choice' => array(
-							        'value' => 'show',
-							        'label' => __('Show', 'alone'),
-							    ),
-							    'right-choice' => array(
-							        'value' => 'hide',
-							        'label' => __('Hide', 'alone'),
-							    ),
-								),
-				        'icon' => array(
-							    'type'  => 'icon-v2',
-							    'preview_size' => 'medium',
-							    'modal_size' => 'medium',
-							    // 'attr'  => array( 'class' => 'custom-class', 'data-foo' => 'bar' ),
-							    'label' => __('Login Icon', 'alone'),
-							    'desc'  => __('Select a icon display for login', 'alone'),
-							    // 'help'  => __('Help tip', 'alone'),
-								)
-					    )
-						),
-						'cart_notification_settings' => array(
-					    'type'  => 'multi',
-					    'value' => array(
-				        'display' => 'show',
-				        'icon' => array(
-									'type' => 'icon-font',
-									'icon-class' => 'unycon unycon-shopping-cart3',
-					     		'icon-class-without-root' => false,
-					     		'pack-name' => 'unycon',
-					     		'pack-css-uri' => false
-								),
-					    ),
-					    'label' => false,
-					    // 'desc'  => __('Description', 'alone'),
-					    // 'help'  => __('Help tip', 'alone'),
-					    'inner-options' => array(
-				        'display' => array(
-							    'type'  => 'switch',
-							    // 'value' => 'show',
-							    'label' => __('Cart Icon Display', 'alone'),
-							    'desc'  => __('Option setting show/hide cart notification', 'alone'),
-							    'help'  => __('Show/Hide', 'alone'),
-							    'left-choice' => array(
-							        'value' => 'show',
-							        'label' => __('Show', 'alone'),
-							    ),
-							    'right-choice' => array(
-							        'value' => 'hide',
-							        'label' => __('Hide', 'alone'),
-							    ),
-								),
-				        'icon' => array(
-							    'type'  => 'icon-v2',
-							    'preview_size' => 'medium',
-							    'modal_size' => 'medium',
-							    // 'attr'  => array( 'class' => 'custom-class', 'data-foo' => 'bar' ),
-							    'label' => __('Cart Icon', 'alone'),
-							    'desc'  => __('Select a icon display for cart', 'alone'),
-							    // 'help'  => __('Help tip', 'alone'),
-								)
-					    )
-						),
-	        )
+	        'options' => $notification_center_settings,
 		    ),
 			),
 		),

@@ -14,6 +14,7 @@ if(! function_exists('alone_vc_load_custom_elements')) :
       'vc_progressbar_svg',
       'vc_posts_grid_resizable',
       'vc_liquid_button',
+      'vc_counter_up',
     );
 
     /* check plugin Give (donations) exist  */
@@ -26,12 +27,54 @@ if(! function_exists('alone_vc_load_custom_elements')) :
     /* fw_event */
     if (function_exists('fw_ext') && fw_ext('events')) {
       $new_elements[] = 'vc_events_slider';
-      // $new_elements[] = 'vc_events_listing';
+      $new_elements[] = 'vc_events_listing';
     }
 
     foreach($new_elements as $item) :
       $dir = $path . 'vc-params/' . $item . '.php';
       if(file_exists($dir)) require $dir;
     endforeach;
+  }
+endif;
+
+if(! function_exists('alone_vc_load_templates')) :
+  /**
+   * alone_vc_load_templates
+   * @since 0.0.7
+   */
+  function alone_vc_load_templates($folder = 'default_templates') {
+    $templates = array();
+
+    //Load default tempaltes
+    foreach (glob($folder) as $filename)
+    {
+      $template_params = alone_vc_get_template_data($filename);
+      $filename_clean = basename($filename, '.php');
+
+      $data = array();
+      $data['name']         = $template_params['template_name'];
+      $data['weight']       = 0;
+      $data['custom_class'] = 'vc-default-temp-' . $filename_clean;
+      $data['content']      = file_get_contents($filename);
+      $templates[] = $data;
+    }
+
+    return $templates;
+  }
+endif;
+
+if(! function_exists('alone_vc_get_template_data')) :
+  /**
+   * vctl_get_template_data
+   * @since 0.0.7
+   */
+  function alone_vc_get_template_data($file) {
+    $default_headers = array(
+      'template_name' => 'Template Name',
+      'preview_image' => 'Preview Image',
+      'descriptions'  => 'Descriptions',
+    );
+
+    return get_file_data($file, $default_headers);
   }
 endif;

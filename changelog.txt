@@ -10,6 +10,8 @@
   + Give customize general settings
   + Update plugin Unyson Event Helper
   + Event element VC Carousel
+  + Event element posts listing
+  + Update Vc element vc_post_grid_resizable layout gallery (add thumbnail and show media desciption)
   + Update Css
 
 2017.05.23 -------------- 0.0.6

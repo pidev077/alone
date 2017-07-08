@@ -511,3 +511,46 @@ body.is-header-sticky{
     background: transparent;
   }
 }
+
+%nf-form-temp{
+  .nf-form-title{
+    h3{
+      font-size: 22px;
+      line-height: 26px;
+      letter-spacing: -1.2px;
+    }
+  }
+  .nf-form-layout{
+    .nf-form-content {
+      margin-top: 30px;
+
+      input[type="text"],
+      input[type="password"],
+      input[type="number"],
+      input[type="email"],
+      input[type="date"],
+      input[type="color"],
+      input[type="tel"],
+      input[type="search"],
+      textarea,
+      select{
+        padding: 10px;
+        border-radius: 3px;
+      }
+      input[type="button"] {
+        background: $accent-color;
+        border: medium none;
+        border-radius: 3px;
+        color: #fff;
+        padding: 8px 22px;
+        @include transition(.3s ease);
+        &:hover{
+          background: darken($accent-color, 5%);
+        }
+      }
+    }
+  }
+}
+.nf-form-cont{
+  @extend %nf-form-temp;
+}
