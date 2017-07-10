@@ -101,8 +101,9 @@ class vcGiveFormsSlider extends WPBakeryShortCode {
                 'heading' => __( 'Select Layout', 'alone' ),
                 'param_name' => 'layout',
                 'value' => array(
-                  'default' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/give-forms-slider-default.jpg',
-                  // 'block-image' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/posts-slider-layout-2.jpg',
+                  'default' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/give-forms-slider-default.jpg', 
+                  'style-1' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/give-forms-slider-default.jpg', 
+                  //'block-image' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/posts-slider-layout-2.jpg',
                 ),
                 'std' => 'default',
                 'description' => __('Select a layout display', 'alone'),
@@ -408,6 +409,30 @@ class vcGiveFormsSlider extends WPBakeryShortCode {
               '<div class="meta-item meta-date">{date}</div>',
             '</div>',
           '</div>',
+        '</div>',
+      ));
+
+      /* layout style 1 horizontal give forms  */
+      $template['style-1'] = implode('', array(
+        '<div class="item-inner give-forms-slider-layout-style-1">', 
+            '<div class="entry-content ">',
+              '<div class="meta-donor">'. __('Donor', 'alone') .' {donors_count}</div>',
+              '<div class="give-goal-progress-wrap">',
+                '{goal_progress_bar_default}',
+                '<div class="give-price-wrap">{pricing_text}</div>',
+              '</div>',
+              '<a href="{form_link}" class="title-link"><h4 class="title">{form_title}</h4></a>',
+              '<div class="extra-meta">',
+                '<div class="meta-item meta-author">{author_name}</div>',
+                ' / ',
+                '<div class="meta-item meta-date">{date}</div>',
+              '</div>',
+              '<a class="readmore-btn" href="{form_link}" title="{form_title}">DONATE NOW  </a>',
+            '</div>',
+            '<div class="featured-image ">',
+              '<img src="{form_featured_image}" alt="#">',
+              '<a class="readmore-link" href="{form_link}" title="View detail"><span class="ion-ios-arrow-right"></span></a>',
+            '</div>', 
         '</div>',
       ));
 
