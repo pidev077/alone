@@ -1,18 +1,31 @@
 *** Core Changelog ***
 
 2017.**.** -------------- 0.0.7
-* Update
-  + Vc element Featured box fix icon not show
+  - Fix -
+  + Fix icon not show (vc element Featured box)
+
+  - Issue -
+  + Issue Visual Composer builder v5.2 frontend error javascript
+  + Issue vc element Liquid Button Svg not apply effect on frontend builder
+
+  - New -
+  + New vc element Progress Bar Svg
+  + New vc element Grid Resizable
+  + New vc element Liquid Button Svg
+  + New vc element Give Carousel
+  + New vc element Event Carousel
+  + New vc element Event element Posts Listing
+  + New vc element Counter Up
+  + New vc element grid builder Give (Visual Composer Grid Builder)
+
+  - Compatible -
   + Compatible plugin "Give" (donation)
-  + VC new elelemt: Progress Bar Svg, Grid Resizable, Liquid Button Svg
-  + Give element for VC Grid Builder
-  + Give element VC Carousel
-  + Give customize general settings
+  + Compatible Visual Composer v5.1.1
+
+  - Update -
   + Update plugin Unyson Event Helper
-  + Event element VC Carousel
-  + Event element posts listing
+  + Update Give customize general settings
   + Update Vc element vc_post_grid_resizable layout gallery (add thumbnail and show media desciption)
-  + Update Css
 
 2017.05.23 -------------- 0.0.6
 * Update
