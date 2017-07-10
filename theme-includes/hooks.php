@@ -369,8 +369,9 @@ add_action( 'init', '_alone_init' );
 		function _alone_give_set_posts_per_page( $query ) {
 			$_FW = defined( 'FW' );
 			if($_FW) {
-				if(is_post_type_archive('give_forms')) {
+				if(is_post_type_archive('give_forms') && fw_akg('query_vars/post_type', $query) == 'give_forms') {
 					$give_posts_per_page = fw_get_db_customizer_option('give_settings/give_archive/number_form_per_page', 9);
+					// echo '<pre>'; print_r($query); echo '</pre>';
 					$query->set('posts_per_page', $give_posts_per_page);
 				}
 			}

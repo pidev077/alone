@@ -37,6 +37,7 @@
 		'date_query' => $date_query
 	);
 	$fw_posts = alone_get_posts($args);
+	
 	// print_r($fw_posts);
 	$args = array(
 		'attr' => array( 'class' => 'attachment-post-thumbnail' ),

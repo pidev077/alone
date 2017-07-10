@@ -1476,7 +1476,7 @@ if ( ! function_exists( 'alone_get_posts' ) ):
 		} else {
 			return false;
 		}
-
+		// echo '<pre>'; print_r($query); echo '</pre>';
 		$fw_post_option = array();
 		$alone_count          = 0;
 		if ( ! empty( $posts ) ) {

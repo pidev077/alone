@@ -52,7 +52,6 @@ if ( $_FW ) {
 						endif; ?>
 					</div><!-- /.postlist-->
 					<?php alone_paging_navigation(); // archive pagination ?>
-					<?php wp_reset_postdata(); ?>
 				</div>
 			</div><!-- /.bt-content-area-->
 
