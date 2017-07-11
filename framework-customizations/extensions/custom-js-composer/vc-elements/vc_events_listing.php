@@ -11,6 +11,7 @@ $atts = shortcode_atts(
     /* Source */
 		'post_total_items'	=> 3,
 		'type'							=> 'recent',
+		'offset'						=> 0,
 		'taxonomy_ids'			=> '',
 		'event_ids'					=> '',
 		/* Layout */

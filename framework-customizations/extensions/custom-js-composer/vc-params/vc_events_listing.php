@@ -55,6 +55,18 @@ class vcEventsListing extends WPBakeryShortCode {
               ),
               array(
                 'type' => 'textfield',
+                'heading' => __('Offset', 'alone'),
+                'param_name' => 'offset',
+                'value' => 0,
+                'dependency' => array(
+          				'element' => 'type',
+          				'value' => 'recent',
+          			),
+                'description' => __( 'Enter offset number.', 'alone' ),
+                'group' => 'Source',
+              ),
+              array(
+                'type' => 'textfield',
                 'heading' => __('Taxonomy IDs', 'alone'),
                 'param_name' => 'taxonomy_ids',
                 'value' => '',
@@ -119,6 +131,7 @@ class vcEventsListing extends WPBakeryShortCode {
                 'param_name' => 'layout',
                 'value' => array(
                   'default' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/event-listing-default.jpg',
+                  'simplify' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/event-listing-simplify.jpg',
                   // 'block-image' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/posts-slider-layout-2.jpg',
                 ),
                 'std' => 'default',
@@ -186,6 +199,7 @@ class vcEventsListing extends WPBakeryShortCode {
       switch ($type) {
         case 'recent':
           $args['sort'] = 'recent';
+          $args['offset'] = $offset;
           break;
 
         case 'event_id':
@@ -245,6 +259,31 @@ class vcEventsListing extends WPBakeryShortCode {
                 '<div class="break-line"></div>',
                 '<a href="{post_link}" class="title-link" title="{post_title}"><div class="title">{post_title}</div></a>',
                 '<div class="event-start-time"><span class="ion-ios-location"></span> {venue}, <span class="ion-ios-timer"></span> {event_start_time}</div>',
+              '</div>',
+            '</div>',
+          ));
+          break;
+        case 'simplify':
+          $date = date_create($variables['{event_start_time}']);
+          $date_template = implode('', array(
+            '<div class="date-entry">',
+              '<div class="date-entry-inner">',
+                '<div class="d-d">'. date_format($date,'d') .'</div>',
+                '<div class="d-my">'. date_format($date,'M Y') .'</div>',
+                '<div class="d-t">'. date_format($date,'H:i') .'</div>',
+              '</div>',
+            '</div>',
+          ));
+
+          $output = implode('', array(
+            '<div class="item-inner layout-{layout}">',
+              '<div class="event-start-date">',
+                $date_template,
+              '</div>',
+              '<div class="content-entry">',
+                '<a href="{post_link}" class="title-link" title="{post_title}"><div class="title">{post_title}</div></a>',
+                '<div class="venue-empty">{venue}</div>',
+                '<a href="{post_link}" class="readmore-link">'. __('Read More', 'alone') .' <span class="ion-ios-arrow-thin-right"></span></a>',
               '</div>',
             '</div>',
           ));
