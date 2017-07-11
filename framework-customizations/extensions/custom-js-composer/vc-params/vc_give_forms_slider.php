@@ -101,8 +101,8 @@ class vcGiveFormsSlider extends WPBakeryShortCode {
                 'heading' => __( 'Select Layout', 'alone' ),
                 'param_name' => 'layout',
                 'value' => array(
-                  'default' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/give-forms-slider-default.jpg', 
-                  'style-1' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/give-forms-slider-default.jpg', 
+                  'default' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/give-forms-slider-default.jpg',
+                  'style-1' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/give-forms-slider-default.jpg',
                   //'block-image' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/posts-slider-layout-2.jpg',
                 ),
                 'std' => 'default',
@@ -356,7 +356,7 @@ class vcGiveFormsSlider extends WPBakeryShortCode {
             'progressValue' => $progress,
             'color' => $color,
             'strokeWidth' => 20,
-            'trailColor' => 'rgba(238,238,238,0.5)',
+            'trailColor' => 'rgb(222, 222, 222)',
             'trailWidth' => 3,
             'easing' => 'easeInOut',
             'duration' => 1800,
@@ -371,8 +371,35 @@ class vcGiveFormsSlider extends WPBakeryShortCode {
             'text_color' => '#fff',
           )),
         );
+        $progressbar_style_1_attr = array(
+          'class' => 'give-goal-progress-bar',
+          'data-progressbar-svg' => json_encode(array(
+            /* source */
+            'shape' => 'line', //'line',
+            'progressValue' => $progress,
+            'color' => $color,
+            'strokeWidth' => 1,
+            'trailColor' => 'rgb(222, 222, 222)',
+            'trailWidth' => 1,
+            'easing' => 'easeInOut',
+            'duration' => 1800,
+            'textSetings' => '',
+            'animateTransformSettings' => 'show',
+            'delay' => 300,
+            // 'svgStyleWidth' => '100%',
+            // 'svgStyleHeight' => '100%',
+            /* transform */
+            'colorTransform' => $color,
+            'strokeWidthTransform' => 2,
+            /* text */
+            // 'textSetings' => 'show',
+            // 'label' => '{percent}%',
+            // 'text_color' => '#fff',
+          )),
+        );
 
         $variable['{goal_progress_bar_default}'] = '<div '. html_build_attributes($progressbar_style_default_attr) .'></div>';
+        $variable['{goal_progress_bar_style_1}'] = '<div '. html_build_attributes($progressbar_style_1_attr) .'></div>';
       }
 
       /* check featured image exist */
@@ -414,12 +441,17 @@ class vcGiveFormsSlider extends WPBakeryShortCode {
 
       /* layout style 1 horizontal give forms  */
       $template['style-1'] = implode('', array(
-        '<div class="item-inner give-forms-slider-layout-style-1">', 
-            '<div class="entry-content ">',
+        '<div class="item-inner give-forms-slider-layout-style-1">',
+          '<div class="featured-image " style="background: url({form_featured_image}) center center / cover, #9E9E9E;">',
+            //'<img src="{form_featured_image}" alt="#">',
+            '<a class="readmore-link" href="{form_link}" title="View detail"><span class="ion-ios-arrow-right"></span></a>',
+          '</div>',
+          '<div class="entry-content ">',
+            '<div class="entry-content-inner">',
               '<div class="meta-donor">'. __('Donor', 'alone') .' {donors_count}</div>',
               '<div class="give-goal-progress-wrap">',
-                '{goal_progress_bar_default}',
                 '<div class="give-price-wrap">{pricing_text}</div>',
+                '{goal_progress_bar_style_1}',
               '</div>',
               '<a href="{form_link}" class="title-link"><h4 class="title">{form_title}</h4></a>',
               '<div class="extra-meta">',
@@ -427,12 +459,9 @@ class vcGiveFormsSlider extends WPBakeryShortCode {
                 ' / ',
                 '<div class="meta-item meta-date">{date}</div>',
               '</div>',
-              '<a class="readmore-btn" href="{form_link}" title="{form_title}">DONATE NOW  </a>',
+              '<a class="readmore-btn" href="{form_link}" title="{form_title}">'. __('Read More', 'alone') .' <span class="ion-ios-arrow-thin-right"></span></a>',
             '</div>',
-            '<div class="featured-image ">',
-              '<img src="{form_featured_image}" alt="#">',
-              '<a class="readmore-link" href="{form_link}" title="View detail"><span class="ion-ios-arrow-right"></span></a>',
-            '</div>', 
+          '</div>',
         '</div>',
       ));
 
