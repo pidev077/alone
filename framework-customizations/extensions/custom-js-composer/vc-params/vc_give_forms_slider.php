@@ -356,7 +356,7 @@ class vcGiveFormsSlider extends WPBakeryShortCode {
             'progressValue' => $progress,
             'color' => $color,
             'strokeWidth' => 20,
-            'trailColor' => 'rgba(238,238,238,0.5)',
+            'trailColor' => 'rgb(222, 222, 222)',
             'trailWidth' => 3,
             'easing' => 'easeInOut',
             'duration' => 1800,
@@ -371,8 +371,34 @@ class vcGiveFormsSlider extends WPBakeryShortCode {
             'text_color' => '#fff',
           )),
         );
+        $progressbar_style_1_attr = array(
+          'class' => 'give-goal-progress-bar',
+          'data-progressbar-svg' => json_encode(array(
+            /* source */
+            'shape' => 'line', //'line',
+            'progressValue' => $progress,
+            'color' => $color,
+            'strokeWidth' => 20,
+            'trailColor' => 'rgb(222, 222, 222)',
+            'trailWidth' => 10,
+            'easing' => 'easeInOut',
+            'duration' => 1800,
+            'textSetings' => '',
+            'animateTransformSettings' => 'show',
+            'delay' => 300,
+            // 'svgStyleWidth' => '100%',
+            // 'svgStyleHeight' => '100%',
+            /* transform */
+            'colorTransform' => $color,
+            'strokeWidthTransform' => 20,
+            /* text */
+            'label' => '{percent}%',
+            'text_color' => '#fff',
+          )),
+        );
 
         $variable['{goal_progress_bar_default}'] = '<div '. html_build_attributes($progressbar_style_default_attr) .'></div>';
+        $variable['{goal_progress_bar_style_1}'] = '<div '. html_build_attributes($progressbar_style_1_attr) .'></div>';
       }
 
       /* check featured image exist */
@@ -414,12 +440,16 @@ class vcGiveFormsSlider extends WPBakeryShortCode {
 
       /* layout style 1 horizontal give forms  */
       $template['style-1'] = implode('', array(
-        '<div class="item-inner give-forms-slider-layout-style-1">', 
+        '<div class="item-inner give-forms-slider-layout-style-1">',
+            '<div class="featured-image " style="background: #9E9E9E; height: 50vh; background-image: url({form_featured_image}); background-position: center; background-size: cover;">',
+              //'<img src="{form_featured_image}" alt="#">',
+              '<a class="readmore-link" href="{form_link}" title="View detail"><span class="ion-ios-arrow-right"></span></a>',
+            '</div>',
             '<div class="entry-content ">',
               '<div class="meta-donor">'. __('Donor', 'alone') .' {donors_count}</div>',
               '<div class="give-goal-progress-wrap">',
-                '{goal_progress_bar_default}',
                 '<div class="give-price-wrap">{pricing_text}</div>',
+                '{goal_progress_bar_style_1}',
               '</div>',
               '<a href="{form_link}" class="title-link"><h4 class="title">{form_title}</h4></a>',
               '<div class="extra-meta">',
@@ -428,10 +458,6 @@ class vcGiveFormsSlider extends WPBakeryShortCode {
                 '<div class="meta-item meta-date">{date}</div>',
               '</div>',
               '<a class="readmore-btn" href="{form_link}" title="{form_title}">DONATE NOW  </a>',
-            '</div>',
-            '<div class="featured-image ">',
-              '<img src="{form_featured_image}" alt="#">',
-              '<a class="readmore-link" href="{form_link}" title="View detail"><span class="ion-ios-arrow-right"></span></a>',
             '</div>', 
         '</div>',
       ));
