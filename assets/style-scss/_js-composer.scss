@@ -240,6 +240,7 @@
                       }
                       .content-entry{
                         padding-left: 20px;
+                        width: 100%;
                         .title-link{
                           text-decoration: none;
                           .title{
@@ -265,7 +266,8 @@
                           // text-decoration: underline;
                           font-size: 14px;
                           letter-spacing: -.6px;
-
+                          display: inline-block;
+                          margin-top: 7px;
                           span{
                             margin-left: 4px;
                             font-size: 20px;
@@ -789,7 +791,7 @@
                                 position: relative;
                                 left: auto;
                                 top: auto;
-                                height: 60vh
+                                height: 32vh
                             }
                             .entry-content {
                                 width: 100%;
