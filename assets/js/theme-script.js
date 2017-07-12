@@ -58,7 +58,6 @@
      * Liquid Button script
      *
      */
-    var LiquidButton = function() {};
     var _createClass = function() {
         function defineProperties(target, props) {
             for (var i = 0; i < props.length; i++) {
@@ -1241,7 +1240,7 @@
             /* re-call progressBarSvg */
             setTimeout(function() {
                 Bears.progressBarSvg();
-                Bears.liquidButton();
+                // Bears.liquidButton();
             }, 1000)
 
         });

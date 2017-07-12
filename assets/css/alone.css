@@ -3658,7 +3658,8 @@ body #cs-content .x-btn {
             border-radius: 20px;
             background: #76a700; }
       #page .wpb_theme_custom_element.wpb_events_listing .post-event-item .item-inner.layout-simplify .content-entry {
-        padding-left: 20px; }
+        padding-left: 20px;
+        width: 100%; }
       #page .wpb_theme_custom_element.wpb_events_listing .post-event-item .item-inner.layout-simplify .content-entry .title-link {
         text-decoration: none; }
         #page .wpb_theme_custom_element.wpb_events_listing .post-event-item .item-inner.layout-simplify .content-entry .title-link .title {
@@ -3677,7 +3678,9 @@ body #cs-content .x-btn {
       #page .wpb_theme_custom_element.wpb_events_listing .post-event-item .item-inner.layout-simplify .content-entry .readmore-link {
         color: #333;
         font-size: 14px;
-        letter-spacing: -0.6px; }
+        letter-spacing: -0.6px;
+        display: inline-block;
+        margin-top: 7px; }
         #page .wpb_theme_custom_element.wpb_events_listing .post-event-item .item-inner.layout-simplify .content-entry .readmore-link span {
           margin-left: 4px;
           font-size: 20px;
@@ -4321,7 +4324,7 @@ body #cs-content .x-btn {
           background: #88c000;
           color: #fff; }
       #page .wpb_theme_custom_element.wpb_posts_grid_resizable .vc-custom-inner-wrap .grid-item.item-skin-give_forms-default .grid-item-inner:hover .background-image-backend:after {
-        background: rgba(0, 0, 0, 0.25); }
+        background: rgba(0, 0, 0, 0.5); }
         #page .wpb_theme_custom_element.wpb_posts_grid_resizable .vc-custom-inner-wrap .grid-item.item-skin-give_forms-default .grid-item-inner:hover .readmore-btn {
           visibility: visible;
           opacity: 1;
@@ -7446,6 +7449,51 @@ body.is-header-sticky {
     transition: 0.3s ease; }
   .nf-form-cont .nf-form-layout .nf-form-content input[type="button"]:hover {
     background: #76a700; }
+
+.nf-form-cont {
+  /* theme-custom-social-message-item */ }
+
+.theme-custom-social-message-item .message-wrap {
+  background: #f5f5f5 none repeat scroll 0 0;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: -1.2px;
+  line-height: 24px;
+  padding: 30px;
+  position: relative; }
+  .theme-custom-social-message-item .message-wrap:after {
+    content: "";
+    border: solid 10px transparent;
+    border-top-color: #f5f5f5;
+    position: absolute;
+    left: 55px;
+    bottom: -20px; }
+  .theme-custom-social-message-item .info-wrap {
+    margin: 20px 0 0 20px;
+    disblay: table; }
+  .theme-custom-social-message-item .info-wrap > * {
+    display: table-cell;
+    vertical-align: middle; }
+  .theme-custom-social-message-item .info-wrap .avatar {
+    width: 100px; }
+  .theme-custom-social-message-item .info-wrap .avatar img {
+    width: 100%;
+    border-radius: 50%; }
+  .theme-custom-social-message-item .info-wrap .meta-items {
+    padding-left: 20px; }
+  .theme-custom-social-message-item .info-wrap .meta-items .from {
+    color: #999;
+    font-size: 11px;
+    letter-spacing: 2px;
+    line-height: normal;
+    text-transform: uppercase; }
+  .theme-custom-social-message-item .info-wrap .meta-items .name {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    line-height: 30px;
+    margin: 0; }
 
 #page .fw-shortcode-calendar-wrapper {
   /*************
