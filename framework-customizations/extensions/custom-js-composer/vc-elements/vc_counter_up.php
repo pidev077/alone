@@ -63,13 +63,14 @@ $variables = array(
   '{counter_number}'      => $counter_number,
   '{before_prefix}'       => $before_prefix,
   '{after_prefix}'        => $after_prefix,
+  '{counteup_data}'       => $counteup_data,
 );
 
 $templates = array(
   'default' => implode('', array(
     '<{tag} {style_attr}>',
       '{before_prefix}',
-      '<span class="counterUp" data-bears-counterup="{counter_number}">',
+      '<span class="counterUp" data-bears-counterup="{counteup_data}">',
         '{counter_number}',
       '</span>',
       '{after_prefix}',
