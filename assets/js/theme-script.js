@@ -76,7 +76,24 @@
     var LiquidButton = function(svg) {
         _classCallCheck(this, LiquidButton);
 
-        var options = svg.dataset;
+        var _opts = $.extend({
+          tension: 0.4,
+          width: 200,
+          height: 50,
+          margin: 50,
+          hoverFactor: -0.1,
+          gap: 5,
+          debug: false,
+          forceFactor: 0.2,
+          color1: '#36DFE7',
+          color2: '#8F17E1',
+          color3: '#BF09E6',
+          textColor: '#FFFFFF',
+          text: '',
+        }, svg.dataset);
+
+        var options = _opts; //svg.dataset;
+
         this.id = this.constructor.id || (this.constructor.id = 1);
         this.constructor.id++;
         this.xmlns = 'http://www.w3.org/2000/svg';
