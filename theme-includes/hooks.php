@@ -155,7 +155,8 @@ add_action( 'init', '_alone_init' );
 			add_action('pre_get_posts', '_alone_give_set_posts_per_page', 10);
 
 			/* _alone_action_give_single_form_summary */
-			add_action( '_alone_action_give_single_form_summary', '_alone_give_get_donation_form', 10 );
+			// add_action( '_alone_action_give_single_form_summary', '_alone_give_get_donation_form', 10 );
+			add_action( '_alone_action_give_single_form_summary', 'give_get_donation_form', 10 );
 		}
 	endif;
 
