@@ -132,7 +132,8 @@
         }
         this.wrapperElement = options.wrapperElement || document.body;
         if (!this.svg.parentElement) {
-            this.wrapperElement.append(this.svg);
+            // this.wrapperElement.append(this.svg);
+            $(this.wrapperElement).append($(this.svg));
         }
 
         this.svgText = document.createElementNS(this.xmlns, 'text');

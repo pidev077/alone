@@ -10401,8 +10401,8 @@ body.search-results .fw-title-bar .fw-heading .fw-special-title:after {
     transition: 0.3s; }
     .bt-wrap-related-article.bt-related-articles-1 .related-article-list .related-article-item .post-title-link .post-title {
       font-size: 18px;
-      line-height: 28px;
-      margin: 0; }
+      line-height: 22px;
+      margin: 0 0 15px 0; }
     .bt-wrap-related-article.bt-related-articles-1 .related-article-list .related-article-item .post-title-link:hover {
       color: #88c000;
       text-decoration: none; }
