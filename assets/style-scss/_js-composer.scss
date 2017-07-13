@@ -833,12 +833,16 @@
                                 z-index: 3;
                                 opacity: 1;
                                 @include transition(.5s ease);
+                                display: block;
                                 >* {
-                                    display: table-cell;
+                                    // display: table-cell;
+                                    // vertical-align: middle;
+                                    display: inline-block;
                                     vertical-align: middle;
                                 }
                                 .give-goal-progress-bar {
                                     width: 45px;
+                                    // float: left;
                                 }
                                 .give-price-wrap {
                                     padding-left: 20px;

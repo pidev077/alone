@@ -139,13 +139,19 @@
     }
     .entry-container{
       position: relative;
-      display: table;
+      display: block;
       > *{
-        display: table-cell;
-        vertical-align: top;
+        //display: table-cell;
+        // vertical-align: top;
+      }
+      &:after{
+        content: '';
+        display: block;
+        clear: both;
       }
       .give-social-share-post{
         width: 100px;
+        float: left;
         .share-post-wrap{
           margin-top: 16px;
           .share-post-item{
@@ -166,7 +172,15 @@
         }
       }
       .give-content-wrap{
-        padding-left: 20px;
+        padding-left: 120px;
+
+        /* fix goal */
+        .give-goal-progress,
+        .give_error,
+        .give_success{
+          clear: none;
+        }
+
         .title-heading{
           margin-bottom: 30px;
           .title{

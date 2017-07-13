@@ -4116,9 +4116,10 @@ body #cs-content .x-btn {
         z-index: 3;
         opacity: 1;
         -webkit-transition: 0.5s ease;
-        transition: 0.5s ease; }
+        transition: 0.5s ease;
+        display: block; }
         #page .wpb_theme_custom_element.wpb_give_forms_slider .item .item-inner.give-forms-slider-layout-default .featured-image .give-goal-progress-wrap > * {
-          display: table-cell;
+          display: inline-block;
           vertical-align: middle; }
         #page .wpb_theme_custom_element.wpb_give_forms_slider .item .item-inner.give-forms-slider-layout-default .featured-image .give-goal-progress-wrap .give-goal-progress-bar {
           width: 45px; }
@@ -11357,12 +11358,14 @@ body.single .post-single-creative-layout-blog-2 .entry-content .post-single-entr
       font-size: 150%; }
   .give-single-layout-style-2 .give_forms .entry-container {
     position: relative;
-    display: table; }
-  .give-single-layout-style-2 .give_forms .entry-container > * {
-    display: table-cell;
-    vertical-align: top; }
+    display: block; }
+  .give-single-layout-style-2 .give_forms .entry-container:after {
+    content: '';
+    display: block;
+    clear: both; }
   .give-single-layout-style-2 .give_forms .entry-container .give-social-share-post {
-    width: 100px; }
+    width: 100px;
+    float: left; }
   .give-single-layout-style-2 .give_forms .entry-container .give-social-share-post .share-post-wrap {
     margin-top: 16px; }
     .give-single-layout-style-2 .give_forms .entry-container .give-social-share-post .share-post-wrap .share-post-item {
@@ -11379,7 +11382,10 @@ body.single .post-single-creative-layout-blog-2 .entry-content .post-single-entr
       transform: translate(-50%, -50%);
       -webkit-transform: translate(-50%, -50%); }
   .give-single-layout-style-2 .give_forms .entry-container .give-content-wrap {
-    padding-left: 20px; }
+    /* fix goal */
+    padding-left: 120px; }
+  .give-single-layout-style-2 .give_forms .entry-container .give-content-wrap .give-goal-progress, .give-single-layout-style-2 .give_forms .entry-container .give-content-wrap .give_error, .give-single-layout-style-2 .give_forms .entry-container .give-content-wrap .give_success {
+    clear: none; }
   .give-single-layout-style-2 .give_forms .entry-container .give-content-wrap .title-heading {
     margin-bottom: 30px; }
     .give-single-layout-style-2 .give_forms .entry-container .give-content-wrap .title-heading .title {

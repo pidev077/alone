@@ -132,7 +132,7 @@ $_template = array(
       // show donor slide
       '',
 			// show bar
-      '<div class="give-goal-progress-bar" data-toggle="modal" data-target=".donors-modal-{id}">{goal_progress_bar_default} <div class="give-donor-slide">{donors_slide}</div></div>',
+      '<div class="give-goal-progress-bar">{goal_progress_bar_default} <div class="give-donor-slide">{donors_slide}</div></div>',
       // show text
 			'<div class="raised">',
 				( $goal_format !== 'percentage' ) ? '{pricing_text}' : '{percentage_text}',
