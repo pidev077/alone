@@ -54,6 +54,20 @@
         return this;
     };
 
+    function _check_MSIEversion() {
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf("MSIE ");
+
+        if (msie > 0) // If Internet Explorer, return version number
+        {
+            return true
+        }
+        else  // If another browser, return 0
+        {
+            return false;
+        }
+    }
+
     /**
      * Liquid Button script
      *
@@ -74,6 +88,10 @@
     function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
     var LiquidButton = function(svg) {
+
+        /* break to IE */
+        if(_check_MSIEversion()) return;
+
         _classCallCheck(this, LiquidButton);
 
         var _opts = $.extend({
