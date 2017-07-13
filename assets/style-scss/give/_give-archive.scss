@@ -4,7 +4,7 @@
       .post-give-inner{
         .post-thumbnail-wrap{
           position: relative;
-          border-radius: 3px;
+          border-radius: 3px 3px 0 0;
           overflow: hidden;
           .give-thumbnail{
             max-width: 100%;
@@ -99,7 +99,10 @@
           }
         }
         .post-entry-wrap{
-          padding: 15px 0 0 0;
+          padding: 30px;
+          border: solid #f5f5f5;
+          border-width: 0  2px 2px;
+          border-radius: 0 0 3px 3px;
           .title-link{
             text-decoration: none;
             .title{

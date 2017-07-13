@@ -2900,7 +2900,7 @@ if(! function_exists('alone_give_get_donor')) :
 				foreach($donations as $donation) :
 
 					//Now get donor information from this donation ("customer" aka "donor")
-					$customer_id = give_get_payment_customer_id( $donation->ID );
+					$customer_id = give_get_payment_donor_id( $donation->ID );
 					$customer    = new Give_Customer( $customer_id );
 
 					$donors[] = $customer;
