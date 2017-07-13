@@ -53,6 +53,7 @@ fw-shortcode-calendar-wrapper
 /**
  * $fw-top-menu-color - lvl 1
  * $fw-top-menu-line-color - lvl 1 hover
+ * $fw-sub-menu-color
  */
 /* hidden menu title */
 /* wp-caption */
@@ -8863,7 +8864,8 @@ menu style offcanvas
     .bt-header.header-1 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item > .menu-item-custom-wrap.off-canvas-menu-wrap > div ul.menu li.menu-item-type-custom .menu-item-custom-wrap .widget .widget-title, .bt-header.header-2 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item > .menu-item-custom-wrap.off-canvas-menu-wrap > div ul.menu li.menu-item-type-custom .menu-item-custom-wrap .widget .widget-title, .bt-header.header-3 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item > .menu-item-custom-wrap.off-canvas-menu-wrap > div ul.menu li.menu-item-type-custom .menu-item-custom-wrap .widget .widget-title, .bt-header-mobi.header-mobi .bt-header-mobi-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item > .menu-item-custom-wrap.off-canvas-menu-wrap > div ul.menu li.menu-item-type-custom .menu-item-custom-wrap .widget .widget-title, .bt-header-top-bar .header-top-sidebar-item .widget.widget_nav_menu ul.menu li.menu-item-type-custom > .menu-item-custom-wrap.off-canvas-menu-wrap > div ul.menu li.menu-item-type-custom .menu-item-custom-wrap .widget .widget-title, .header-3-top .bt-header-logo-sidebar-wrap .header-sidebar-item .widget.widget_nav_menu ul.menu li.menu-item-type-custom > .menu-item-custom-wrap.off-canvas-menu-wrap > div ul.menu li.menu-item-type-custom .menu-item-custom-wrap .widget .widget-title {
       font-size: 18px;
       line-height: 30px;
-      margin: 0 0 8px; }
+      margin: 0 0 8px;
+      color: #ebebeb; }
     .bt-header.header-1 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item > .menu-item-custom-wrap.off-canvas-menu-wrap > div ul.menu li.menu-item-type-custom .menu-item-custom-wrap .widget.fw-widget-instagram .fw-instagram-wrap ul li, .bt-header.header-2 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item > .menu-item-custom-wrap.off-canvas-menu-wrap > div ul.menu li.menu-item-type-custom .menu-item-custom-wrap .widget.fw-widget-instagram .fw-instagram-wrap ul li, .bt-header.header-3 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item > .menu-item-custom-wrap.off-canvas-menu-wrap > div ul.menu li.menu-item-type-custom .menu-item-custom-wrap .widget.fw-widget-instagram .fw-instagram-wrap ul li, .bt-header-mobi.header-mobi .bt-header-mobi-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item > .menu-item-custom-wrap.off-canvas-menu-wrap > div ul.menu li.menu-item-type-custom .menu-item-custom-wrap .widget.fw-widget-instagram .fw-instagram-wrap ul li, .bt-header-top-bar .header-top-sidebar-item .widget.widget_nav_menu ul.menu li.menu-item-type-custom > .menu-item-custom-wrap.off-canvas-menu-wrap > div ul.menu li.menu-item-type-custom .menu-item-custom-wrap .widget.fw-widget-instagram .fw-instagram-wrap ul li, .header-3-top .bt-header-logo-sidebar-wrap .header-sidebar-item .widget.widget_nav_menu ul.menu li.menu-item-type-custom > .menu-item-custom-wrap.off-canvas-menu-wrap > div ul.menu li.menu-item-type-custom .menu-item-custom-wrap .widget.fw-widget-instagram .fw-instagram-wrap ul li {
       width: 60px;
       height: 60px; }

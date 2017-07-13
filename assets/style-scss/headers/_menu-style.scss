@@ -1,6 +1,7 @@
 /**
  * $fw-top-menu-color - lvl 1
  * $fw-top-menu-line-color - lvl 1 hover
+ * $fw-sub-menu-color
  */
 
 %menu-style-1{
@@ -818,6 +819,7 @@ menu style offcanvas
 							// font-size: 4.5vw;
 					    // line-height: 8vw;
 					    margin: 0 0 8px;
+							color: $fw-sub-menu-color;
 						}
 						&.fw-widget-instagram{
 							.fw-instagram-wrap{
