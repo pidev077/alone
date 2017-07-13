@@ -55,17 +55,16 @@
     };
 
     function _check_MSIEversion() {
-        var ua = window.navigator.userAgent;
-        var msie = ua.indexOf("MSIE ");
+      var ua = window.navigator.userAgent;
+      var msie = ua.indexOf("MSIE ");
 
-        if (msie > 0) // If Internet Explorer, return version number
-        {
-            return true
-        }
-        else  // If another browser, return 0
-        {
-            return false;
-        }
+      if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
+        return true;
+      }
+      else  {
+        return false;
+      }
+
     }
 
     /**
@@ -90,6 +89,7 @@
     var LiquidButton = function(svg) {
 
         /* break to IE */
+        // alert(_check_MSIEversion());
         if(_check_MSIEversion()) return;
 
         _classCallCheck(this, LiquidButton);
