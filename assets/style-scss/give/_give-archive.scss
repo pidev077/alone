@@ -51,8 +51,11 @@
             form.give-form{
               margin: 0;
               .give-btn{
+                background: $accent-color;
                 font-size: 11px;
                 margin: 0;
+                padding: 13px 18px;
+                display: inline-block;
                 @include transition(.3s ease);
                 &:hover{
                   background: darken($accent-color, 5%);
@@ -100,8 +103,9 @@
           .title-link{
             text-decoration: none;
             .title{
-              font-size: 22px;
+              font-size: 20px;
               line-height: 24px;
+              letter-spacing: -1.2px;
             }
           }
           .give-goal-progress{
@@ -121,7 +125,7 @@
             font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            padding: 4px 14px;
+            padding: 6px 18px;
             display: inline-block;
             margin-top: 15px;
             @include transition(.3s ease);

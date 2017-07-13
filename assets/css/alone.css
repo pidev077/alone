@@ -4122,7 +4122,8 @@ body #cs-content .x-btn {
           display: inline-block;
           vertical-align: middle; }
         #page .wpb_theme_custom_element.wpb_give_forms_slider .item .item-inner.give-forms-slider-layout-default .featured-image .give-goal-progress-wrap .give-goal-progress-bar {
-          width: 45px; }
+          width: 45px;
+          height: 45px; }
         #page .wpb_theme_custom_element.wpb_give_forms_slider .item .item-inner.give-forms-slider-layout-default .featured-image .give-goal-progress-wrap .give-price-wrap {
           padding-left: 20px;
           color: #fff;
@@ -11533,8 +11534,11 @@ body.single .post-single-creative-layout-blog-2 .entry-content .post-single-entr
   .post-type-archive-give_forms .post-give-list .post-give .post-give-inner .post-thumbnail-wrap .give-display-button-only form.give-form {
     margin: 0; }
   .post-type-archive-give_forms .post-give-list .post-give .post-give-inner .post-thumbnail-wrap .give-display-button-only form.give-form .give-btn {
+    background: #88c000;
     font-size: 11px;
     margin: 0;
+    padding: 13px 18px;
+    display: inline-block;
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease; }
   .post-type-archive-give_forms .post-give-list .post-give .post-give-inner .post-thumbnail-wrap .give-display-button-only form.give-form .give-btn:hover {
@@ -11570,8 +11574,9 @@ body.single .post-single-creative-layout-blog-2 .entry-content .post-single-entr
   .post-type-archive-give_forms .post-give-list .post-give .post-give-inner .post-entry-wrap .title-link {
     text-decoration: none; }
   .post-type-archive-give_forms .post-give-list .post-give .post-give-inner .post-entry-wrap .title-link .title {
-    font-size: 22px;
-    line-height: 24px; }
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -1.2px; }
   .post-type-archive-give_forms .post-give-list .post-give .post-give-inner .post-entry-wrap .give-goal-progress {
     margin-bottom: 15px; }
   .post-type-archive-give_forms .post-give-list .post-give .post-give-inner .post-entry-wrap .give-goal-progress .raised {
@@ -11584,7 +11589,7 @@ body.single .post-single-creative-layout-blog-2 .entry-content .post-single-entr
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    padding: 4px 14px;
+    padding: 6px 18px;
     display: inline-block;
     margin-top: 15px;
     -webkit-transition: 0.3s ease;
