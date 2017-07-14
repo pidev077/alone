@@ -4141,8 +4141,8 @@ body #cs-content .x-btn {
         margin: 0;
         opacity: 0;
         visibility: hidden;
-        -webkit-transition: 0.3s ease;
-        transition: 0.3s ease; }
+        -webkit-transition: 0.5s ease;
+        transition: 0.5s ease; }
         #page .wpb_theme_custom_element.wpb_give_forms_slider .item .item-inner.give-forms-slider-layout-default .featured-image .give-button-donate .give-form, #page .wpb_theme_custom_element.wpb_give_forms_slider .item .item-inner.give-forms-slider-layout-default .featured-image .give-button-donate .give-btn {
           margin: 0; }
         #page .wpb_theme_custom_element.wpb_give_forms_slider .item .item-inner.give-forms-slider-layout-default .featured-image .give-button-donate .give-btn {
@@ -4233,11 +4233,17 @@ body #cs-content .x-btn {
         letter-spacing: 2px;
         font-size: 12px;
         text-transform: uppercase;
-        display: inline-block; }
+        display: inline-block;
+        font-weight: bold;
+        text-decoration: none; }
         #page .wpb_theme_custom_element.wpb_give_forms_slider .item .item-inner.give-forms-slider-layout-default .entry-content .readmore-btn span {
           font-size: 20px;
           vertical-align: middle;
-          margin-left: 4px; }
+          margin-left: 2px;
+          -webkit-transition: 0.3s ease;
+          transition: 0.3s ease; }
+        #page .wpb_theme_custom_element.wpb_give_forms_slider .item .item-inner.give-forms-slider-layout-default .entry-content .readmore-btn:hover span {
+          margin-left: 8px; }
   #page .wpb_theme_custom_element.wpb_posts_grid_resizable {
     /* pricing table */ }
     #page .wpb_theme_custom_element.wpb_posts_grid_resizable .vc-custom-inner-wrap .grid-item .grid-item-inner {
