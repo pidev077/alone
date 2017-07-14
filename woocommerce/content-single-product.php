@@ -28,7 +28,7 @@ alone_title_bar();
 			<div class="bt-content-area <?php alone_get_content_class( 'content', $alone_sidebar_position ); ?>">
 				<div class="bt-col-inner">
 					<?php // if( function_exists('fw_ext_breadcrumbs') ) fw_ext_breadcrumbs(); ?>
-          <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
+          <div itemscope itemtype="" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
             <?php
             	/**
             	 * woocommerce_before_single_product hook.

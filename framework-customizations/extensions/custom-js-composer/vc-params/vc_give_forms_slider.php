@@ -318,6 +318,12 @@ class vcGiveFormsSlider extends WPBakeryShortCode {
       $income = give_human_format_large_amount( give_format_amount( $income ) );
       $goal = give_human_format_large_amount( give_format_amount( $goal ) );
 
+      $button_donate = implode('', array(
+        '<div class="give-button-donate">',
+          do_shortcode('[give_form id="'. $form_id .'" show_title="true" show_goal="false" show_content="none" display_style="button"]'),
+        '</div>',
+      ));
+
       $variable = array(
         '{id}' => $form_id,
         '{form_title}' => get_the_title($form_id),
@@ -336,6 +342,7 @@ class vcGiveFormsSlider extends WPBakeryShortCode {
           '<span class="give-percentage">' . apply_filters( 'give_goal_amount_funded_percentage_output', round( $progress ) ) . '</span>'),
 
         '{goal_progress_bar_default}' => '',
+        '{button_donate}' => $button_donate,
       );
 
       //Sanity check - ensure form has goal set to output
@@ -425,7 +432,8 @@ class vcGiveFormsSlider extends WPBakeryShortCode {
               '{goal_progress_bar_default}',
               '<div class="give-price-wrap">{pricing_text}</div>',
             '</div>',
-            '<a class="readmore-btn" href="{form_link}" title="{form_title}"><span class="ion-ios-arrow-right"></span></a>',
+            // '<a class="readmore-btn" href="{form_link}" title="{form_title}"><span class="ion-ios-arrow-right"></span></a>',
+            '{button_donate}',
           '</div>',
           '<div class="entry-content">',
             '<div class="meta-donor">'. __('Donor', 'alone') .' {donors_count}</div>',
@@ -435,6 +443,7 @@ class vcGiveFormsSlider extends WPBakeryShortCode {
               ' / ',
               '<div class="meta-item meta-date">{date}</div>',
             '</div>',
+            '<a href="{form_link}" class="readmore-btn">'. __('Read More' , 'alone') .' <span class="ion-ios-arrow-thin-right"></span></a>',
           '</div>',
         '</div>',
       ));
