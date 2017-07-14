@@ -865,7 +865,7 @@
 
                               opacity: 0;
                               visibility: hidden;
-                              @include transition(.3s ease);
+                              @include transition(.5s ease);
 
                               .give-form,
                               .give-btn{
