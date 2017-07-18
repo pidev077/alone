@@ -168,7 +168,7 @@ while ( $my_query->have_posts() ) {
 	// Link logic
 	if ( 'link_no' !== $link ) {
 		if ( 'link_post' === $link ) {
-			$link_image_start = '<a class="link_image" href="' . get_permalink( $post_id ) . '" title="' . sprintf( esc_attr__( 'Permalink to %s', 'js_composer' ), the_title_attribute( 'echo=0' ) ) . '">';
+			$link_image_start = '<a class="link_image" href="' . get_permalink( $post_id ) . '" title="' . sprintf( esc_attr__( 'Permalink to %s', 'alone' ), the_title_attribute( 'echo=0' ) ) . '">';
 		} elseif ( 'link_image' === $link ) {
 			$p_video = get_post_meta( $post_id, '_p_video', true );
 			//
@@ -210,7 +210,7 @@ wp_reset_query();
 if ( $teasers ) {
 	$teasers = $slides_wrap_start . $teasers . $slides_wrap_end;
 } else {
-	$teasers = __( 'Nothing found.', 'js_composer' );
+	$teasers = __( 'Nothing found.', 'alone' );
 }
 
 $class_to_filter = 'wpb_gallery wpb_posts_slider wpb_content_element';

@@ -8,8 +8,9 @@ class vcPostsGridResizable extends WPBakeryShortCode {
 
     // Element Init
     function __construct() {
+        global $__VcShadowWPBakeryVisualComposerAbstract;
         add_action( 'init', array( $this, 'vc_posts_grid_resizable_mapping' ) );
-        add_shortcode( 'vc_posts_grid_resizable', array( $this, 'vc_posts_grid_resizable_html' ) );
+        $__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_posts_grid_resizable', array( $this, 'vc_posts_grid_resizable_html' ));
     }
 
     function get_support_post_types() {

@@ -8,8 +8,9 @@ class vcEventsListing extends WPBakeryShortCode {
 
     // Element Init
     function __construct() {
+        global $__VcShadowWPBakeryVisualComposerAbstract;
         add_action( 'init', array( $this, 'vc_events_listing_mapping' ) );
-        add_shortcode( 'vc_events_listing', array( $this, 'vc_events_listing_html' ) );
+        $__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_events_listing', array( $this, 'vc_events_listing_html' ));
     }
 
     // Element Mapping

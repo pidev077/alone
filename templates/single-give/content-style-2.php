@@ -147,7 +147,7 @@ $_template = array(
 				'<div class="extra-meta">',
 					'<div class="meta-item post-author"><span class="ion-ios-compose-outline"></span> {author_name}</div>',
 					'<div class="meta-item post-date"><span class="ion-ios-calendar-outline"></span> {date}</div>',
-					'<div class="meta-item meta-donors">'. __('Donors:') .' {donors_count}</div>',
+					'<div class="meta-item meta-donors">'. __('Donors:', 'alone') .' {donors_count}</div>',
 				'</div>',
 			'</div>', /* End title heading */
 			'<div class="entry-content">{content}</div>',

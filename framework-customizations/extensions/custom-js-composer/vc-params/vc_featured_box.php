@@ -8,8 +8,9 @@ class vcFeaturedBox extends WPBakeryShortCode {
 
     // Element Init
     function __construct() {
+        global $__VcShadowWPBakeryVisualComposerAbstract;
         add_action( 'init', array( $this, 'vc_featured_box_mapping' ) );
-        add_shortcode( 'vc_featured_box', array( $this, 'vc_featured_box_html' ) );
+        $__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_featured_box', array( $this, 'vc_featured_box_html' ));
     }
 
     // Element Mapping
@@ -34,16 +35,16 @@ class vcFeaturedBox extends WPBakeryShortCode {
                 'type'  => 'textfield',
                 'heading' => __('Heading', 'alone'),
                 'param_name' => 'heading_text',
-                'value' => __('Heading text', 'greenfres'),
-                'description' => __('Enter heading featured box.', 'greenfres'),
+                'value' => __('Heading text', 'alone'),
+                'description' => __('Enter heading featured box.', 'alone'),
                 'group' => 'Source',
               ),
               array(
                 'type' => 'textarea',
-                'heading' => __('Content', 'greenfres'),
+                'heading' => __('Content', 'alone'),
                 'param_name' => 'content_text',
-                'value' => __('I am featured box. Click edit button to change this text.', 'greenfres'),
-                'description' => __('Enter content featured box.', 'greenfres'),
+                'value' => __('I am featured box. Click edit button to change this text.', 'alone'),
+                'description' => __('Enter content featured box.', 'alone'),
                 'group' => 'Source',
               ),
               array(
@@ -67,8 +68,8 @@ class vcFeaturedBox extends WPBakeryShortCode {
                 'heading' => __( 'Graphic', 'alone' ),
                 'param_name' => 'graphic',
                 'value' => array(
-                  __('Icon') => 'icon',
-                  __('Image') => 'image',
+                  __('Icon', 'alone') => 'icon',
+                  __('Image', 'alone') => 'image',
                 ),
                 'std' => 'icon',
                 'description' => __( 'Choose between an icon and a custom image for your graphic.', 'alone' ),
@@ -217,7 +218,7 @@ class vcFeaturedBox extends WPBakeryShortCode {
                 'heading'       => __('Button', 'alone'),
                 // 'description'   => __('', 'alone'),
                 'value'         => array(
-                  __('Select if you want to show button.') => 'show',
+                  __('Select if you want to show button.', 'alone') => 'show',
                 ),
                 'param_name'    => 'show_button',
                 'group' => 'Source',
@@ -228,7 +229,7 @@ class vcFeaturedBox extends WPBakeryShortCode {
                 'heading' => __('Button Text', 'alone'),
                 'param_name' => 'button_text',
                 'value' => __('Read More', 'alone'),
-                'description' => __('Enter the button text featured box.'),
+                'description' => __('Enter the button text featured box.', 'alone'),
                 'group' => 'Button',
                 'dependency' => array(
           				'element' => 'show_button',
@@ -237,9 +238,9 @@ class vcFeaturedBox extends WPBakeryShortCode {
               ),
               array(
           			'type' => 'href',
-          			'heading' => __( 'URL (Link)', 'js_composer' ),
+          			'heading' => __( 'URL (Link)', 'alone' ),
           			'param_name' => 'href',
-                'description' => __('Enter the link featured box.'),
+                'description' => __('Enter the link featured box.', 'alone'),
                 'group' => 'Button',
                 'value' => '#',
                 'dependency' => array(
@@ -268,7 +269,7 @@ class vcFeaturedBox extends WPBakeryShortCode {
                 'type'          => 'checkbox',
                 'heading'       => __('Open Link In New Window', 'alone'),
                 'value'         => array(
-                  __('Select to open your link in new window.') => 'yes',
+                  __('Select to open your link in new window.', 'alone') => 'yes',
                 ),
                 'param_name'    => 'open_link_in_new_tab',
                 'dependency' => array(

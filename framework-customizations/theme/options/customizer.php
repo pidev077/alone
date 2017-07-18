@@ -986,7 +986,7 @@ $options = array(
 							'dropdown_bg_color' => array(
 								'label' => esc_html__('Dropdown Bg Color', 'alone'),
 								'desc' => esc_html__('Select the dropdown background color', 'alone'),
-								'value' => '#ffffff',
+								'value' => '#333333',
 								'choices' => $alone_color_settings,
 								'type' => 'color-palette'
 							),
@@ -1130,7 +1130,7 @@ $options = array(
 								),
 								'sticky_opacity' => array(
 									'type' => 'slider',
-									'value' => 30,
+									'value' => 5,
 									'properties' => array(
 										'min' => 0,
 										'max' => 100,
@@ -1182,7 +1182,7 @@ $options = array(
 								'header_top_bar_bg' => array(
 									'label' => false, //esc_html__('Background Color', 'alone'),
 									'desc' => esc_html__("Select the header's top bar background color", "alone"),
-									'value' => $alone_color_settings['color_2'],
+									'value' => $alone_color_settings['color_3'],
 									'choices' => $alone_color_settings,
 									'type' => 'color-palette'
 								),
@@ -1943,7 +1943,7 @@ $options = array(
               'links_hover_state' => array(
                 'label' => false, //esc_html__('', 'alone'),
                 'desc' => esc_html__('hover state', 'alone'),
-                'value' => '',
+                'value' => $alone_color_settings['color_2'],
                 'choices' => $alone_color_settings,
                 'type' => 'color-palette'
               ),
@@ -1997,7 +1997,7 @@ $options = array(
               'size' => '16.5',
               'line-height' => '28',
               'letter-spacing' => '0',
-              'color-palette' => '#a8a8a8',
+              'color-palette' => $alone_color_settings['color_3'],
             ),
           ),
 					'buttons_typography_group' => array(
@@ -2017,7 +2017,7 @@ $options = array(
                   'size' => '12',
                   'line-height' => '20',
                   'letter-spacing' => '0',
-                  'color-palette' => '#ffffff',
+                  'color-palette' => $alone_color_settings['color_5'],
                 ),
               ),
               'buttons_hover' => array(
@@ -2196,7 +2196,7 @@ $options = array(
                   'size' => '16',
                   'line-height' => '35',
                   'letter-spacing' => '0.3',
-                  'color-palette' => '#ffffff',
+                  'color-palette' => $alone_color_settings['color_5'],
                 ),
               ),
               'header_menu_group' => array(
@@ -2289,7 +2289,7 @@ $options = array(
                   'size' => '15',
                   'line-height' => '45',
                   'letter-spacing' => '0',
-                  'color-palette' => '#686869',
+                  'color-palette' => $alone_color_settings['color_5'],
                 ),
               ),
             )

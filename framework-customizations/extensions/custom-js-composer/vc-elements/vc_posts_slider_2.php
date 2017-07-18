@@ -134,7 +134,7 @@ if(! empty($el_id)) { $attr_id = "id='{$el_id}'"; }
           $temp_variables = array(
             // '{image_html}'    => '',
 						'{pid}'						=> $item['post_id'],
-            '{readmore_html}' => '<a href="'. $item['post_link'] .'" class="post-view-detail">'. __('Read More') .' <span class="ion-ios-arrow-thin-right"></span></a>',
+            '{readmore_html}' => '<a href="'. $item['post_link'] .'" class="post-view-detail">'. __('Read More', 'alone') .' <span class="ion-ios-arrow-thin-right"></span></a>',
             '{post_title}'    => $item['post_title'],
             '{post_link}'     => $item['post_link'],
             '{post_excerpt}'  => $item['post_excerpt'],

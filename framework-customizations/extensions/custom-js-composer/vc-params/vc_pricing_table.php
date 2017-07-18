@@ -8,8 +8,9 @@ class vcPricingTable extends WPBakeryShortCode {
 
     // Element Init
     function __construct() {
+        global $__VcShadowWPBakeryVisualComposerAbstract;
         add_action( 'init', array( $this, 'vc_pricing_table_mapping' ) );
-        add_shortcode( 'vc_pricing_table', array( $this, 'vc_pricing_table_html' ) );
+        $__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_pricing_table', array( $this, 'vc_pricing_table_html' ));
     }
 
     // Element Mapping
@@ -120,21 +121,21 @@ class vcPricingTable extends WPBakeryShortCode {
                   ),
                   array(
                     'type' => 'textfield',
-                    'heading' => __('Currency',' alone'),
+                    'heading' => __('Currency','alone'),
                     'value' => '$',
                     'description' => __('Enter your desired currency symbol here.', 'alone'),
                     'param_name' => 'currency',
                   ),
                   array(
                     'type' => 'textfield',
-                    'heading' => __('Price',' alone'),
+                    'heading' => __('Price','alone'),
                     'value' => '20.99',
                     'description' => __('Enter the price for this column.', 'alone'),
                     'param_name' => 'price',
                   ),
                   array(
                     'type' => 'textfield',
-                    'heading' => __('Interval',' alone'),
+                    'heading' => __('Interval','alone'),
                     'value' => __('Per Month', 'alone'),
                     'description' => __('Enter the duration for this payment.', 'alone'),
                     'param_name' => 'interval',
@@ -144,7 +145,7 @@ class vcPricingTable extends WPBakeryShortCode {
                     'heading'       => __('Button', 'alone'),
                     // 'description'   => __('', 'alone'),
                     'value'         => array(
-                      __('Select if you want to show button.') => 'show',
+                      __('Select if you want to show button.', 'alone') => 'show',
                     ),
                     'param_name'    => 'show_button',
                   ),
@@ -162,7 +163,7 @@ class vcPricingTable extends WPBakeryShortCode {
                   ),
                   array(
               			'type' => 'href',
-              			'heading' => __( 'URL (Link)', 'js_composer' ),
+              			'heading' => __( 'URL (Link)', 'alone' ),
               			'param_name' => 'href',
                     'description' => __('Enter the link item.', 'alone'),
                     'group' => 'Button',
@@ -207,7 +208,7 @@ class vcPricingTable extends WPBakeryShortCode {
                 'type'          => 'checkbox',
                 'heading'       => __('Open Link In New Window', 'alone'),
                 'value'         => array(
-                  __('Select to open your link in new window.') => 'yes',
+                  __('Select to open your link in new window.', 'alone') => 'yes',
                 ),
                 'param_name'    => 'open_link_in_new_tab',
                 'group' => 'Button Options',

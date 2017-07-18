@@ -1520,10 +1520,10 @@ if(! function_exists('_the_bears_filter_fw_ext_backups_demos')) :
 	function _alone_filter_fw_ext_backups_demos($demos)
 	{
 		$demos_array = array(
-			'alone_5' => array(
+			'alone-5' => array(
 				'title' => esc_html__('Alone 5', 'alone'),
-				'screenshot' => 'http://theme.bearsthemes.com/import_demo/alone/alone_5/screenshot.png',
-				'preview_link' => 'http://theme.bearsthemes.com/wordpress/alone_5/',
+				'screenshot' => 'http://theme.bearsthemes.com/import_demo/alone/alone-5/screenshot.png',
+				'preview_link' => 'http://theme.bearsthemes.com/wordpress/alone-5/',
 			),
 		);
 
@@ -1622,7 +1622,7 @@ if(! function_exists('_alone_admin_notice_page_builder_conflict')) :
 	    ?>
 	    <div class="notice notice-warning is-dismissible">
 					<img style="width: 80px; margin-top: 10px;" src="<?php echo get_template_directory_uri() . '/assets/images/bears-message-icon.png'; ?>" alt="#"/>
-	        <p><strong><?php _e('Page Builder Conflict !!!') ?></strong></p>
+	        <p><strong><?php _e('Page Builder Conflict !!!', 'alone') ?></strong></p>
 					<p><?php _e('We found that you used two page buider plugins at the same time (Cornerstone & Visual Composer). We\'d recommend you use only one of them. Your site will be fine if you use only one of those plugins.', 'alone'); ?></p>
 			</div>
 	    <?php

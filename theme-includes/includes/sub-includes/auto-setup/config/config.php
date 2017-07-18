@@ -4,14 +4,18 @@ return array(
 	 * Array for demos
 	 */
 	'demos' => array(
-    'alone_5' => array(
+    'alone-5' => array(
       array(
-        'name' => 'Contact Form 7',
-        'slug' => 'contact-form-7',
+        'name' => 'Ninja Forms',
+        'slug' => 'ninja-forms',
       ),
       array(
-        'name' => 'Newsletter',
-        'slug' => 'newsletter',
+        'name' => 'Visual Composer Templates Library',
+        'slug' => 'vc-design-template-library',
+      ),
+      array(
+        'name' => 'WooCommerce',
+        'slug' => 'woocommerce',
       ),
     ),
 	),

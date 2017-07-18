@@ -8,8 +8,9 @@ class vcBaseCarousel extends WPBakeryShortCode {
 
     // Element Init
     function __construct() {
+        global $__VcShadowWPBakeryVisualComposerAbstract;
         add_action( 'init', array( $this, 'vc_base_carousel_mapping' ) );
-        add_shortcode( 'vc_base_carousel', array( $this, 'vc_base_carousel_html' ) );
+        $__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_base_carousel', array( $this, 'vc_base_carousel_html' ));
     }
 
     // Element Mapping
