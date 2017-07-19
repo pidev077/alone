@@ -69,6 +69,36 @@
 	endif;
 	add_filter( 'alone:menuitem:filter:type:search', '_alone_menuitem_filter_content_type_search', 10, 3 );
 
+	if(!function_exists('_alone_menuitem_filter_content_type_button_donate')) :
+		/**
+		 * _alone_menuitem_filter_content_type_search
+		 *
+		 */
+		function _alone_menuitem_filter_content_type_button_donate( $content = '', $options ) {
+		   	/* check menu item type (default) */
+		   	if($options['menu_item_type'] != 'default') return $content;
+
+				$button_donate_opts = fw_akg('menu_type/button_donate', $options);
+				$form_id = fw_akg('form_id/0', $button_donate_opts);
+				$button_title = fw_akg('button_title', $button_donate_opts);
+
+				$variables = array(
+					'{form_id}' => fw_akg('form_id/0', $button_donate_opts),
+					'{button_title}' => fw_akg('button_title', $button_donate_opts),
+					'{show_title}' => fw_akg('show_title', $button_donate_opts),
+					'{show_goal}' => fw_akg('show_goal', $button_donate_opts),
+					'{show_content}' => fw_akg('show_content', $button_donate_opts),
+				);
+
+				$shortcode_text = str_replace(array_keys($variables), array_values($variables), '[give_form id="{form_id}" show_title="{show_title}" show_goal="{show_goal}" show_content="{show_content}" display_style="button" continue_button_title="{button_title}"]');
+
+				// echo '<pre style="text-align: left;">'; print_r($options); echo '</pre>';
+				$content .= do_shortcode($shortcode_text);
+		    return $content;
+		}
+	endif;
+	add_filter( 'alone:menuitem:filter:type:button_donate', '_alone_menuitem_filter_content_type_button_donate', 10, 3 );
+
 	if(!function_exists('_alone_menuitem_filter_content_type_notification_center')) :
 		/**
 		 * _alone_menuitem_filter_content_type_notification_center

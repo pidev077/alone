@@ -9,6 +9,7 @@ $menu_type_data = array(
 	'notification_center' => esc_html__('Notification Center', 'alone'),
 );
 
+
 $menu_type_arr = apply_filters( '_megamenu_filter_menu_type', $menu_type_data );
 
 $notification_center_settings = array(
@@ -145,6 +146,67 @@ if ( class_exists( 'WooCommerce' ) ) :
 	);
 endif;
 
+// give exist
+$button_donate_settings = array();
+if (class_exists('Give')) :
+	$menu_type_arr['button_donate'] = esc_html__('Button Donate', 'alone');
+	$button_donate_settings = array(
+		'form_id' => array(
+			'type'  => 'multi-select',
+	    'value' => array(),
+	    'label' => __('Select Form Donate', 'alone'),
+	    'population' => 'posts',
+	    'source' => 'give_forms',
+	    'prepopulate' => 10,
+	    'limit' => 1,
+		),
+		'show_title' => array(
+	    'type'  => 'switch',
+	    'value' => 'true',
+	    'label' => __('Display Title', 'alone'),
+	    'left-choice' => array(
+	        'value' => 'true',
+	        'label' => __('True', 'alone'),
+	    ),
+	    'right-choice' => array(
+	        'value' => 'false',
+	        'label' => __('False', 'alone'),
+	    ),
+		),
+		'show_goal' => array(
+	    'type'  => 'switch',
+	    'value' => 'false',
+	    'label' => __('Display Goal', 'alone'),
+	    'left-choice' => array(
+	        'value' => 'true',
+	        'label' => __('True', 'alone'),
+	    ),
+	    'right-choice' => array(
+	        'value' => 'false',
+	        'label' => __('False', 'alone'),
+	    ),
+		),
+		'show_content' => array(
+	    'type'  => 'select',
+	    'value' => 'none',
+	    'label' => __('Display Content', 'alone'),
+	    'choices' => array(
+        'none' => __('No Content', 'alone'),
+        'above' => __('Display content ABOVE the fields', 'alone'),
+        'below' => __('Display content BELOW the fields', 'alone'),
+	    ),
+	    'no-validate' => false,
+		),
+		'button_title' => array(
+	    'type'  => 'text',
+	    'value' => __('Donate Now', 'alone'),
+	    'label' => __('Button Title', 'alone'),
+	    //'desc'  => __('Description', '{domain}'),
+	    //'help'  => __('Help tip', '{domain}'),
+		),
+	);
+endif;
+
 // default (not MegaMenu) item options
 $options = array(
 	'menu_type' => array(
@@ -185,6 +247,7 @@ $options = array(
 	        'options' => $notification_center_settings,
 		    ),
 			),
+			'button_donate' => $button_donate_settings,
 		),
 	),
 	'hidden_menu_title' => array(

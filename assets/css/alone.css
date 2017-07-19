@@ -3288,8 +3288,8 @@ body #select2-drop {
 
 body {
   font-family: 'Work Sans';
-  font-size: 16.5px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 28px;
   font-weight: 400;
   font-style: normal;
   letter-spacing: -0.8px;
@@ -3372,7 +3372,7 @@ blockquote {
     font-family: 'Montserrat';
     font-weight: 400;
     font-style: normal;
-    font-size: 18px; }
+    font-size: 20px; }
 
 @media (max-width: 767px) {
   h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -3557,8 +3557,8 @@ body #cs-content .x-btn {
     /* vc accordion */ }
     #page .vc_tta-container .vc_tta-tabs h4.vc_tta-panel-title {
       font-family: 'Work Sans';
-      font-size: 16.5px;
-      line-height: 24px;
+      font-size: 18px;
+      line-height: 28px;
       font-weight: 400;
       font-style: normal;
       letter-spacing: -0.8px; }
@@ -3566,8 +3566,8 @@ body #cs-content .x-btn {
       vertical-align: middle; }
   #page .vc_tta-container .vc_tta-accordion .vc_tta-panel-title {
     font-family: 'Work Sans';
-    font-size: 16.5px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 28px;
     font-weight: 400;
     font-style: normal;
     letter-spacing: -0.8px; }
@@ -5365,8 +5365,8 @@ body {
     text-decoration: none; }
     #page #bbpress-forums, #page #bbpress-forums ul.bbp-lead-topic, #page #bbpress-forums ul.bbp-topics, #page #bbpress-forums ul.bbp-forums, #page #bbpress-forums ul.bbp-replies, #page #bbpress-forums ul.bbp-search-results, #page #bbpress-forums .bbp-forum-info .bbp-forum-content, #page #bbpress-forums p.bbp-topic-meta, #page div.bbp-breadcrumb, #page div.bbp-topic-tags {
       font-family: 'Work Sans';
-      font-size: 16.5px;
-      line-height: 24px;
+      font-size: 18px;
+      line-height: 28px;
       font-weight: 400;
       font-style: normal;
       letter-spacing: -0.8px;
@@ -9178,14 +9178,15 @@ body.is-header-sticky.admin-bar .fw-sticky-header {
 
 .bt-header-top-bar {
   background: #1f1f1f;
-  padding: 6px 0;
-  font-family: 'Work Sans';
-  font-size: 16px;
-  line-height: 35px;
-  letter-spacing: 0.3px;
-  color: #fff;
-  font-style: normal;
-  font-weight: 300; }
+  padding: 6px 0; }
+  .bt-header-top-bar * {
+    font-family: 'Work Sans';
+    font-size: 11px;
+    line-height: 38px;
+    letter-spacing: 2px;
+    color: #fff;
+    font-style: normal;
+    font-weight: 300; }
   .bt-header-top-bar .menu-item a, .bt-header-top-bar a {
     color: #fff; }
   .bt-header-top-bar .menu-item a:hover, .bt-header-top-bar a:hover {
@@ -9199,13 +9200,42 @@ body.is-header-sticky.admin-bar .fw-sticky-header {
   .bt-header-top-bar .header-top-sidebar-item.fw-sidebar-content-align-right .widget.widget_nav_menu ul.menu li.menu-item-type-custom > .menu-item-custom-wrap {
     right: 0;
     left: auto; }
-  .bt-header-top-bar .header-top-sidebar-item .widget a {
-    text-decoration: none; }
+  .bt-header-top-bar .header-top-sidebar-item .widget.widget_text a, .bt-header-top-bar .header-top-sidebar-item .widget a {
+    text-decoration: none;
+    font-family: 'Work Sans';
+    font-size: 11px;
+    line-height: 38px;
+    letter-spacing: 2px;
+    color: #fff;
+    font-style: normal;
+    font-weight: 300; }
+  .bt-header-top-bar .header-top-sidebar-item .widget.widget_nav_menu ul.menu > li a {
+    padding-top: 0;
+    padding-bottom: 0; }
   .bt-header-top-bar .header-top-sidebar-item .widget.widget_nav_menu ul li a {
     -webkit-transition: 0.3s;
     transition: 0.3s; }
     .bt-header-top-bar .header-top-sidebar-item .widget.widget_nav_menu ul li a:hover {
       color: rgba(255, 255, 255, 0.7); }
+    .bt-header-top-bar .header-top-sidebar-item .widget.widget_nav_menu ul li.menu-item-custom-type-button_donate .give-form-wrap form.give-form {
+      margin: 0; }
+    .bt-header-top-bar .header-top-sidebar-item .widget.widget_nav_menu ul li.menu-item-custom-type-button_donate .give-form-wrap form.give-form .give-btn {
+      margin: 0;
+      padding: 0 20px;
+      border-radius: 0;
+      box-shadow: 0 7px 0 0 #ec2127, 0 -7px 0 0 #ec2127;
+      -webkit-transition: 0.4s ease;
+      transition: 0.4s ease;
+      font-family: 'Work Sans';
+      font-size: 11px;
+      line-height: 38px;
+      letter-spacing: 2px;
+      color: #fff;
+      font-style: normal;
+      font-weight: 300; }
+      .bt-header-top-bar .header-top-sidebar-item .widget.widget_nav_menu ul li.menu-item-custom-type-button_donate .give-form-wrap form.give-form .give-btn:hover {
+        background: #e01319;
+        box-shadow: 0 7px 0 0 #e01319, 0 -7px 0 0 #e01319; }
 
 .bt-header.header-1 .bt-container-logo {
   width: 15%; }
@@ -12649,8 +12679,8 @@ body.single .post-single-creative-layout-blog-2 .entry-content .post-single-entr
     padding: 0 8px; }
 
 .widget {
-  font-size: 15.5px;
-  line-height: 22px; }
+  font-size: 17px;
+  line-height: 26px; }
   .widget img {
     max-width: 100%;
     height: auto; }
@@ -13272,9 +13302,9 @@ body.single .post-single-creative-layout-blog-2 .entry-content .post-single-entr
   .widget_rss ul li .rsswidget:hover {
     color: #ec2127; }
   .widget_rss ul li .rssSummary {
-    font-size: 15px; }
+    font-size: 16px; }
   .widget_rss ul li cite {
-    font-size: 15.5px; }
+    font-size: 17px; }
 
 .widget_text .textwidget a {
   font-family: ;
@@ -13872,7 +13902,7 @@ body.single .post-single-creative-layout-blog-2 .entry-content .post-single-entr
   .bt-footer-widgets .widget-title span {
     color: #fff; }
   .bt-footer-widgets .widget_text .textwidget {
-    font-size: 14.85px; }
+    font-size: 16.2px; }
 
 @media (max-width: 991px) {
   /*Screen 568px*/
