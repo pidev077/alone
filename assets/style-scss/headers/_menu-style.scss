@@ -59,6 +59,30 @@
 					}
 				}
 			}
+			&.menu-item-custom-type-button_donate{
+				.give-form-wrap{
+					form.give-form{
+						margin: 0;
+						.give-btn{
+							margin: 0;
+							padding: 7px 18px;
+							color: #FFF;
+							background: $accent-color;
+							@include transition(.4s ease);
+
+							line-height: $fw-menu-item-height;
+							font-size: $fw-menu-item-font-size;
+							font-family: $fw-menu-font-family;
+							letter-spacing: $fw-menu-letter-spacing;
+							font-style: $fw-menu-font-style;
+							font-weight: $fw-menu-font-weight;
+							&:hover{
+								background: darken($accent-color, 5%);
+							}
+						}
+					}
+				}
+			}
 			&.menu-item-custom-type-notification_center{
 				> a, .notification-center-icon{
 					display: inline-block;

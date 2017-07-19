@@ -8452,6 +8452,23 @@ menu style inline
       margin-left: 10px; }
   .bt-header.header-1 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-hidden-title-yes > a > span, .bt-header.header-2 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-hidden-title-yes > a > span, .bt-header.header-3 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-hidden-title-yes > a > span, .bt-header-mobi.header-mobi .bt-header-mobi-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-hidden-title-yes > a > span {
     display: none !important; }
+  .bt-header.header-1 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-button_donate .give-form-wrap form.give-form, .bt-header.header-2 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-button_donate .give-form-wrap form.give-form, .bt-header.header-3 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-button_donate .give-form-wrap form.give-form, .bt-header-mobi.header-mobi .bt-header-mobi-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-button_donate .give-form-wrap form.give-form {
+    margin: 0; }
+    .bt-header.header-1 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-button_donate .give-form-wrap form.give-form .give-btn, .bt-header.header-2 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-button_donate .give-form-wrap form.give-form .give-btn, .bt-header.header-3 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-button_donate .give-form-wrap form.give-form .give-btn, .bt-header-mobi.header-mobi .bt-header-mobi-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-button_donate .give-form-wrap form.give-form .give-btn {
+      margin: 0;
+      padding: 7px 18px;
+      color: #fff;
+      background: #ec2127;
+      -webkit-transition: 0.4s ease;
+      transition: 0.4s ease;
+      line-height: 30px;
+      font-size: 14.5px;
+      font-family: 'Poppins';
+      letter-spacing: 0px;
+      font-style: normal;
+      font-weight: 500; }
+    .bt-header.header-1 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-button_donate .give-form-wrap form.give-form .give-btn:hover, .bt-header.header-2 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-button_donate .give-form-wrap form.give-form .give-btn:hover, .bt-header.header-3 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-button_donate .give-form-wrap form.give-form .give-btn:hover, .bt-header-mobi.header-mobi .bt-header-mobi-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-button_donate .give-form-wrap form.give-form .give-btn:hover {
+      background: #e01319; }
   .bt-header.header-1 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-notification_center > a, .bt-header.header-2 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-notification_center > a, .bt-header.header-3 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-notification_center > a, .bt-header-mobi.header-mobi .bt-header-mobi-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-notification_center > a, .bt-header.header-1 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-notification_center .notification-center-icon, .bt-header.header-2 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-notification_center .notification-center-icon, .bt-header.header-3 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-notification_center .notification-center-icon, .bt-header-mobi.header-mobi .bt-header-mobi-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-notification_center .notification-center-icon {
     display: inline-block;
     vertical-align: middle; }
