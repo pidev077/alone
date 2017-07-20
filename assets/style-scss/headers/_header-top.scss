@@ -1,7 +1,7 @@
 .bt-header-top-bar{
 	background: $fw-top-bar-bg;
 	padding: 6px 0;
-	* {
+	*:not(.fa) {
 		font-family: $fw-top-bar-font-family;
 		font-size: $fw-top-bar-font-size-text;
 		line-height: $fw-top-bar-height;

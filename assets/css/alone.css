@@ -9196,7 +9196,7 @@ body.is-header-sticky.admin-bar .fw-sticky-header {
 .bt-header-top-bar {
   background: #1f1f1f;
   padding: 6px 0; }
-  .bt-header-top-bar * {
+  .bt-header-top-bar *:not(.fa) {
     font-family: 'Work Sans';
     font-size: 11px;
     line-height: 38px;

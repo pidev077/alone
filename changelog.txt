@@ -1,8 +1,8 @@
 *** Core Changelog ***
 
-2017.07.18 -------------- 0.0.8
+2017.07.20 -------------- 0.0.8
   - New -
-  + New button donate on menu (give donations plugin)
+  + New button donate on header menu (give donations plugin)
 
   - Update -
   + Update style header top bar
