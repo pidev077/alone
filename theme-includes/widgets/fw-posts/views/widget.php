@@ -53,11 +53,15 @@
 				<?php if($instance['show_images']) : ?>
 					<?php if($item['post_img'] != '') : ?>
 						<?php
-						$image = alone_get_image( $item['post_img']['attachment_id'], $args );
+						// print_r($item);
+						$image = wp_get_attachment_image_src(fw_akg('post_img/attachment_id', $item), 'thumbnail');
+						$_style_bg_image = "background: url(". $image[0] .") no-repeat center center / cover;";
+						// $image = alone_get_image( $item['post_img']['attachment_id'], $args );
 						?>
 						<div class="fw-widget-post-image fw-block-image-parent fw-overlay-1 fw-image-frame">
-							<a href="<?php echo esc_url($item['post_link']); ?>" class="fw-thumbnail-post-list">
-								<?php echo "{$image}"; ?>
+							<a href="<?php echo esc_url($item['post_link']); ?>" class="fw-thumbnail-post-list" style="<?php echo esc_attr($_style_bg_image); ?>">
+								<?php // echo "{$image}"; ?>
+								<div class="post-image-bg" style="background: url()"></div>
 							</a>
 						</div>
 					<?php else : ?>
