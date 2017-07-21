@@ -37,11 +37,11 @@
 		'date_query' => $date_query
 	);
 	$fw_posts = alone_get_posts($args);
-	
+
 	// print_r($fw_posts);
 	$args = array(
 		'attr' => array( 'class' => 'attachment-post-thumbnail' ),
-		'size'     => 'alone-image-square-300',
+		'size'     => 'medium',
 	);
 
 	echo "{$before_widget}";
