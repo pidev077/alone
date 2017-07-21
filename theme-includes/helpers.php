@@ -258,7 +258,6 @@ if(!function_exists('alone_scan_enqueue_google_font')) :
 	 * scan google font from theme setting
 	 */
 	function alone_scan_enqueue_google_font( $settings = array() ) {
-
 		foreach( $settings as $key => $item ) :
 			if( isset( $item['google_font'] ) ) :
 				$params_google_font = array(

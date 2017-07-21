@@ -36,11 +36,11 @@ if ( isset( $alone_footer_settings['show_footer_widgets']['yes']['footer_widgets
 							'bt-col-' . $count,
 							$footer_item['content_align'],
 							$footer_item['custom_class']);
-					?>
-					<div class="<?php echo implode(' ', $class); ?>">
+					?><!--
+					--><div class="<?php echo implode(' ', $class); ?>">
 						<?php dynamic_sidebar( $footer_item['sidebar_id'] ); ?>
-					</div>
-					<?php
+					</div><!--
+					--><?php
 					}
 				}
 				?>
