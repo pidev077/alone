@@ -248,6 +248,14 @@ wp_enqueue_style(
 
 add_editor_style();
 
+// Load local font
+wp_enqueue_style(
+	'alone-local-font',
+	$alone_template_directory . '/assets/fonts/local-font.css',
+	array(),
+	$alone_version
+);
+
 // Load theme stylesheet.
 wp_enqueue_style(
 	'alone-theme-style',

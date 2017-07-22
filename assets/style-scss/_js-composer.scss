@@ -612,6 +612,113 @@
             @extend %custom-owl-nav-dot-ui;
             .item {
                 .item-inner {
+                  &.give-forms-slider-layout-style-2 {
+                    position: relative;
+                    padding-top: 30px;
+                    .meta-donor{
+                      background: #333 none repeat scroll 0 0;
+                      color: #fff;
+                      font-size: 9px;
+                      left: 10px;
+                      letter-spacing: 2px;
+                      line-height: normal;
+                      padding: 7px 10px;
+                      position: absolute;
+                      text-transform: uppercase;
+                      top: 0;
+                      z-index: 3;
+                      border-radius: 2px;
+                      &:after{
+                        content: "";
+                        border: solid 10px transparent;
+                        border-right-color: #333;
+                        position: absolute;
+                        left: 0px;
+                        bottom: -10px;
+                        z-index: -1;
+                      }
+                    }
+                    .featured-image {
+                      border-radius: 3px;
+                      overflow: hidden;
+                      img{
+                        width: 100%;
+                        height: auto;
+                        @include transition(.3s ease);
+                      }
+                    }
+                    .entry-content {
+                      padding-top: 30px;
+                      .entry-content-inner{
+                        .give-goal-progress-wrap{
+                          .give-price-wrap{
+                            font-size: 16px;
+                            letter-spacing: -1px;
+                            color: #c5c5c5;
+                            .income{
+                              font-size: 130%;
+                              color: #333;
+                            }
+                          }
+                        }
+                        .title-link{
+                          display: block;
+                          min-height: 56px;
+                          padding-right: 50px;
+                          text-decoration: none;
+                          .title{
+                            font-size: 20px;
+                            line-height: 24px;
+                            letter-spacing: -1.2px;
+                          }
+                        }
+                        .entry-bot{
+                          margin-top: 15px;
+                          .extra-meta,
+                          .readmore-btn{
+                            display: inline-block;
+                            width: calc(100% - 134px);
+                            vertical-align: middle;
+                            font-size: 11px;
+                            letter-spacing: 2px;
+                            text-transform: uppercase;
+                          }
+                          .readmore-btn{
+                            background: $accent-color;
+                            border-radius: 2px;
+                            color: #fff;
+                            padding: 5px 0;
+                            text-align: center;
+                            width: 130px;
+                            text-decoration: none;
+                            @include transition(.3s ease);
+                            span{
+                              font-size: 20px;
+                              vertical-align: middle;
+                            }
+                            &:hover{
+                              background: darken($accent-color, 5%);
+                            }
+                          }
+                          .extra-meta{
+                            text-align: right;
+                            *{
+                              display: inline-block;
+                              vertical-align: middle;
+                            }
+                          }
+                        }
+                      }
+                    }
+                    &:hover{
+                      .featured-image{
+                        img{
+                          transform: scale(1.05);
+                          -webkit-transform: scale(1.05);
+                        }
+                      }
+                    }
+                  }
                   &.give-forms-slider-layout-style-1 {
                         .entry-content,
                         .featured-image {

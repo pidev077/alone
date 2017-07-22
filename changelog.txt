@@ -3,6 +3,7 @@
 2017.07.20 -------------- 0.0.8
   - New -
   + New button donate on header menu (give donations plugin)
+  + New metabox option off load googleFont on page (off-googlefont: true) / Use for increase load page time
 
   - Update -
   + Update style header top bar
