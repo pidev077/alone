@@ -11,6 +11,9 @@ $ext_portfolio_settings = $ext_portfolio_instance->get_settings();
 $thumbnails = fw_theme_ext_portfolio_get_gallery_images();
 // echo '<pre>'; print_r($thumbnails); echo '</pre>';
 
+$prevPost = get_previous_post();
+$nextPost = get_next_post();
+
 alone_title_bar();
 ?>
 <section class="bt-main-row bt-section-space <?php alone_get_content_class( 'main', $alone_sidebar_position ); ?>" role="main" itemprop="mainEntity" itemscope="itemscope" itemtype="http://schema.org/Blog">
@@ -20,41 +23,78 @@ alone_title_bar();
 				<div class="bt-col-inner">
 					<?php // if( function_exists('fw_ext_breadcrumbs') ) fw_ext_breadcrumbs(); ?>
 					<?php while ( have_posts() ) : the_post();
+						$term_list = get_the_term_list( get_the_ID(), 'fw-portfolio-category', '', ', ' );
 						?>
             <article id="post-<?php the_ID(); ?>" <?php post_class( "portfolio portfolio-details" ); ?> itemscope="itemscope" itemtype="http://schema.org/PortfolioPosting" itemprop="portfolioPost">
             	<div class="fw-col-inner">
             		<div class="entry-content clearfix" itemprop="text">
-            			<?php
-            			/* content */
-            			the_content();
-                  ?>
-                  <?php if(! empty($thumbnails) && count($thumbnails) > 0) : ?>
-                  <div class="portfolio-gallery">
-                    <h4 class="portfolio-gallery-title"><?php _e('Project Gallery', 'alone') ?></h4>
-                    <div class="portfolio-gallery-items" data-bears-masonryhybrid='{"col": 4}' data-bears-lightgallery='{"selector": ".zoom-image"}'>
-                      <div class="grid-sizer"></div>
-          						<div class="gutter-sizer"></div>
-                      <?php foreach($thumbnails as $thumb_item) :
-                        $image_data = wp_get_attachment_image_src($thumb_item['attachment_id'], 'medium');
-                      ?>
-                      <div class="grid-item portfolio-gallery-item">
-                        <div class="portfolio-gallery-item-inner">
-                          <img src="<?php echo esc_attr($image_data[0]); ?>" alt="#">
-                          <a href="<?php echo esc_attr($thumb_item['url']); ?>" class="zoom-image"><i class="fa fa-search" aria-hidden="true"></i></a>
-                        </div>
-                      </div>
-                      <?php endforeach; ?>
-                    </div>
-                  </div>
-                  <?php endif; ?>
-                  <?php
-            			wp_link_pages( array(
-            				'before'      => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'alone' ) . '</span>',
-            				'after'       => '</div>',
-            				'link_before' => '<span>',
-            				'link_after'  => '</span>',
-            			) );
-            			?>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="gallery-wrap" data-bears-lightgallery='{"selector": ".zoom-image", "thumbnail": "true"}'>
+												<?php
+												/* post thumbnail */
+												if ( has_post_thumbnail( get_the_ID() ) ) :
+													$thumbnail_url = get_the_post_thumbnail_url( get_the_ID(), 'full' );
+													echo "<a href='{$thumbnail_url}' class='zoom-image'><img src='{$thumbnail_url}' alt='". get_the_title() ."'></a>";
+												endif;
+
+												/* gallery */
+												if(! empty($thumbnails) && count($thumbnails) > 0) :
+													foreach($thumbnails as $thumb_item) :
+														$image_data = wp_get_attachment_image_src($thumb_item['attachment_id'], 'large');
+														echo "<a href='{$thumb_item['url']}' class='zoom-image'><img src='{$image_data[0]}' alt='". get_the_title() ."'></a>";
+													endforeach;
+												endif;
+												?>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="entry-content-wrap">
+												<h2 class="title"><?php the_title(); ?></h2>
+												<div class="extra-meta">
+													<?php
+													/* $term_list */
+													if(! empty($term_list)) : echo '<div class="post-category"><span class="ion-folder"></span> '. $term_list .'</div>'; endif; ?>
+
+													<!-- author -->
+													<div class="post-author"><span class="ion-person"></span> <?php echo get_the_author(); ?></div>
+
+													<!-- date -->
+													<div class="post-date"><span class="ion-android-time"></span> <?php echo get_the_date(); ?></div>
+												</div>
+												<div class="entry-the-content">
+													<?php the_content(); ?>
+													<?php
+				            			wp_link_pages( array(
+				            				'before'      => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'alone' ) . '</span>',
+				            				'after'       => '</div>',
+				            				'link_before' => '<span>',
+				            				'link_after'  => '</span>',
+				            			) );
+				            			?>
+												</div>
+												<div class="social-share-entry">
+													<?php echo alone_share_post(array('facebook' => true, 'twitter' => true, 'google_plus' => true, 'linkedin' => true, 'pinterest' => false)); ?>
+												</div>
+
+												<?php if($prevPost || $nextPost) : ?>
+													<ul class="previous-next-link">
+														<?php if($prevPost) { ?>
+													    <li class="previous">
+													    	<?php $prevthumbnail = get_the_post_thumbnail($prevPost->ID, array(80,80) ); ?>
+													      <?php previous_post_link('%link', $prevthumbnail . '<div><div class="icon"><span class="ion-ios-arrow-thin-left"></span> '.__('Previous', 'alone').'</div> <div class="title">%title</div></div>'); ?>
+													    </li>
+														<?php } if($nextPost) { ?>
+													    <li class="next">
+													    	<?php $nextthumbnail = get_the_post_thumbnail($nextPost->ID, array(80,80) ); ?>
+													      <?php next_post_link('%link', $nextthumbnail . '<div><div class="icon">'.__('Next', 'alone').' <span class="ion-ios-arrow-thin-right"></span></div> <div class="title">%title</div></div>'); ?>
+													    </li>
+														<?php } ?>
+													</ul>
+												<?php endif; ?>
+											</div>
+										</div>
+									</div>
             		</div>
             	</div>
             </article>

@@ -24,7 +24,12 @@ if(! function_exists('alone_vc_load_custom_elements')) :
       $new_elements[] = 'vc_give_forms_slider';
     endif;
 
-    /* fw_event */
+    /* portfolio */
+    if (function_exists('fw_ext') && fw_ext('portfolio')) {
+      $new_elements[] = 'vc_portfolio_grid';
+    }
+
+    /* event */
     if (function_exists('fw_ext') && fw_ext('events')) {
       $new_elements[] = 'vc_events_slider';
       $new_elements[] = 'vc_events_listing';

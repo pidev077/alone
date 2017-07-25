@@ -1,5 +1,12 @@
 *** Core Changelog ***
 
+2017.**.** -------------- 0.0.9
+  - New -
+  + New vc element Portfolio Grid (Masonry)
+
+  - Update -
+  + Update portfolio single page
+
 2017.07.20 -------------- 0.0.8
   - New -
   + New button donate on header menu (give donations plugin)

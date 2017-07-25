@@ -1203,7 +1203,7 @@
                 data = $this.data('bears-countdown'),
                 date_end = data.date_end,
                 template = data.template;
-            console.log(data);
+            // console.log(data);
             $this._once(function() {
                 $this.countdown({
                     until: new Date(date_end),
