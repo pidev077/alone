@@ -3613,40 +3613,63 @@ body #cs-content .x-btn {
       border-radius: 2px;
       top: auto;
       bottom: 0; }
-  #page .wpb_theme_custom_element .filter-wrap {
-    margin-bottom: 30px;
-    text-align: center; }
-    #page .wpb_theme_custom_element .filter-wrap .filter-nav {
+  #page .wpb_theme_custom_element.wpb_portfolio_grid {
+    /* wpb_events_listing */ }
+    #page .wpb_theme_custom_element.wpb_portfolio_grid .filter-wrap {
+      margin-bottom: 30px;
+      text-align: center; }
+    #page .wpb_theme_custom_element.wpb_portfolio_grid .filter-wrap .filter-nav {
       display: inline-block;
       background: #fafafa;
       border-radius: 150px; }
-    #page .wpb_theme_custom_element .filter-wrap .filter-nav .portfolio-filter-item {
-      float: left;
-      padding: 12px 15px;
-      font-size: 11px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      min-width: 150px;
-      -webkit-transition: 0.5s cubic-bezier(0.7, 0.19, 0.3, 0.99);
-      transition: 0.5s cubic-bezier(0.7, 0.19, 0.3, 0.99);
-      text-decoration: none;
-      border-radius: 150px;
-      background: #fafafa; }
-      #page .wpb_theme_custom_element .filter-wrap .filter-nav .portfolio-filter-item.is-active {
-        z-index: 3;
-        background: #ec2127;
-        color: #fff;
-        transform: scale(1.1);
-        -webkit-transform: scale(1.1); }
-  #page .wpb_theme_custom_element.wpb_theme_custom_element {
-    /* wpb_events_listing */ }
-    #page .wpb_theme_custom_element.wpb_theme_custom_element .grid-item.item-skin-default {
+      #page .wpb_theme_custom_element.wpb_portfolio_grid .filter-wrap .filter-nav .portfolio-filter-item {
+        float: left;
+        padding: 12px 15px;
+        font-size: 11px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        min-width: 150px;
+        -webkit-transition: 0.5s cubic-bezier(0.7, 0.19, 0.3, 0.99);
+        transition: 0.5s cubic-bezier(0.7, 0.19, 0.3, 0.99);
+        text-decoration: none;
+        border-radius: 150px;
+        background: #fafafa; }
+        #page .wpb_theme_custom_element.wpb_portfolio_grid .filter-wrap .filter-nav .portfolio-filter-item.is-active {
+          z-index: 3;
+          background: #ec2127;
+          color: #fff;
+          transform: scale(1.1);
+          -webkit-transform: scale(1.1); }
+    @media (max-width: 644px) {
+      #page .wpb_theme_custom_element.wpb_portfolio_grid .filter-wrap {
+        text-align: left; }
+        #page .wpb_theme_custom_element.wpb_portfolio_grid .filter-wrap .filter-nav {
+          background: none; }
+          #page .wpb_theme_custom_element.wpb_portfolio_grid .filter-wrap .filter-nav .portfolio-filter-item {
+            background: none !important;
+            color: #333 !important;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: -1.2px;
+            min-width: auto;
+            padding: 5px 0;
+            text-transform: none; }
+            #page .wpb_theme_custom_element.wpb_portfolio_grid .filter-wrap .filter-nav .portfolio-filter-item:not(:last-child):after {
+              content: "/";
+              margin: 0 20px;
+              color: #333 !important; }
+            #page .wpb_theme_custom_element.wpb_portfolio_grid .filter-wrap .filter-nav .portfolio-filter-item.is-active {
+              color: #ec2127 !important;
+              transform: scale(1) !important;
+              -webkit-transform: scale(1) !important; } }
+    #page .wpb_theme_custom_element.wpb_portfolio_grid .grid-item.item-skin-default {
       overflow: hidden; }
-      #page .wpb_theme_custom_element.wpb_theme_custom_element .grid-item.item-skin-default .item-inner {
+      #page .wpb_theme_custom_element.wpb_portfolio_grid .grid-item.item-skin-default .item-inner {
+        overflow: hidden;
         position: relative; }
-        #page .wpb_theme_custom_element.wpb_theme_custom_element .grid-item.item-skin-default .item-inner .portfolio-thumbnail {
+        #page .wpb_theme_custom_element.wpb_portfolio_grid .grid-item.item-skin-default .item-inner .portfolio-thumbnail {
           position: relative; }
-          #page .wpb_theme_custom_element.wpb_theme_custom_element .grid-item.item-skin-default .item-inner .portfolio-thumbnail:after {
+          #page .wpb_theme_custom_element.wpb_portfolio_grid .grid-item.item-skin-default .item-inner .portfolio-thumbnail:after {
             content: "";
             position: absolute;
             left: 0;
@@ -3656,12 +3679,12 @@ body #cs-content .x-btn {
             background: rgba(0, 0, 0, 0.3);
             -webkit-transition: 0.3s ease;
             transition: 0.3s ease; }
-          #page .wpb_theme_custom_element.wpb_theme_custom_element .grid-item.item-skin-default .item-inner .portfolio-thumbnail img {
+          #page .wpb_theme_custom_element.wpb_portfolio_grid .grid-item.item-skin-default .item-inner .portfolio-thumbnail img {
             width: 100%;
             height: auto;
             -webkit-transition: 0.5s cubic-bezier(0.7, 0.19, 0.3, 0.99);
             transition: 0.5s cubic-bezier(0.7, 0.19, 0.3, 0.99); }
-        #page .wpb_theme_custom_element.wpb_theme_custom_element .grid-item.item-skin-default .item-inner .entry-content {
+        #page .wpb_theme_custom_element.wpb_portfolio_grid .grid-item.item-skin-default .item-inner .entry-content {
           position: absolute;
           left: 0;
           bottom: 0;
@@ -3671,11 +3694,11 @@ body #cs-content .x-btn {
           text-align: left;
           -webkit-transition: 0.8s cubic-bezier(0.7, 0.19, 0.3, 0.99);
           transition: 0.8s cubic-bezier(0.7, 0.19, 0.3, 0.99); }
-          #page .wpb_theme_custom_element.wpb_theme_custom_element .grid-item.item-skin-default .item-inner .entry-content .cat-meta {
+          #page .wpb_theme_custom_element.wpb_portfolio_grid .grid-item.item-skin-default .item-inner .entry-content .cat-meta {
             position: relative;
             color: #fff;
             padding-left: 35px; }
-            #page .wpb_theme_custom_element.wpb_theme_custom_element .grid-item.item-skin-default .item-inner .entry-content .cat-meta:after {
+            #page .wpb_theme_custom_element.wpb_portfolio_grid .grid-item.item-skin-default .item-inner .entry-content .cat-meta:after {
               content: "";
               position: absolute;
               left: 0;
@@ -3684,24 +3707,24 @@ body #cs-content .x-btn {
               -webkit-transform: translateY(-50%);
               border-top: solid 1px;
               width: 30px; }
-            #page .wpb_theme_custom_element.wpb_theme_custom_element .grid-item.item-skin-default .item-inner .entry-content .cat-meta a {
+            #page .wpb_theme_custom_element.wpb_portfolio_grid .grid-item.item-skin-default .item-inner .entry-content .cat-meta a {
               color: #fff;
               font-size: 11px;
               text-transform: uppercase;
               letter-spacing: 2px;
               text-decoration: none; }
-              #page .wpb_theme_custom_element.wpb_theme_custom_element .grid-item.item-skin-default .item-inner .entry-content .cat-meta a:hover {
+              #page .wpb_theme_custom_element.wpb_portfolio_grid .grid-item.item-skin-default .item-inner .entry-content .cat-meta a:hover {
                 color: #ec2127; }
-          #page .wpb_theme_custom_element.wpb_theme_custom_element .grid-item.item-skin-default .item-inner .entry-content .title-link {
+          #page .wpb_theme_custom_element.wpb_portfolio_grid .grid-item.item-skin-default .item-inner .entry-content .title-link {
             text-decoration: none; }
-            #page .wpb_theme_custom_element.wpb_theme_custom_element .grid-item.item-skin-default .item-inner .entry-content .title-link .title {
+            #page .wpb_theme_custom_element.wpb_portfolio_grid .grid-item.item-skin-default .item-inner .entry-content .title-link .title {
               color: #fff;
               font-size: 20px;
               letter-spacing: -1.2px;
               line-height: 24px;
               margin: 0;
               text-decoration: underline; }
-        #page .wpb_theme_custom_element.wpb_theme_custom_element .grid-item.item-skin-default .item-inner .readmore {
+        #page .wpb_theme_custom_element.wpb_portfolio_grid .grid-item.item-skin-default .item-inner .readmore {
           position: absolute;
           width: 80px;
           height: 80px;
@@ -3721,19 +3744,19 @@ body #cs-content .x-btn {
           font-size: 30px;
           -webkit-transition: 0.8s cubic-bezier(0.7, 0.19, 0.3, 0.99);
           transition: 0.8s cubic-bezier(0.7, 0.19, 0.3, 0.99); }
-          #page .wpb_theme_custom_element.wpb_theme_custom_element .grid-item.item-skin-default .item-inner .readmore:hover {
+          #page .wpb_theme_custom_element.wpb_portfolio_grid .grid-item.item-skin-default .item-inner .readmore:hover {
             background: #ec2127;
             color: #fff; }
-      #page .wpb_theme_custom_element.wpb_theme_custom_element .grid-item.item-skin-default:hover .item-inner .portfolio-thumbnail:after {
+      #page .wpb_theme_custom_element.wpb_portfolio_grid .grid-item.item-skin-default:hover .item-inner .portfolio-thumbnail:after {
         opacity: 0; }
-        #page .wpb_theme_custom_element.wpb_theme_custom_element .grid-item.item-skin-default:hover .item-inner .portfolio-thumbnail img {
+        #page .wpb_theme_custom_element.wpb_portfolio_grid .grid-item.item-skin-default:hover .item-inner .portfolio-thumbnail img {
           transform: scale(1.05);
           -webkit-transform: scale(1.05); }
-        #page .wpb_theme_custom_element.wpb_theme_custom_element .grid-item.item-skin-default:hover .item-inner .entry-content {
+        #page .wpb_theme_custom_element.wpb_portfolio_grid .grid-item.item-skin-default:hover .item-inner .entry-content {
           transform: translateY(100%);
           -webkit-transform: translateY(100%);
           opacity: 0; }
-        #page .wpb_theme_custom_element.wpb_theme_custom_element .grid-item.item-skin-default:hover .item-inner .readmore {
+        #page .wpb_theme_custom_element.wpb_portfolio_grid .grid-item.item-skin-default:hover .item-inner .readmore {
           visibility: visible;
           opacity: 1;
           transform: scale(1);

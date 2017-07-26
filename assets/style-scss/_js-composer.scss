@@ -151,42 +151,72 @@
     }
     /* custom element */
     .wpb_theme_custom_element {
-      .filter-wrap{
-        margin-bottom: 30px;
-        text-align: center;
-        .filter-nav{
-          display: inline-block;
-          background: #fafafa;
-          border-radius: 150px;
-          .portfolio-filter-item{
-            float: left;
-            padding: 12px 15px;
-            font-size: 11px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            min-width: 150px;
-            @include transition(.5s cubic-bezier(.7,.19,.3,.99));
-            text-decoration: none;
-            border-radius: 150px;
+
+      &.wpb_portfolio_grid{
+        .filter-wrap{
+          margin-bottom: 30px;
+          text-align: center;
+          .filter-nav{
+            display: inline-block;
             background: #fafafa;
-            &:not(:last-child){
-              // margin-right: 30px;
+            border-radius: 150px;
+            .portfolio-filter-item{
+              float: left;
+              padding: 12px 15px;
+              font-size: 11px;
+              letter-spacing: 2px;
+              text-transform: uppercase;
+              min-width: 150px;
+              @include transition(.5s cubic-bezier(.7,.19,.3,.99));
+              text-decoration: none;
+              border-radius: 150px;
+              background: #fafafa;
+              &:not(:last-child){
+                // margin-right: 30px;
+              }
+              &.is-active{
+                z-index: 3;
+                background: $accent-color;
+                color: #FFF;
+                transform: scale(1.1);
+                -webkit-transform: scale(1.1);
+              }
             }
-            &.is-active{
-              z-index: 3;
-              background: $accent-color;
-              color: #FFF;
-              transform: scale(1.1);
-              -webkit-transform: scale(1.1);
+          }
+          @media (max-width: 644px) {
+            text-align: left;
+            .filter-nav{
+              background: none;
+              .portfolio-filter-item{
+                background: none !important;
+                color: #333 !important;
+                font-size: 20px;
+                font-weight: bold;
+                letter-spacing: -1.2px;
+                min-width: auto;
+                padding: 5px 0;
+                text-transform: none;
+                &:not(:last-child){
+                  &:after{
+                    content: "/";
+                    margin: 0 20px;
+                    color: #333 !important;
+                  }
+                }
+                &.is-active{
+                  color: $accent-color !important;
+                  transform: scale(1) !important;
+                  -webkit-transform: scale(1) !important;
+                }
+              }
             }
           }
         }
-      }
-      &.wpb_theme_custom_element{
         .grid-item{
           &.item-skin-default{
             overflow: hidden;
             .item-inner{
+              overflow: hidden;
               position: relative;
               .portfolio-thumbnail{
                 position: relative;
