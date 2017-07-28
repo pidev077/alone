@@ -2,10 +2,12 @@
 
 2017.**.** -------------- 0.0.9
   - New -
-  + New vc element Portfolio Grid (Masonry)
+  + New vc element Portfolio Grid (grid masonry & filter category)
 
   - Update -
   + Update portfolio single page
+  + Update event archive small css
+  + Update page checkout small css (WooCommerce)
 
 2017.07.20 -------------- 0.0.8
   - New -

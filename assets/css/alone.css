@@ -6804,15 +6804,17 @@ section {
   .woocommerce .cart-collaterals .cart_totals .shop_table tbody tr > * {
     vertical-align: middle; }
   .woocommerce .cart-collaterals .cart_totals .wc-proceed-to-checkout .button {
-    border-radius: 100px;
-    text-transform: uppercase;
-    font-size: 15px;
-    padding: 20px 0;
     background: #ec2127;
-    color: #fff;
-    font-weight: normal;
     -webkit-transition: 0.3s;
-    transition: 0.3s; }
+    transition: 0.3s;
+    border-radius: 100px;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: normal;
+    min-width: auto;
+    padding: 16px 30px;
+    width: auto; }
     .woocommerce .cart-collaterals .cart_totals .wc-proceed-to-checkout .button:hover {
       background: #e01319; }
   @media (max-width: 768px) {

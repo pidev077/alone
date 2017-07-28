@@ -134,14 +134,16 @@
       }
       .wc-proceed-to-checkout{
         .button{
-          border-radius: 100px;
-          text-transform: uppercase;
-          font-size: 15px;
-          padding: 20px 0;
           background: $accent-color;
-          color: #FFF;
-          font-weight: normal;
           @include transition(.3s);
+          border-radius: 100px;
+          color: #fff;
+          display: inline-block;
+          font-size: 16px;
+          font-weight: normal;
+          min-width: auto;
+          padding: 16px 30px;
+          width: auto;
           &:hover{
             background: darken($accent-color, 5%);
           }
