@@ -25,7 +25,7 @@ $atts = shortcode_atts(
     'give_forms_skin'   => 'default',   /* [give_forms] */
     /* Grid settings */
     'grid_id'           => '',
-    'grid_col'          => 3,
+    'grid_col'          => 3, 
     'grid_gap'          => 30,
     'cel_height'        => 320,
     'col_in_table'      => 2,

@@ -568,3 +568,45 @@ input.fw-option-type-color-picker {
   top: 0;
   line-height: normal;
 }
+
+.theme-custom-notice-ui{
+  padding: 4px 12px 14px
+}
+.theme-custom-notice-ui:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.theme-custom-notice-ui > img{
+  float: left;
+}
+.theme-custom-notice-ui > .entry-content{
+  padding-left: 90px;
+}
+
+.theme-custom-button{
+
+}
+.theme-custom-button-ui{
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: top;
+  background: #52C27D;
+  padding: 8px 16px;
+  color: #FFF;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: .3s ease;
+  -webkit-transition: .3s ease;
+}
+.theme-custom-button-ui:hover{
+  background: #39a964;
+  color: #FFF;
+  text-decoration: none;
+}
+.theme-custom-button-ui.btn-type-theme_requirements{
+  background: #DA5830;
+}
+.theme-custom-button-ui.btn-type-theme_requirements:hover{
+  background: #c9471f;
+}

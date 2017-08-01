@@ -36,8 +36,40 @@ class FW_Extension_Bearsthemes_Update extends FW_Extension {
 	}
 
 	private function add_actions() {
-
+		add_action( 'upgrader_process_complete', array($this, 'wp_upgrade_completed'), 10, 2 );
 	}
+
+	/**
+	 * wp_upgrade_completed
+	 * @since core 0.0.9
+	 */
+	public function wp_upgrade_completed( $upgrader_object, $options ) {
+		$_fw = defined('FW');
+		// The path to our theme's main file
+		$our_theme = get_template();
+		// If an update has taken place and the updated type is themes and the themes element exists
+		if( $options['action'] == 'update' && $options['type'] == 'theme' && isset( $options['themes'] ) ) {
+		// Iterate through the plugins being updated and check if ours is there
+		foreach( $options['themes'] as $theme ) {
+				if( $theme == $our_theme && $_fw && function_exists('alone_scss_handle')) {
+					fw_render_view( get_template_directory().'/theme-includes/styling.php', array(), false );
+					$alone_scss_content = alone_scss_variables_handle($alone_scss_variables);
+
+					if (function_exists('fw_get_db_settings_option')) {
+						$quick_css = fw_get_db_settings_option('quick_css');
+						$scss_extra_string .= str_replace(array('{accent-color}', '{secondary-color}'), array('$theme-color-1', '$theme-color-2'), $quick_css);
+					}
+
+					/* extra font */
+					$scss_extra_string .= alone_get_extra_typography('build_class_css');
+
+					$scss_content = implode('; ', $alone_scss_content);
+					alone_scss_handle($scss_content . ';' . $scss_extra_string);
+				}
+			}
+		}
+	}
+
 
 	public function _check_for_update($checked_data) {
 		global $wp_version;

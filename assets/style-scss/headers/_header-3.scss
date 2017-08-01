@@ -19,6 +19,7 @@
 	z-index: 20;
 	.bt-header-top-bar{
 		position: relative;
+		overflow: hidden;
 	}
   .bt-header-logo-sidebar-wrap{
     padding-top: $header-3-logo-sidebar-padding-top;

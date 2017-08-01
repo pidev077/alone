@@ -1622,16 +1622,72 @@ if(! function_exists('_alone_admin_notice_page_builder_conflict')) :
 
 		if ($cornerstone && $visual_composer) :
 	    ?>
-	    <div class="notice notice-warning is-dismissible">
+	    <div class="notice notice-warning is-dismissible theme-custom-notice-ui">
 					<img style="width: 80px; margin-top: 10px;" src="<?php echo get_template_directory_uri() . '/assets/images/bears-message-icon.png'; ?>" alt="#"/>
-	        <p><strong><?php _e('Page Builder Conflict !!!', 'alone') ?></strong></p>
-					<p><?php _e('We found that you used two page buider plugins at the same time (Cornerstone & Visual Composer). We\'d recommend you use only one of them. Your site will be fine if you use only one of those plugins.', 'alone'); ?></p>
+					<div class="entry-content">
+						<p><strong><?php _e('Page Builder Conflict !!!', 'alone') ?></strong></p>
+						<p><?php _e('We found that you used two page buider plugins at the same time (Cornerstone & Visual Composer). We\'d recommend you use only one of them. Your site will be fine if you use only one of those plugins.', 'alone'); ?></p>
+					</div>
 			</div>
 	    <?php
 		endif;
 	}
 endif;
 add_action( 'admin_notices', '_alone_admin_notice_page_builder_conflict' );
+
+if(! function_exists('_alone_admin_notice_theme_message')) :
+	function _alone_admin_notice_theme_message() {
+		$_fw = defined( 'FW' );
+
+		$current_theme_data = wp_get_theme();
+		$themename = $current_theme_data->get( 'Name' );
+		$themeversion = $current_theme_data->get( 'Version' );
+		$admin_link = get_admin_url();
+		$links = array();
+
+		if($_fw) {
+			$links['theme_requirements'] = array(
+				'text' => __('Theme Requirements', 'alone'),
+				'link' => $admin_link . 'themes.php?page=fw-settings',
+			);
+
+			$links['install_demo'] = array(
+				'text' => __('Install Demo', 'alone'),
+				'link' => $admin_link . 'tools.php?page=fw-backups-demo-content',
+			);
+		}
+
+		$links['install_plugins'] = array(
+			'text' => __('Install Plugins', 'alone'),
+			'link' => $admin_link . 'themes.php?page=bearsthemes_auto_setup',
+		);
+
+		$links['support'] = array(
+			'text' => __('Support', 'alone'),
+			'link' => 'https://bearsthemes.ticksy.com/',
+		);
+    ?>
+    <div class="notice notice-info is-dismissible theme-custom-notice-ui">
+				<img style="width: 80px; margin-top: 10px;" src="<?php echo get_template_directory_uri() . '/assets/images/bears-message-icon.png'; ?>" alt="#"/>
+				<div class="entry-content">
+					<p><strong><?php _e( sprintf('Hey! Thanks for your used %s theme. (current version %s)', $themename, $themeversion), 'alone') ?></strong></p>
+					<div class="theme-custom-button">
+						<?php
+						foreach($links as $type => $item) :
+							echo implode('', array(
+								'<a class="theme-custom-button-ui btn-type-'. $type .'" href="'. $item['link'] .'" target="_blank">',
+									$item['text'],
+								'</a>',
+							));
+						endforeach;
+						?>
+					</div>
+				</div>
+		</div>
+    <?php
+	}
+endif;
+add_action( 'admin_notices', '_alone_admin_notice_theme_message' );
 
 if(! function_exists('_alone_notification_center_action')) :
 	/**
