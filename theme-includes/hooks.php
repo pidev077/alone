@@ -1522,6 +1522,11 @@ if(! function_exists('_the_bears_filter_fw_ext_backups_demos')) :
 	function _alone_filter_fw_ext_backups_demos($demos)
 	{
 		$demos_array = array(
+			'alone-ngo' => array(
+				'title' => esc_html__('Alone - NGO', 'alone'),
+				'screenshot' => 'http://theme.bearsthemes.com/import_demo/alone/alone-ngo/screenshot.png',
+				'preview_link' => 'http://theme.bearsthemes.com/wordpress/alone-ngo/',
+			),
 			'alone-5' => array(
 				'title' => esc_html__('Alone 5', 'alone'),
 				'screenshot' => 'http://theme.bearsthemes.com/import_demo/alone/alone-5/screenshot.png',

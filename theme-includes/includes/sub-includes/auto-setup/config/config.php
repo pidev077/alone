@@ -4,6 +4,20 @@ return array(
 	 * Array for demos
 	 */
 	'demos' => array(
+		'alone-ngo' => array(
+      array(
+        'name' => 'Ninja Forms',
+        'slug' => 'ninja-forms',
+      ),
+      array(
+        'name' => 'Visual Composer Templates Library',
+        'slug' => 'vc-design-template-library',
+      ),
+      array(
+        'name' => 'WooCommerce',
+        'slug' => 'woocommerce',
+      ),
+    ),
     'alone-5' => array(
       array(
         'name' => 'Ninja Forms',

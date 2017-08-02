@@ -1,12 +1,13 @@
 *** Core Changelog ***
 
-2017.**.** -------------- 0.0.9
+2017.08.02 -------------- 0.0.9
   - New -
   + New vc element Portfolio Grid (grid masonry & filter category)
   + New notices admin (theme required, install demo, install plugins, support)
 
   - Update -
   + Update portfolio single page
+  + Update element Give Carousel new layout
   + Update event archive small css
   + Update page checkout small css (WooCommerce)
   + Update function re-build scss to css after update theme (Not yet test)
