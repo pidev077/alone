@@ -10,7 +10,7 @@
   + Update element Give Carousel new layout
   + Update event archive small css
   + Update page checkout small css (WooCommerce)
-  + Update function re-build scss to css after update theme (Not yet test)
+  + Update function re-build scss to css after update theme
 
 2017.07.20 -------------- 0.0.8
   - New -
