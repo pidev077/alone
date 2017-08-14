@@ -248,6 +248,7 @@ class vcFeaturedBox extends WPBakeryShortCode {
           				'value' => 'show',
           			),
           		),
+              /*
               array(
                 'type' => 'dropdown',
                 'heading' => __('Type', 'alone'),
@@ -265,6 +266,7 @@ class vcFeaturedBox extends WPBakeryShortCode {
           			),
                 'group' => 'Button',
               ),
+              */
               array(
                 'type'          => 'checkbox',
                 'heading'       => __('Open Link In New Window', 'alone'),

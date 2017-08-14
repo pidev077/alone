@@ -1,5 +1,15 @@
 *** Core Changelog ***
 
+2017.**.** -------------- 0.0.10
+ - Compatible -
+ + Compatible Visual Composer v5.2.1
+
+ - Update -
+ + Update vc element vc_progressbar_svg field content (textarea => textarea_html)
+
+ - Remove -
+ - Remove option off load googleFont
+
 2017.08.02 -------------- 0.0.9
   - New -
   + New vc element Portfolio Grid (grid masonry & filter category)

@@ -2075,31 +2075,41 @@
                             font-size: 16px;
                             line-height: 22px;
                             font-weight: 300;
+                            letter-spacing: -0.6px;
                         }
                         .featured-button {
-                            background: $accent-color;
-                            color: #fff;
-                            padding: 11px 18px;
-                            display: inline-block;
-                            font-size: 11px;
-                            text-transform: uppercase;
-                            letter-spacing: 1px;
-                            margin-top: 15px;
-                            line-height: normal;
-                            text-decoration: none;
-                            @include transition(.3s ease);
-                            &.btn-type-rounded {
-                                border-radius: 4px;
-                            }
-                            &.btn-type-square {
-                                border-radius: 0px;
-                            }
-                            &.btn-type-circle {
-                                border-radius: 50px;
-                            }
-                            &:hover {
-                                background: darken($accent-color, 5%);
-                            }
+                          display: inline-block;
+                          margin-top: 20px;
+                          font-weight: bold;
+                          padding: 0 0 5px 0;
+                          border-bottom: solid 2px;
+                          font-size: 14px;
+                          line-height: normal;
+                          text-decoration: none;
+                          @include transition(.3s ease);
+                            // background: $accent-color;
+                            // color: #fff;
+                            // padding: 11px 18px;
+                            // display: inline-block;
+                            // font-size: 11px;
+                            // text-transform: uppercase;
+                            // letter-spacing: 1px;
+                            // margin-top: 15px;
+                            // line-height: normal;
+                            // text-decoration: none;
+                            // @include transition(.3s ease);
+                            // &.btn-type-rounded {
+                            //     border-radius: 4px;
+                            // }
+                            // &.btn-type-square {
+                            //     border-radius: 0px;
+                            // }
+                            // &.btn-type-circle {
+                            //     border-radius: 50px;
+                            // }
+                            // &:hover {
+                            //     background: darken($accent-color, 5%);
+                            // }
                         }
                     }
                 }

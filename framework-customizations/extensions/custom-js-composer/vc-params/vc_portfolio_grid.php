@@ -252,7 +252,8 @@ class vcPortfolioGrid extends WPBakeryShortCode {
 				'offset'				 => 0,
       );
 
-      if(! empty(fw_akg('categories', $atts))) :
+      $categories = fw_akg('categories', $atts);
+      if(! empty($categories)) :
         $args['tax_query'] = array(
           array(
             'taxonomy' => 'fw-portfolio-category',

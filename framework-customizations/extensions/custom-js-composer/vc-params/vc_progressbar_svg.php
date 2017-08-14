@@ -152,7 +152,7 @@ class vcProgressbarSvg extends WPBakeryShortCode {
               ),
               /* Text Settings */
               array(
-          			'type' => 'textarea',
+          			'type' => 'textarea_html',
           			'heading' => __( 'Content', 'alone' ),
           			'param_name' => 'content',
           			'description' => __( 'Enter label for progress bar (Ex: {percent}%)', 'alone' ),

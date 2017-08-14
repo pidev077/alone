@@ -1222,7 +1222,7 @@
                 data = $this.data('bears-counterup'),
                 delay = data.delay,
                 time = data.time;
-            console.log(data);
+            // console.log(data);
             $this._once(function() {
                 $this.counterUp({
                     delay: delay,
