@@ -169,10 +169,10 @@
 
         this.touches = [];
         this.noise = options.noise || 0;
-        document.body.addEventListener('touchstart', this.touchHandler);
-        document.body.addEventListener('touchmove', this.touchHandler);
-        document.body.addEventListener('touchend', this.clearHandler);
-        document.body.addEventListener('touchcancel', this.clearHandler);
+        // document.body.addEventListener('touchstart', this.touchHandler);
+        // document.body.addEventListener('touchmove', this.touchHandler);
+        // document.body.addEventListener('touchend', this.clearHandler);
+        // document.body.addEventListener('touchcancel', this.clearHandler);
         this.svg.addEventListener('mousemove', this.mouseHandler);
         this.svg.addEventListener('mouseout', this.clearHandler);
         this.initOrigins();
