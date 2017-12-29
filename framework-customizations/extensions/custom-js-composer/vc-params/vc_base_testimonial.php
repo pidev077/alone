@@ -4,17 +4,17 @@ Element Description: VC Post Slider 2
 */
 
 // Element Class
-class vcPostsSlider2 extends WPBakeryShortCode {
+class vcBaseTestimonial extends WPBakeryShortCode {
 
     // Element Init
     function __construct() {
         global $__VcShadowWPBakeryVisualComposerAbstract;
-        add_action( 'init', array( $this, 'vc_posts_slider2_mapping' ) );
-        $__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_posts_slider2', array( $this, 'vc_posts_slider2_html' ));
+        add_action( 'init', array( $this, 'vc_base_testimonial_mapping' ) );
+        $__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_base_testimonial', array( $this, 'vc_base_testimonial_html' ));
     }
 
     // Element Mapping
-    public function vc_posts_slider2_mapping() {
+    public function vc_base_testimonial_mapping() {
 
         // Stop all if VC is not enabled
         if ( !defined( 'WPB_VC_VERSION' ) ) {
@@ -24,57 +24,73 @@ class vcPostsSlider2 extends WPBakeryShortCode {
         // Map the block with vc_map()
         vc_map(
           array(
-            'name' => __('Posts Slider 2', 'alone'),
-            'base' => 'vc_posts_slider2',
-            'description' => __('Posts slider custom layout', 'alone'),
+            'name' => __('Base testimonial', 'alone'),
+            'base' => 'vc_base_testimonial',
+            'description' => __('Base OWL testimonial', 'alone'),
             'category' => __('Theme Elements', 'alone'),
-            'icon' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/posts-slider-2.png',
+            'icon' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/base-testominal.png',
             'params' => array(
+              /* source */
               array(
-                'type' => 'textfield',
-                'heading' => __('Number of Posts to Show', 'alone'),
-                'param_name' => 'number_posts_show',
-                'value' => '5',
-                'admin_label' => true,
+          			'type' => 'param_group',
+          			'heading' => __( 'Values', 'alone' ),
+          			'param_name' => 'values',
+          			'description' => __( 'Enter value item for slider.', 'alone' ),
+          			'value' => urlencode( json_encode( array(
+          				array(
+                    'image' => __(0, 'alone'),
+					'label' => __('Item one', 'alone'),
+					'manger' => __('one', 'alone'),
+          					'content_item' => __( 'I am test text block one. Click edit button to change this text.', 'alone' ),
+          				),
+          				array(
+                    'image' => __(0, 'alone'),
+					'label' => __('Item two', 'alone'),
+					'manger' => __('two', 'alone'),
+          					'content_item' => __( 'I am test text block two. Click edit button to change this text.', 'alone' ),
+          				),
+          				array(
+                    'image' => __(0, 'alone'),
+					'label' => __('Item three', 'alone'),
+					'manger' => __('three', 'alone'),
+          					'content_item' => __( 'I am test text block three. Click edit button to change this text.', 'alone' ),
+          				),
+          			) ) ),
+          			'params' => array(
+                  array(
+                    'type' => 'textfield',
+                    'heading' => __( 'Label', 'alone' ),
+                    'param_name' => 'label', // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
+                    'description' => __( 'Enter a name (it is for internal use and will not appear on the front end)', 'alone' ),
+                    'admin_label' => true,
+                  ),
+				  array(
+                    'type' => 'textfield',
+                    'heading' => __( 'Manger', 'alone' ),
+                    'param_name' => 'manger', // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
+                    'description' => __( 'Enter a name (it is for internal use and will not appear on the front end)', 'alone' ),
+                    'admin_label' => true,
+                  ),
+                  array(
+                    'type' => 'textarea',
+                    'heading' => __( 'Content', 'alone' ),
+                    'param_name' => 'content_item', // Important: Only one textarea_html param per content element allowed and it should have "content" as a "param_name"
+                    'description' => __( 'Enter your content.', 'alone' )
+                  ),
+				  array(
+					'type' => 'attach_image',
+					'heading' => __('Image', 'alone'),
+					'param_name' => 'image',
+					'dependency' => array(
+							'element' => 'graphic',
+							'value' => 'image',
+						),
+					'description' => __('', 'alone'),
+					'group' => 'Source',
+				  ),
+          			),
                 'group' => 'Source',
-              ),
-              array(
-                'type' => 'dropdown',
-                'heading' => __( 'Data Type', 'alone' ),
-                'param_name' => 'data_type',
-                'value' => array(
-                  __('Recent Posts', 'alone') => 'recent',
-                  __('Popular Posts', 'alone') => 'popular',
-                  __('Most Commented Posts', 'alone') => 'commented',
-                ),
-                'std' => 'recent',
-                'description' => __( 'Select a post data type', 'alone' ),
-                'admin_label' => true,
-                'group' => 'Source',
-              ),
-              array(
-                'type' => 'dropdown',
-                'heading' => __( 'Select Days', 'alone' ),
-                'param_name' => 'days',
-                'value' => array(
-                  __('All time', 'alone') => '',
-                  __('1 Week', 'alone') => '7',
-                  __('1 Month', 'alone') => '30',
-                  __('6 Month', 'alone') => '180',
-                  __('1 Year', 'alone') => '360',
-                ),
-                'std' => '',
-                'admin_label' => false,
-                'description' => __('Select a limit day for query or show all time', 'alone'),
-                'group' => 'Source',
-              ),
-              array(
-          			'type' => 'exploded_textarea_safe',
-          			'heading' => __( 'Categories (ID)', 'alone' ),
-          			'param_name' => 'categories',
-          			'description' => __( 'Enter categories by ID to narrow output (Note: only listed categories will be displayed, divide categories with linebreak (Enter)).', 'alone' ),
-                'group' => 'Source',
-              ),
+          		),
               array(
           			'type' => 'el_id',
           			'heading' => __( 'Element ID', 'alone' ),
@@ -89,45 +105,12 @@ class vcPostsSlider2 extends WPBakeryShortCode {
           			'description' => __( 'Style particular content element differently - add a class name and refer to it in custom CSS.', 'alone' ),
                 'group' => 'Source',
               ),
-              /*** Layout Options ***/
-              array(
-                'type' => 'dropdown',
-                'heading' => __('Image Size', 'alone'),
-                'param_name' => 'image_size',
-                'value' => array(
-                  array('value' => 'thumbnail', 'label' => esc_html__('Thumbnail', 'alone')),
-                  array('value' => 'medium', 'label' => esc_html__('Medium', 'alone')),
-                  array('value' => 'medium_large', 'label' => esc_html__('Medium Large', 'alone')),
-                  array('value' => 'large', 'label' => esc_html__('Large', 'alone')),
-                  array('value' => 'alone-image-large', 'label' => esc_html__('Large (1228 x 691)', 'alone')),
-                  array('value' => 'alone-image-medium', 'label' => esc_html__('Medium (614 x 346)', 'alone')),
-                  array('value' => 'alone-image-small', 'label' => esc_html__('Small (295 x 166)', 'alone')),
-                  array('value' => 'alone-image-square-800', 'label' => esc_html__('Square (800 x 800)', 'alone')),
-                  array('value' => 'alone-image-square-300', 'label' => esc_html__('Square (300 x 300)', 'alone')),
-                ),
-                'std' => 'alone-image-medium',
-                'description' => __('Select a image size', 'alone'),
-                'group' => 'Layout',
-              ),
-              array(
-                'type' => 'vc_image_picker',
-                'heading' => __( 'Select Layout', 'alone' ),
-                'param_name' => 'layout',
-                'value' => array(
-                  'default' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/posts-slider-layout-1.jpg',
-                  'block-image' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/posts-slider-layout-2.jpg',
-				  'block-image-3' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/posts-slider-layout-3.jpg',
-                ),
-                'std' => 'default',
-                'description' => __('Select a layout display', 'alone'),
-                'group' => 'Layout',
-              ),
               /*** Slider Options ***/
               array(
                 'type' => 'textfield',
                 'heading' => __('Items', 'alone'),
                 'param_name' => 'items',
-                'value' => '1',
+                'value' => '3',
                 'admin_label' => false,
                 'description' => __('The number of items you want to see on the screen.', 'alone'),
                 'group' => 'Slider Options',
@@ -136,7 +119,7 @@ class vcPostsSlider2 extends WPBakeryShortCode {
                 'type' => 'textfield',
                 'heading' => __('Margin', 'alone'),
                 'param_name' => 'margin',
-                'value' => '0',
+                'value' => '30',
                 'admin_label' => false,
                 'description' => __('margin-right(px) on item.', 'alone'),
                 'group' => 'Slider Options',
@@ -271,11 +254,18 @@ class vcPostsSlider2 extends WPBakeryShortCode {
                 'description' => __('The number of items you want to see on the mobile screen.', 'alone'),
                 'group' => 'Slider Options',
               ),
+              /* css editor */
+              array(
+                'type' => 'css_editor',
+                'heading' => __( 'Css', 'alone' ),
+                'param_name' => 'css_item',
+                'group' => __( 'Design Options items', 'alone' ),
+              ),
               array(
                 'type' => 'css_editor',
                 'heading' => __( 'Css', 'alone' ),
                 'param_name' => 'css',
-                'group' => __( 'Design options', 'alone' ),
+                'group' => __( 'Design Options general', 'alone' ),
               ),
             ),
           )
@@ -305,87 +295,47 @@ class vcPostsSlider2 extends WPBakeryShortCode {
   		 *
   		 * @since 4.3
   		 */
-  		$css_class = apply_filters( 'vc_posts_slider_2_filter_class', 'wpb_theme_custom_element wpb_posts_slider_2 ' . $el_class . vc_shortcode_custom_css_class( $css, ' ' ), $this->settings['base'], $atts );
+  		$css_class = apply_filters( 'vc_base_testimonial_filter_class', 'wpb_theme_custom_element wpb_base_testimonial ' . $el_class . vc_shortcode_custom_css_class( $css, ' ' ), $this->settings['base'], $atts );
 
   		return array(
   			'css_class' => trim( preg_replace( '/\s+/', ' ', $css_class ) ),
   			'styles' => $styles,
   		);
     }
+    public function getStylesSliderItem($class, $css, $atts) {
+      $styles = array();
 
-    public function _template($temp = 'default', $params = array()) {
       /**
-       * template variables
-       * {image_html}, {readmore_html}, {post_link}, {post_excerpt}, {author_link}, {author_name}, {comment_count}
-       */
+  		 * Filter 'VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG' to change vc_custom_heading class
+  		 *
+  		 * @param string - filter_name
+  		 * @param string - element_class
+  		 * @param string - shortcode_name
+  		 * @param array - shortcode_attributes
+  		 *
+  		 * @since 4.3
+  		 */
+  		$css_class = apply_filters( 'vc_base_testimonial_item_filter_class', $class . ' ' . vc_shortcode_custom_css_class( $css, ' ' ), $this->settings['base'], $atts );
 
-      $thumbnail_default = get_template_directory_uri() . '/assets/images/image-default-2.jpg';
+  		return array(
+  			'css_class_item' => trim( preg_replace( '/\s+/', ' ', $css_class ) ),
+  			'styles_item' => $styles,
+  		);
+    }
 
-      $params = array_merge(array(
-        '{image_html}'    => '<img src="'. $thumbnail_default .'" class="thumbnail-default" alt="#">',
-        '{readmore_html}' => '',
-        '{post_title}'    => '',
-        '{post_link}'     => '',
-        '{post_excerpt}'  => '',
-		'{date}' => get_the_date(),
-        '{author_link}'   => '',
-        '{author_name}'   => '',
-        '{comment_count}' => 0
-      ), $params);
+    public function template($temp = 'default', $params = array()) {
 
-      $output = '';
-      $template = array();
-
-      /* layout default */
-      $template['default'] = implode('', array(
-        '<div class="item-inner posts_slider_2_template_default">',
-          '<div class="post-thumbnail">{image_html} {readmore_html}</div>',
-          '<div class="post-caption">',
-            (! empty($params['{term_list_html}'])) ? '<div class="post-term-list">{term_list_html}</div>' : '',
-            '<a class="post-title-link" href="{post_link}"><h2 class="post-title" title="{post_title}">{post_title}</h2></a>',
-            '<div class="post-excerpt">{post_excerpt}</div>',
-            '{readmore_html}',
-          '</div>',
-        '</div>',
-      ));
-
-      /* layout blog-image */
-      $template['block-image'] = implode('', array(
-        '<div class="item-inner posts_slider_2_template_blog_image">',
-          '<div class="post-thumbnail">{image_html} <a class="icon-readmore-post-link" title="{post_title}" href="{post_link}"><i class="ion-ios-arrow-right"></i></a></div>',
-          '<div class="post-caption">',
-            (! empty($params['{term_list_html}'])) ? '<div class="post-term-list">{term_list_html}</div>' : '',
-            '<a class="post-title-link" href="{post_link}"><h2 class="post-title" title="{post_title}">{post_title}</h2></a>',
-          '</div>',
-        '</div>',
-      ));
-	  
-	  /* layout blog-image-3 */
-      $template['block-image-3'] = implode('', array(
-        '<div class="item-inner posts_slider_2_template_style_austim">',
-          '<div class="post-thumbnail">{image_html}</div>',
-          '<div class="post-caption">',
-            (! empty($params['{term_list_html}'])) ? '<div class="post-term-date"><span class="ion-android-calendar"></span>{date}</div>' : '',
-            '<a class="post-title-link" href="{post_link}"><h2 class="post-title" title="{post_title}">{post_title}</h2></a>',
-            '<div class="post-author"><span class="pacifico">by: </span><a href="{author_link}"> {author_name}</a></div>',
-            '<div class="post-more">{readmore_html}</div>',
-          '</div>',
-        '</div>',
-      ));
-
-      $template = apply_filters('vc_post_slider_2:template', $template);
-
-      return str_replace(array_keys($params), array_values($params), fw_akg($temp, $template));
     }
 
     // Element HTML
-    public function vc_posts_slider2_html( $atts ) {
+    public function vc_base_testimonial_html( $atts, $content ) {
       $atts['self'] = $this;
-      return fw_render_view(get_template_directory() . '/framework-customizations/extensions/custom-js-composer/vc-elements/vc_posts_slider_2.php', array('atts' => $atts), true);
+      $atts['content'] = $content;
+      return fw_render_view(get_template_directory() . '/framework-customizations/extensions/custom-js-composer/vc-elements/vc_base_testimonial.php', array('atts' => $atts), true);
     }
 
 } // End Element Class
 
 
 // Element Class Init
-new vcPostsSlider2();
+new vcBasetestimonial();

@@ -15,6 +15,7 @@ if(! function_exists('alone_vc_load_custom_elements')) :
       'vc_posts_grid_resizable',
       'vc_liquid_button',
       'vc_counter_up',
+	  'vc_base_testimonial',
     );
 
     /* check plugin Give (donations) exist  */
