@@ -126,34 +126,34 @@ if(! empty($el_id)) { $attr_id = "id='{$el_id}'"; }
 <div <?php echo esc_attr($attr_id); ?> class="<?php echo esc_attr($css_class); ?>">
   <div class="vc-custom-inner-wrap">
     <div class="owl-carousel" data-bears-owl-carousel='<?php echo esc_attr($owl_options); ?>'>
-      <?php
-      if(count($posts_data) > 0):
-        foreach($posts_data as $item) {
-					$thumbnail_id = fw_akg('post_img/attachment_id', $item);
+	<?php
+	if(count($posts_data) > 0):
+		foreach($posts_data as $item) {
+		$thumbnail_id = fw_akg('post_img/attachment_id', $item);
 
-          $temp_variables = array(
-            // '{image_html}'    => '',
-						'{pid}'						=> $item['post_id'],
-            '{readmore_html}' => '<a href="'. $item['post_link'] .'" class="post-view-detail">'. __('Read More', 'alone') .' <span class="ion-ios-arrow-thin-right"></span></a>',
-            '{post_title}'    => $item['post_title'],
-            '{post_link}'     => $item['post_link'],
-            '{post_excerpt}'  => $item['post_excerpt'],
-						'{author_link}'		=> $item['post_author_link'],
-						'{author_name}'		=> $item['post_author_name'],
-						'{comment_count}'	=> $item['post_comment_numb'],
-						'{term_list_html}'=> get_the_term_list( $item['post_id'], 'category', '', ', ' )
-          );
+		$temp_variables = array(
+			// '{image_html}'    => '',
+			'{pid}'						=> $item['post_id'],
+			'{readmore_html}' => '<a href="'. $item['post_link'] .'" class="post-view-detail">'. __('Read More', 'alone') .' <span class="ion-ios-arrow-thin-right"></span></a>',
+			'{post_title}'    => $item['post_title'],
+			'{post_link}'     => $item['post_link'],
+			'{post_excerpt}'  => $item['post_excerpt'],
+			'{author_link}'		=> $item['post_author_link'],
+			'{author_name}'		=> $item['post_author_name'],
+			'{comment_count}'	=> $item['post_comment_numb'],
+			'{term_list_html}'=> get_the_term_list( $item['post_id'], 'category', '', ', ' )
+		);
 
-					if(! empty($thumbnail_id)) {
-						$temp_variables['{image_html}'] = wp_get_attachment_image($thumbnail_id, $image_size, false, array());
-					}
+		if(! empty($thumbnail_id)) {
+			$temp_variables['{image_html}'] = wp_get_attachment_image($thumbnail_id, $image_size, false, array());
+		}
 
-          echo sprintf('<div class="item %s">%s</div>', $item['post_class'], $self->_template($layout, $temp_variables));
-        }
-      else :
-        echo sprintf('<div class="item">%s</div>', __('There are no posts to display!', 'alone'));
-      endif;
-      ?>
+		echo sprintf('<div class="item %s">%s</div>', $item['post_class'], $self->_template($layout, $temp_variables));
+	}
+	else :
+		echo sprintf('<div class="item">%s</div>', __('There are no posts to display!', 'alone'));
+	endif;
+	?>
     </div>
   </div>
 </div>

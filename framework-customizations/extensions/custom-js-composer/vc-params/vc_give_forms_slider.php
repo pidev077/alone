@@ -105,6 +105,7 @@ class vcGiveFormsSlider extends WPBakeryShortCode {
                   'default' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/give-forms-slider-default.jpg',
                   'style-1' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/give-forms-slider-layout-2.jpg',
                   'style-2' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/give-forms-slider-layout-3.jpg',
+				  'style-3' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/give-forms-slider-layout-4.jpg',
                 ),
                 'std' => 'default',
                 'description' => __('Select a layout display', 'alone'),
@@ -334,6 +335,10 @@ class vcGiveFormsSlider extends WPBakeryShortCode {
         '{author_name}' => get_the_author(),
       	'{date}' => get_the_date(),
         '{donors_count}' => $form->get_sales(),
+		'{pricing_text_layout3}' => sprintf(
+          __('Raised: %1$s / Goad: %2$s', 'alone'),
+          '<span class="income">' . apply_filters( 'give_goal_amount_raised_output', give_currency_filter( $income ) ) . '</span>',
+          '<span class="goal-text">' . apply_filters( 'give_goal_amount_target_output', give_currency_filter( $goal ) ) . '</span>'),
         '{pricing_text}' => sprintf(
           __('%1$s of %2$s raised', 'alone'),
           '<span class="income">' . apply_filters( 'give_goal_amount_raised_output', give_currency_filter( $income ) ) . '</span>',
@@ -345,7 +350,7 @@ class vcGiveFormsSlider extends WPBakeryShortCode {
         '{goal_progress_bar_default}' => '',
         '{button_donate}' => $button_donate,
       );
-
+		
       //Sanity check - ensure form has goal set to output
       if ( empty( $form->ID )
       	|| ( is_singular( 'give_forms' ) && ! give_is_setting_enabled( $goal_option ) )
@@ -503,6 +508,32 @@ class vcGiveFormsSlider extends WPBakeryShortCode {
           '</div>',
         '</div>',
       ));
+	  
+	  /* style-3 */
+      $template['style-3'] = implode('', array(
+        '<div class="item-inner give-forms-slider-layout-style-3">',
+          '<div class="featured-image">',
+            '<a href="{form_link}">',
+              '<img src="{form_featured_image}" alt="#">',
+            '</a>',
+          '</div>',
+          '<div class="entry-content ">',
+            '<div class="entry-content-inner">',
+			  '<div class="extra-meta">',
+                '<div class="meta-item meta-date"><span class="ion-android-calendar"></span>{date}</div>',
+              '</div>',
+			  '<a href="{form_link}" class="title-link"><h4 class="title">{form_title}</h4></a>',
+              '<div class="give-goal-progress-wrap">',
+                '<div class="give-price-wrap">{pricing_text_layout3}</div>',
+                '{goal_progress_bar_style_1}',
+              '</div>',
+              '<div class="entry-bot">',
+                '<a class="readmore-btn" href="{form_link}" title="{form_title}"><span class="ion-log-in"></span>'. __('Read More', 'alone') .'</a>',
+              '</div>',
+            '</div>',
+          '</div>',
+        '</div>',
+      ));
 
       /* layout blog-image */
       $template['block-image'] = implode('', array(
@@ -510,7 +541,7 @@ class vcGiveFormsSlider extends WPBakeryShortCode {
       ));
 
       $template = apply_filters('vc_give_forms_slider:template', $template);
-
+	
       return str_replace(array_keys($params), array_values($params), fw_akg($temp, $template));
     }
 
