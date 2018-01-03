@@ -22,7 +22,7 @@
 				</div>
 			</div><!-- /.content-area-->
 
-			<?php get_sidebar(); ?>
+			<?php get_sidebar(); ?> 
 		</div><!-- /.row-->
 	</div><!-- /.container-->
 </section>
