@@ -1521,6 +1521,11 @@ if(! function_exists('_the_bears_filter_fw_ext_backups_demos')) :
 	function _alone_filter_fw_ext_backups_demos($demos)
 	{
 		$demos_array = array(
+			'alone-autism' => array(
+				'title' => esc_html__('Alone Autism', 'alone'),
+				'screenshot' => 'http://theme.bearsthemes.com/import_demo/alone/alone-autism/screenshot.png',
+				'preview_link' => 'http://theme.bearsthemes.com/wordpress/alone-autismdemo/',
+			),
 			'alone-ngo' => array(
 				'title' => esc_html__('Alone - NGO', 'alone'),
 				'screenshot' => 'http://theme.bearsthemes.com/import_demo/alone/alone-ngo/screenshot.png',
