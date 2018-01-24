@@ -62,6 +62,8 @@ if(class_exists('WooCommerce') && fw_akg('notification_cart/display', $notificat
     'class' => 'cart',
   );
 }
+
+$background_style = '';
 ?>
 <div class="notification-wrap <?php echo esc_attr($notification_style); ?>" style="<?php echo esc_attr($background_style); ?>">
   <a href="#" class="close-notification">

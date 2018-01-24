@@ -12,14 +12,16 @@
 	<meta name="robots" content="noindex" />
 	<?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> >
 	<div id="page" class="hfeed site">
 		<div id="main" class="site-main" role="main">
 			<?php
 			global $post;
+			// print_r($post);
+			// echo do_shortcode($post->post_content);
 			while ( have_posts() ) :
 				the_post();
-				$post->post_content; // echo manual the post_content, when page has many shortcodes
+				the_content();
 			endwhile;
 			?>
 		</div>
