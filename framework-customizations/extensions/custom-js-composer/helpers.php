@@ -16,6 +16,7 @@ if(! function_exists('alone_vc_load_custom_elements')) :
       'vc_liquid_button',
       'vc_counter_up',
 	  'vc_base_testimonial',
+	  'vc_logo_carousel',
     );
 
     /* check plugin Give (donations) exist  */
@@ -35,7 +36,14 @@ if(! function_exists('alone_vc_load_custom_elements')) :
       $new_elements[] = 'vc_events_slider';
       $new_elements[] = 'vc_events_listing';
     }
-
+	
+	/* church */
+	if (class_exists('Bears_Church')) :
+      $new_elements[] = 'vc_events_church';
+      $new_elements[] = 'vc_location_church_carousel';
+      $new_elements[] = 'vc_sermon_slider';
+    endif;
+	
     foreach($new_elements as $item) :
       $dir = $path . 'vc-params/' . $item . '.php';
       if(file_exists($dir)) require $dir;

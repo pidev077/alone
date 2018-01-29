@@ -461,7 +461,104 @@
     height: auto;
   }
 }
-
+%post-single-creative-layout.ctc_location{
+	.location-content{
+		padding-bottom: 15px;
+		padding-top: 15px;
+		overflow: hidden;
+		border: solid #eceeef;
+		border-width: 1px;
+		margin-bottom: 30px;
+		.extra-location{
+			.address-meta{
+				font-size:25px;
+				font-weight:700;
+				padding:15px 0;
+				i.fa{
+					color: $accent-color;
+				}
+			}
+			.post-time{
+				br{
+					display:none;
+				}
+				padding:15px 0;
+				font-weight:600;
+				i.fa{
+					color: $accent-color;
+				}
+			}
+			.post-phone{
+				padding:15px 0;
+				font-weight:600;
+				i.fa{
+					color: $accent-color;
+				}
+			}
+			.post-email{
+				padding:15px 0;
+				font-weight:600;
+				i.fa{
+					color: $accent-color;
+				}
+			}
+		}
+	}
+}
+%post-single-creative-layout.ctc_sermon {
+		  .panel.with-nav-tabs{
+			border-color: $accent-color;
+			.panel-heading {
+				background-color: $accent-color;
+				border-color: $accent-color;
+				ul{
+				
+					li{
+						a{
+							color:#fff;
+						}
+					}
+					li.active{
+						a{
+							color:#d45f44;
+						}
+					}
+				}
+			}
+			.panel-body {
+				padding: 35px 15px;
+				.tab-content{
+					min-height: 300px;
+					.book{
+					> p:first-child{
+						&:first-letter {
+						  border: 2px solid;
+						  float: left;
+						  font-size: 30px;
+						  font-weight: bold;
+						  margin: 0 22px 0 0;
+						  padding: 26px 20px;
+						}
+					  }
+					}
+					.down{
+						text-align:center;
+						img{
+							width:160px;
+							height:auto;
+							padding-top:120px;
+						}
+					}
+					.mp3{
+						margin: 0 60px;
+						text-align: center;
+						padding-top: 120px;
+					}
+				}
+				
+			}
+		  }
+}
 %post-single-creative-layout{
   .entry-content{
     .post-single-entry-extra{

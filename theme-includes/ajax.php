@@ -94,3 +94,51 @@ if(! function_exists('_alone_search_data_ajax')) :
 endif;
 add_action( 'wp_ajax__alone_search_data_ajax', '_alone_search_data_ajax' );
 add_action( 'wp_ajax_nopriv__alone_search_data_ajax', '_alone_search_data_ajax' );
+
+if( ! function_exists('_alone_semon_load_media_template') ) {
+	/**
+	 * @since 5.0.3
+	 */
+	function _alone_semon_load_media_template() {
+		$demo_content = array(
+			'title' => 'This is id: ' . $_POST['pid'],
+			'content' => alone_semon_get_media_template($_POST['pid']),
+		);
+		
+		wp_send_json($demo_content);
+		exit();
+	}
+	add_action( 'wp_ajax__alone_semon_load_media_template', '_alone_semon_load_media_template' );
+	add_action( 'wp_ajax_nopriv__alone_semon_load_media_template', '_alone_semon_load_media_template' );
+}
+
+function alone_semon_get_media_template($id = 0) {
+	ob_start();
+	$video_sm = get_post_meta($_POST['pid'], '_ctc_sermon_video', true);
+	$audio_sm = get_post_meta($_POST['pid'], '_ctc_sermon_audio', true);
+	$pdf_sm = get_post_meta($_POST['pid'], '_ctc_sermon_pdf', true);
+	$content_post = get_post($_POST['pid']);
+	$book_sm = $content_post->post_content;
+	//var_dump($content);
+	?>
+	<div class="panel with-nav-tabs panel-primary">
+                <div class="panel-heading">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tabvideo<?php echo $_POST['pid']?>" data-toggle="tab">Video</a></li>
+                        <li><a href="#tabaudio<?php echo $_POST['pid']?>" data-toggle="tab">Audio</a></li>
+                        <li><a href="#tabdown<?php echo $_POST['pid']?>" data-toggle="tab">Download</a></li>
+                        <li><a href="#tabbook<?php echo $_POST['pid']?>" data-toggle="tab">Book</a></li>
+                    </ul>
+                </div>
+                <div class="panel-body">
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active video" id="tabvideo<?php echo $_POST['pid']?>"><iframe width="100%" height="300" src="<?php echo $video_sm; ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+                        <div class="tab-pane fade mp3" id="tabaudio<?php echo $_POST['pid']?>"><audio controls style="width: 100%;"><source src="<?php echo $audio_sm; ?>"></audio></iframe></div>
+                        <div class="tab-pane fade down" id="tabdown<?php echo $_POST['pid']?>"><a href="<?php echo $pdf_sm; ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Download-PDF-Button.png"></a></div>
+                        <div class="tab-pane fade book" id="tabbook<?php echo $_POST['pid']?>"><p><?php echo $book_sm; ?></p></div>
+                    </div>
+                </div>
+            </div>
+	<?php
+	return ob_get_clean();
+}

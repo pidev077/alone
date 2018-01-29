@@ -1,20 +1,20 @@
 <?php
 /*
-Element Description: VC Post Slider 2
+Element Description: VC Sermon Slider
 */
 
 // Element Class
-class vcPostsSlider2 extends WPBakeryShortCode {
+class vcSermonSlider extends WPBakeryShortCode {
 
     // Element Init
     function __construct() {
         global $__VcShadowWPBakeryVisualComposerAbstract;
-        add_action( 'init', array( $this, 'vc_posts_slider2_mapping' ) );
-        $__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_posts_slider2', array( $this, 'vc_posts_slider2_html' ));
+        add_action( 'init', array( $this, 'vc_sermon_slider_mapping' ) );
+        $__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_sermon_slider', array( $this, 'vc_sermon_slider_html' ));
     }
 
     // Element Mapping
-    public function vc_posts_slider2_mapping() {
+    public function vc_sermon_slider_mapping() {
 
         // Stop all if VC is not enabled
         if ( !defined( 'WPB_VC_VERSION' ) ) {
@@ -24,11 +24,11 @@ class vcPostsSlider2 extends WPBakeryShortCode {
         // Map the block with vc_map()
         vc_map(
           array(
-            'name' => __('Posts Slider 2', 'alone'),
-            'base' => 'vc_posts_slider2',
-            'description' => __('Posts slider custom layout', 'alone'),
+            'name' => __('Sermon Slider', 'alone'),
+            'base' => 'vc_sermon_slider',
+            'description' => __('Sermon slider custom layout', 'alone'),
             'category' => __('Theme Elements', 'alone'),
-            'icon' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/posts-slider-2.png',
+            'icon' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/base-carousel-sermon.png',
             'params' => array(
               array(
                 'type' => 'textfield',
@@ -115,9 +115,8 @@ class vcPostsSlider2 extends WPBakeryShortCode {
                 'param_name' => 'layout',
                 'value' => array(
                   'default' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/posts-slider-layout-1.jpg',
-                  'block-image' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/posts-slider-layout-2.jpg',
-				  'block-image-3' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/posts-slider-layout-3.jpg',
-				  'block-church' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/posts-slider-layout-church.png',
+                  //'block-image' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/posts-slider-layout-2.jpg',
+				  //'block-image-3' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/posts-slider-layout-3.jpg',
                 ),
                 'std' => 'default',
                 'description' => __('Select a layout display', 'alone'),
@@ -306,7 +305,7 @@ class vcPostsSlider2 extends WPBakeryShortCode {
   		 *
   		 * @since 4.3
   		 */
-  		$css_class = apply_filters( 'vc_posts_slider_2_filter_class', 'wpb_theme_custom_element wpb_posts_slider_2 ' . $el_class . vc_shortcode_custom_css_class( $css, ' ' ), $this->settings['base'], $atts );
+  		$css_class = apply_filters( 'vc_sermon_slider_filter_class', 'wpb_theme_custom_element wpb_sermon_slider ' . $el_class . vc_shortcode_custom_css_class( $css, ' ' ), $this->settings['base'], $atts );
 
   		return array(
   			'css_class' => trim( preg_replace( '/\s+/', ' ', $css_class ) ),
@@ -328,79 +327,43 @@ class vcPostsSlider2 extends WPBakeryShortCode {
         '{post_title}'    => '',
         '{post_link}'     => '',
         '{post_excerpt}'  => '',
-		'{date}' => get_the_date( '\<\s\p\a\n\>d\<\/\s\p\a\n\> M\<\/\b\r\> Y' ),
+		'{date}' => get_the_date(),
         '{author_link}'   => '',
         '{author_name}'   => '',
-        '{comment_count}' => 0
+        '{comment_count}' => 0,
       ), $params);
-
+		
       $output = '';
       $template = array();
-
+	  
       /* layout default */
       $template['default'] = implode('', array(
-        '<div class="item-inner posts_slider_2_template_default">',
-          '<div class="post-thumbnail">{image_html} {readmore_html}</div>',
+        '<div class="item-inner sermon_slider_template_default">',
+          '<div class="post-thumbnail">{image_html}</div>',
           '<div class="post-caption">',
             (! empty($params['{term_list_html}'])) ? '<div class="post-term-list">{term_list_html}</div>' : '',
-            '<a class="post-title-link" href="{post_link}"><h2 class="post-title" title="{post_title}">{post_title}</h2></a>',
-            '<div class="post-excerpt">{post_excerpt}</div>',
-            '{readmore_html}',
+            '<div class="church-speaker">Speaker:<span> {peaker_sm}</span></div>',
+			'<a class="post-title-link" href="{post_link}"><h2 class="post-title" title="{post_title}">{post_title}</h2></a>',
+            '<span class="church-date">{date}</span>',
+			
           '</div>',
+			'<a class="sermon-media" href="#sm-modal-media-{rand_id}" data-semon-trigger-modal data-semon-id="{pid}" data-toggle="modal"><span class="video"><img src="'.get_template_directory_uri() . '/assets/images/video.png'.'"></span><span class="audio"><img src="'.get_template_directory_uri() . '/assets/images/head.png'.'"></span><span class="cloud"><img src="'.get_template_directory_uri() . '/assets/images/cloud.png'.'"></span><span class="book"><img src="'.get_template_directory_uri() . '/assets/images/book.png'.'"></span></a>',
         '</div>',
       ));
 
-      /* layout blog-image */
-      $template['block-image'] = implode('', array(
-        '<div class="item-inner posts_slider_2_template_blog_image">',
-          '<div class="post-thumbnail">{image_html} <a class="icon-readmore-post-link" title="{post_title}" href="{post_link}"><i class="ion-ios-arrow-right"></i></a></div>',
-          '<div class="post-caption">',
-            (! empty($params['{term_list_html}'])) ? '<div class="post-term-list">{term_list_html}</div>' : '',
-            '<a class="post-title-link" href="{post_link}"><h2 class="post-title" title="{post_title}">{post_title}</h2></a>',
-          '</div>',
-        '</div>',
-      ));
-	  
-	  /* layout blog-image-3 */
-      $template['block-image-3'] = implode('', array(
-        '<div class="item-inner posts_slider_2_template_style_austim">',
-          '<div class="post-thumbnail">{image_html}</div>',
-          '<div class="post-caption">',
-            (! empty($params['{term_list_html}'])) ? '<div class="post-term-date"><span class="ion-android-calendar"></span>{date}</div>' : '',
-            '<a class="post-title-link" href="{post_link}"><h2 class="post-title" title="{post_title}">{post_title}</h2></a>',
-            '<div class="post-author"><span class="pacifico">by: </span><a href="{author_link}"> {author_name}</a></div>',
-            '<div class="post-more">{readmore_html}</div>',
-          '</div>',
-        '</div>',
-      ));
-	  /* layout block church  */
-      $template['block-church'] = implode('', array(
-        '<div class="item-inner posts_slider_2_template_style_church">',
-          '<div class="post-thumbnail">{image_html}</div>',
-          '<div class="post-caption">',
-            (! empty($params['{term_list_html}'])) ? '<div class="post-term-date">{date}</div>' : '',
-            '<div class="bt-church-meta">',
-				'<a class="post-title-link" href="{post_link}"><h2 class="post-title" title="{post_title}">{post_title}</h2></a>',     
-				'<div class="post-comment"><i class="fa fa-commenting-o" aria-hidden="true"></i> {comment_count} Comments</div>',
-				'<div class="post-more">{readmore_html}</div>',
-			'</div>',
-          '</div>',
-        '</div>',
-      ));
-
-      $template = apply_filters('vc_post_slider_2:template', $template);
+      $template = apply_filters('vc_sermon_slider:template', $template);
 
       return str_replace(array_keys($params), array_values($params), fw_akg($temp, $template));
     }
 
     // Element HTML
-    public function vc_posts_slider2_html( $atts ) {
+    public function vc_sermon_slider_html( $atts ) {
       $atts['self'] = $this;
-      return fw_render_view(get_template_directory() . '/framework-customizations/extensions/custom-js-composer/vc-elements/vc_posts_slider_2.php', array('atts' => $atts), true);
+      return fw_render_view(get_template_directory() . '/framework-customizations/extensions/custom-js-composer/vc-elements/vc_sermon_slider.php', array('atts' => $atts), true);
     }
 
 } // End Element Class
 
 
 // Element Class Init
-new vcPostsSlider2();
+new vcSermonSlider();
