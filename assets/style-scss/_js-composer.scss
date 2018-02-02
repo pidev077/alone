@@ -3159,6 +3159,31 @@
 				.modal{
 					top: 30px;
 					.modal-content{
+						.modal-header{
+							border-bottom: none;
+							position: absolute;
+							right: -10px;
+							top: -10px;
+							background: #fff;
+							z-index: 999;
+							width: 30px;
+							height: 30px;
+							text-align: center;
+							padding: 0;
+							border-radius: 30px;
+							button.close{
+								margin-top: 0px;
+								line-height: 30px;
+								float: none;
+								font-size: 30px;
+								font-weight: bold;
+								line-height: 1;
+								color: $accent-color;
+								text-shadow: 0 1px 0 #fff;
+								filter: alpha(opacity=20);
+								opacity: 1;
+							}
+						}
 						.modal-body{
 							padding:0;
 							.panel{

@@ -6046,6 +6046,29 @@ body #cs-content .x-btn {
           opacity: 1; }
     #page .wpb_theme_custom_element.wpb_sermon_slider .vc-custom-inner-wrap .modal {
       top: 30px; }
+      #page .wpb_theme_custom_element.wpb_sermon_slider .vc-custom-inner-wrap .modal .modal-content .modal-header {
+        border-bottom: none;
+        position: absolute;
+        right: -10px;
+        top: -10px;
+        background: #fff;
+        z-index: 999;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        padding: 0;
+        border-radius: 30px; }
+      #page .wpb_theme_custom_element.wpb_sermon_slider .vc-custom-inner-wrap .modal .modal-content .modal-header button.close {
+        margin-top: 0px;
+        line-height: 30px;
+        float: none;
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 1;
+        color: #d45f44;
+        text-shadow: 0 1px 0 #fff;
+        filter: alpha(opacity=20);
+        opacity: 1; }
       #page .wpb_theme_custom_element.wpb_sermon_slider .vc-custom-inner-wrap .modal .modal-content .modal-body {
         padding: 0; }
       #page .wpb_theme_custom_element.wpb_sermon_slider .vc-custom-inner-wrap .modal .modal-content .modal-body .panel {
@@ -13880,7 +13903,7 @@ body.single .post-single-creative-layout-blog-2 .entry-content .post-single-entr
     color: #d45f44; }
 
 .fw-footer .fw-widget-facebook li {
-  border-bottom: 1px solid #8d8d8d; }
+  border-bottom: 1px solid #fff; }
 
 .fw-widget-twitter .tweet-list .tweet-item:last-child {
   border: none; }
@@ -13912,7 +13935,7 @@ body.single .post-single-creative-layout-blog-2 .entry-content .post-single-entr
     color: #d45f44; }
 
 .bt-footer .fw-widget-twitter .tweet-item {
-  border-bottom: 1px solid #8d8d8d; }
+  border-bottom: 1px solid #fff; }
   .bt-footer .fw-widget-twitter .tweet-item:not(:last-child) {
     margin-bottom: 10px; }
   .bt-footer .fw-widget-twitter .tweet-item:not(:first-child) .tweet-avatar {
@@ -14962,7 +14985,7 @@ body.single .post-single-creative-layout-blog-2 .entry-content .post-single-entr
 .bt-footer-widgets {
   padding-top: 100px;
   padding-bottom: ;
-  background-color: #808080;
+  background-color: #fff;
   background-image: url();
   background-repeat: ;
   background-position: ;
