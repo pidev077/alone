@@ -132,7 +132,7 @@ class vcEventsChurch extends WPBakeryShortCode {
                 'param_name' => 'layout',
                 'value' => array(
                   //'default' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/event-listing-default.jpg',
-                  'simplify' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/event-listing-simplify.jpg',
+                  'default' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/event-listing-simplify.jpg',
                   // 'block-image' => get_template_directory_uri() . '/framework-customizations/extensions/custom-js-composer/images/layouts/posts-slider-layout-2.jpg',
                 ),
                 'std' => 'default',

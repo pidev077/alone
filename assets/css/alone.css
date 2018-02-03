@@ -6046,6 +6046,29 @@ body #cs-content .x-btn {
           opacity: 1; }
     #page .wpb_theme_custom_element.wpb_sermon_slider .vc-custom-inner-wrap .modal {
       top: 30px; }
+      #page .wpb_theme_custom_element.wpb_sermon_slider .vc-custom-inner-wrap .modal .modal-content .modal-header {
+        border-bottom: none;
+        position: absolute;
+        right: -10px;
+        top: -10px;
+        background: #fff;
+        z-index: 999;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        padding: 0;
+        border-radius: 30px; }
+      #page .wpb_theme_custom_element.wpb_sermon_slider .vc-custom-inner-wrap .modal .modal-content .modal-header button.close {
+        margin-top: 0px;
+        line-height: 30px;
+        float: none;
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 1;
+        color: #eba53a;
+        text-shadow: 0 1px 0 #fff;
+        filter: alpha(opacity=20);
+        opacity: 1; }
       #page .wpb_theme_custom_element.wpb_sermon_slider .vc-custom-inner-wrap .modal .modal-content .modal-body {
         padding: 0; }
       #page .wpb_theme_custom_element.wpb_sermon_slider .vc-custom-inner-wrap .modal .modal-content .modal-body .panel {
