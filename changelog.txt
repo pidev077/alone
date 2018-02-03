@@ -1,11 +1,27 @@
 *** Core Changelog ***
 
-2017.**.** -------------- 0.0.10
+2018.02.03 -------------- 0.0.10
  - Compatible -
- + Compatible Visual Composer v5.2.1
+ + Compatible Visual Composer (WPBakery) v5.4.5
+ + Compatible WP plugin "Bears Church" v1.0.0
 
  - Update -
  + Update vc element vc_progressbar_svg field content (textarea => textarea_html)
+ + Update vc element Base testimonial
+ + New layout "Give Forms Slider" vc element
+ + New 2 layout "Posts Slider" vc element
+ + New vc element "Base Logo Banner"
+ + New vc element "Sermon Slider"
+ + New vc element "Events church"
+
+ - Package -
+ + Alone Autism (new layout + new home + new element + new plugin)
+ + Alone Church (new layout + new element)
+
+ - Fix -
+ + Fix css
+ + Fix js parallax "Header Bar"
+ + Fix instagram image loading
 
  - Remove -
  - Remove option off load googleFont
