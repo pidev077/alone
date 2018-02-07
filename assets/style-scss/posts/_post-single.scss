@@ -507,26 +507,38 @@
 }
 %post-single-creative-layout.ctc_sermon {
 		  .panel.with-nav-tabs{
-			border-color: $accent-color;
+			border: none;
 			.panel-heading {
-				background-color: $accent-color;
-				border-color: $accent-color;
+			    padding: 10px 0px;
+				margin: 0 0 20px;
+				background-color: transparent;
+				border: none;
 				ul{
-				
+					border: none;
 					li{
-						a{
-							color:#fff;
+						a{	
+							padding: 10px 30px;
+							margin-right: 7px;
+							background-color:#ececec;
+							color:#171721;
+							border-radius: 0;
+							text-transform: uppercase;
+							font-size: 14px;
+							font-weight: 600;
 						}
 					}
 					li.active{
 						a{
-							color:#d45f44;
+							border-color: #333;
+							background-color:#333;
+							color:$accent-color;
 						}
 					}
 				}
 			}
 			.panel-body {
-				padding: 35px 15px;
+				padding: 30px 40px;
+				border: 1px solid #ececec;
 				.tab-content{
 					min-height: 300px;
 					.book{
@@ -557,7 +569,65 @@
 				}
 				
 			}
+			@media (max-width: 768px){
+			  .panel-body {
+				padding: 30px 10px;
+				}
+			   .panel-heading {
+					ul{
+						li{
+							a{	
+								padding: 10px 10px;
+								margin-right: 4px;
+								font-size: 12px;
+								margin-bottom:5px;
+							}
+						}
+					}
+				}
+			}
 		  }
+	.share-post-wrap{
+		padding-top: 25px;
+		display: block;
+		width: 100%;
+		// height: 80px;
+		.share-post-item{
+		  display: inline-block;
+		  width: 80px;
+		  height: 80px;
+		  position: relative;
+		  border: solid #eceeef;
+		  border-width: 1px 0px 1px 1px;
+		  color: #333;
+		  &:last-child{
+			border-right-width: 1px;
+		  }
+		  span{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+		  }
+		}
+		@media (max-width: 991px){
+		  text-align: center;
+		  width: 100%;
+		  height: auto;
+		  a.share-post-item{
+			display: inline-block;
+			vertical-align: top;
+			width: 50px;
+			height: 50px;
+			border-width: 1px 1px 1px 0;
+			margin-bottom: 30px;
+			&:first-child{
+			  border-left-width: 1px;
+			}
+		  }
+		}
+	  }
 }
 %post-single-creative-layout{
   .entry-content{
