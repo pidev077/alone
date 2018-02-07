@@ -11556,16 +11556,30 @@ body.single .post-single-creative-layout-blog-2.ctc_location .location-content {
     color: #d45f44; }
 
 body.single .post-single-creative-layout-blog-2.ctc_sermon .panel.with-nav-tabs {
-  border-color: #d45f44; }
+  border: none; }
   body.single .post-single-creative-layout-blog-2.ctc_sermon .panel.with-nav-tabs .panel-heading {
-    background-color: #d45f44;
-    border-color: #d45f44; }
+    padding: 10px 0px;
+    margin: 0 0 20px;
+    background-color: transparent;
+    border: none; }
+  body.single .post-single-creative-layout-blog-2.ctc_sermon .panel.with-nav-tabs .panel-heading ul {
+    border: none; }
   body.single .post-single-creative-layout-blog-2.ctc_sermon .panel.with-nav-tabs .panel-heading ul li a {
-    color: #fff; }
+    padding: 10px 30px;
+    margin-right: 7px;
+    background-color: #ececec;
+    color: #171721;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600; }
   body.single .post-single-creative-layout-blog-2.ctc_sermon .panel.with-nav-tabs .panel-heading ul li.active a {
+    border-color: #333;
+    background-color: #333;
     color: #d45f44; }
   body.single .post-single-creative-layout-blog-2.ctc_sermon .panel.with-nav-tabs .panel-body {
-    padding: 35px 15px; }
+    padding: 30px 40px;
+    border: 1px solid #ececec; }
   body.single .post-single-creative-layout-blog-2.ctc_sermon .panel.with-nav-tabs .panel-body .tab-content {
     min-height: 300px; }
   body.single .post-single-creative-layout-blog-2.ctc_sermon .panel.with-nav-tabs .panel-body .tab-content .book > p:first-child:first-letter {
@@ -11585,6 +11599,49 @@ body.single .post-single-creative-layout-blog-2.ctc_sermon .panel.with-nav-tabs 
     margin: 0 60px;
     text-align: center;
     padding-top: 120px; }
+  @media (max-width: 768px) {
+    body.single .post-single-creative-layout-blog-2.ctc_sermon .panel.with-nav-tabs .panel-body {
+      padding: 30px 10px; }
+
+    body.single .post-single-creative-layout-blog-2.ctc_sermon .panel.with-nav-tabs .panel-heading ul li a {
+      padding: 10px 10px;
+      margin-right: 4px;
+      font-size: 12px;
+      margin-bottom: 5px; } }
+  body.single .post-single-creative-layout-blog-2.ctc_sermon .share-post-wrap {
+    padding-top: 25px;
+    display: block;
+    width: 100%; }
+  body.single .post-single-creative-layout-blog-2.ctc_sermon .share-post-wrap .share-post-item {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    border: solid #eceeef;
+    border-width: 1px 0px 1px 1px;
+    color: #333; }
+  body.single .post-single-creative-layout-blog-2.ctc_sermon .share-post-wrap .share-post-item:last-child {
+    border-right-width: 1px; }
+  body.single .post-single-creative-layout-blog-2.ctc_sermon .share-post-wrap .share-post-item span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%); }
+  @media (max-width: 991px) {
+    body.single .post-single-creative-layout-blog-2.ctc_sermon .share-post-wrap {
+      text-align: center;
+      width: 100%;
+      height: auto; }
+      body.single .post-single-creative-layout-blog-2.ctc_sermon .share-post-wrap a.share-post-item {
+        display: inline-block;
+        vertical-align: top;
+        width: 50px;
+        height: 50px;
+        border-width: 1px 1px 1px 0;
+        margin-bottom: 30px; }
+        body.single .post-single-creative-layout-blog-2.ctc_sermon .share-post-wrap a.share-post-item:first-child {
+          border-left-width: 1px; } }
 
 body.single .post-single-creative-layout-blog-2 .entry-content .post-single-entry-extra {
   margin-bottom: 30px; }

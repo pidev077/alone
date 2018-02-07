@@ -29,66 +29,30 @@ $article_classes = array(
 <article id="post-<?php the_ID(); ?>" <?php post_class( implode(' ', $article_classes) ); ?> itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 	<div class="col-inner">
 		<div class="entry-content clearfix" itemprop="text">
-			<div class="post-single-entry-header"> <!-- Start .single-entry-header -->
-				<?php echo "{$image_background_elem}"; ?>
-				<div class="heading-entry-wrap">
-					<!-- Cat & tag -->
-				  <div class="cat-meta">
-				    <?php echo ! empty( $alone_post_options['category_list'] ) ? '<div class="post-category">' . $alone_post_options['category_list'] . '</div>' : ''; ?>
-				  </div>
-
-					<!-- title -->
-				  <?php echo "{$alone_post_options['title']}"; ?>
-
-					<div class="extra-meta">
-				    <!-- post date -->
-				    <div class="post-date" title="<?php _e('Date', 'alone'); ?>">
-				      <?php echo "{$alone_post_options['date']}"; ?>
-				    </div>
-
-				    <!-- post author -->
-				    <div class="post-author" title="<?php _e('Author', 'alone'); ?>">
-				      <span><?php echo esc_html__('By ', 'alone') ?></span>
-				      <?php echo "{$alone_post_options['author_link']}"; ?>
-				    </div>
-
-				    <!-- post comment -->
-				    <div class="post-total-comment" title="<?php _e('Comment', 'alone'); ?>">
-				      <?php echo "{$alone_post_options['comments']}"; ?>
-				      <?php echo ((int) $alone_post_options['comments'] <= 1) ? esc_html__('Comment', 'alone') : esc_html__('Comments', 'alone')  ?>
-				    </div>
-
-				    <!-- post view -->
-				    <div class="post-total-view" title="<?php _e('View', 'alone'); ?>">
-				      <?php echo "{$alone_post_options['views']}"; ?>
-				      <?php echo ((int) $alone_post_options['views'] <= 1) ? esc_html__('View', 'alone') : esc_html__('Views', 'alone')  ?>
-				    </div>
-				  </div>
-				</div>
-			</div> <!-- End .single-entry-header -->
 			<div class="row">
-				<div class="col-md-2">
-					<?php echo alone_share_post(array('facebook' => true, 'twitter' => true, 'google_plus' => true, 'linkedin' => true, 'pinterest' => false));//echo do_shortcode('[x_share title="'. esc_html__(' ', 'alone') .'" facebook="true" twitter="true" google_plus="true" linkedin="true" pinterest="true"]'); ?>
-				</div>
-				<div class="col-md-10">
+				<div class="col-md-12">
 					<div class="panel with-nav-tabs panel-primary">
 						<div class="panel-heading">
 							<ul class="nav nav-tabs">
-								<li class="active"><a href="#tabvideo<?php echo $post->ID ?>" data-toggle="tab">Video</a></li>
-								<li><a href="#tabaudio<?php echo $post->ID ?>" data-toggle="tab">Audio</a></li>
-								<li><a href="#tabdown<?php echo $post->ID ?>" data-toggle="tab">Download</a></li>
-								<li><a href="#tabbook<?php echo $post->ID?>" data-toggle="tab">Book</a></li>
+								<li class="active"><a href="#tabvideo<?php echo $post->ID ?>" data-toggle="tab"><i class="fa fa-video-camera"></i> Video</a></li>
+								<li><a href="#tabaudio<?php echo $post->ID ?>" data-toggle="tab"><i class="fa fa-headphones"></i> Audio</a></li>
+								<li><a href="#tabbook<?php echo $post->ID?>" data-toggle="tab"><i class="fa fa-book"></i> Book</a></li>
+								<li><a href="<?php echo $pdf_sm; ?>" target="_blank"><i class="fa fa-cloud-download"></i> Download</a></li>
+								
 							</ul>
 						</div>
 						<div class="panel-body">
 							<div class="tab-content">
-								<div class="tab-pane fade in active video" id="tabvideo<?php echo $post->ID ?>"><iframe width="100%" height="500" src="<?php echo $video_sm; ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+								<div class="tab-pane fade in active video" id="tabvideo<?php echo $post->ID ?>"><iframe width="100%" height="400" src="<?php echo $video_sm; ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 								<div class="tab-pane fade mp3" id="tabaudio<?php echo $post->ID ?>"><audio controls style="width: 100%;"><source src="<?php echo $audio_sm; ?>"></audio></iframe></div>
-								<div class="tab-pane fade down" id="tabdown<?php echo $post->ID ?>"><a href="<?php echo $pdf_sm; ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Download-PDF-Button.png"></a></div>
+								
 								<div class="tab-pane fade book" id="tabbook<?php echo $post->ID ?>"><p><?php echo $book_sm; ?></p></div>
 							</div>
 						</div>
 					</div>
+				</div>
+				<div class="col-md-12">
+					<?php echo alone_share_post(array('facebook' => true, 'twitter' => true, 'google_plus' => true, 'linkedin' => true, 'pinterest' => false));//echo do_shortcode('[x_share title="'. esc_html__(' ', 'alone') .'" facebook="true" twitter="true" google_plus="true" linkedin="true" pinterest="true"]'); ?>
 				</div>
 			</div>
 		</div>
