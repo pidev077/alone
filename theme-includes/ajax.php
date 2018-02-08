@@ -126,8 +126,8 @@ function alone_semon_get_media_template($id = 0) {
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#tabvideo<?php echo $_POST['pid']?>" data-toggle="tab"><i class="fa fa-video-camera"></i> Video</a></li>
                         <li><a href="#tabaudio<?php echo $_POST['pid']?>" data-toggle="tab"><i class="fa fa-headphones"></i> Audio</a></li>
-                        <li><a href="#tabdown<?php echo $_POST['pid']?>" data-toggle="tab"><i class="fa fa-book"></i> Download</a></li>
-                        <li><a href="#tabbook<?php echo $_POST['pid']?>" data-toggle="tab"><i class="fa fa-cloud-download"></i> Book</a></li>
+                        <li><a href="#tabdown<?php echo $_POST['pid']?>" data-toggle="tab"><i class="fa fa-cloud-download"></i> Download</a></li>
+                        <li><a href="#tabbook<?php echo $_POST['pid']?>" data-toggle="tab"><i class="fa fa-book"></i> Book</a></li>
                     </ul>
                 </div>
                 <div class="panel-body">
