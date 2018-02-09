@@ -11556,12 +11556,6 @@ body.single .post-single-creative-layout-blog-2.ctc_location .location-content {
     color: #eba53a; }
 
 body.single .post-single-creative-layout-blog-2.ctc_sermon .panel.with-nav-tabs {
-<<<<<<< HEAD
-  border-color: #eba53a; }
-  body.single .post-single-creative-layout-blog-2.ctc_sermon .panel.with-nav-tabs .panel-heading {
-    background-color: #eba53a;
-    border-color: #eba53a; }
-=======
   border: none; }
   body.single .post-single-creative-layout-blog-2.ctc_sermon .panel.with-nav-tabs .panel-heading {
     padding: 10px 0px;
@@ -11570,7 +11564,6 @@ body.single .post-single-creative-layout-blog-2.ctc_sermon .panel.with-nav-tabs 
     border: none; }
   body.single .post-single-creative-layout-blog-2.ctc_sermon .panel.with-nav-tabs .panel-heading ul {
     border: none; }
->>>>>>> origin/alone-church-package
   body.single .post-single-creative-layout-blog-2.ctc_sermon .panel.with-nav-tabs .panel-heading ul li a {
     padding: 10px 30px;
     margin-right: 7px;
@@ -11583,7 +11576,7 @@ body.single .post-single-creative-layout-blog-2.ctc_sermon .panel.with-nav-tabs 
   body.single .post-single-creative-layout-blog-2.ctc_sermon .panel.with-nav-tabs .panel-heading ul li.active a {
     border-color: #333;
     background-color: #333;
-    color: #d45f44; }
+    color: #eba53a; }
   body.single .post-single-creative-layout-blog-2.ctc_sermon .panel.with-nav-tabs .panel-body {
     padding: 30px 40px;
     border: 1px solid #ececec; }
