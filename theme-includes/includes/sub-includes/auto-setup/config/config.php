@@ -5,33 +5,48 @@ return array(
 	 */
 	'demos' => array(
 		'alone-ngo' => array(
-      array(
-        'name' => 'Ninja Forms',
-        'slug' => 'ninja-forms',
-      ),
-      array(
-        'name' => 'Visual Composer Templates Library',
-        'slug' => 'vc-design-template-library',
-      ),
-      array(
-        'name' => 'WooCommerce',
-        'slug' => 'woocommerce',
-      ),
-    ),
-    'alone-5' => array(
-      array(
-        'name' => 'Ninja Forms',
-        'slug' => 'ninja-forms',
-      ),
-      array(
-        'name' => 'Visual Composer Templates Library',
-        'slug' => 'vc-design-template-library',
-      ),
-      array(
-        'name' => 'WooCommerce',
-        'slug' => 'woocommerce',
-      ),
-    ),
+		  array(
+			'name' => 'Ninja Forms',
+			'slug' => 'ninja-forms',
+		  ),
+		  array(
+			'name' => 'Visual Composer Templates Library',
+			'slug' => 'vc-design-template-library',
+		  ),
+		  array(
+			'name' => 'WooCommerce',
+			'slug' => 'woocommerce',
+		  ),
+		),
+		'alone-5' => array(
+		  array(
+			'name' => 'Ninja Forms',
+			'slug' => 'ninja-forms',
+		  ),
+		  array(
+			'name' => 'Visual Composer Templates Library',
+			'slug' => 'vc-design-template-library',
+		  ),
+		  array(
+			'name' => 'WooCommerce',
+			'slug' => 'woocommerce',
+		  ),
+		),
+		'alone-church' => array(
+			array(
+				'name'   => 'Bears Church',
+				'slug'   => 'bears-church',
+				'source' => 'http://theme.bearsthemes.com/plugin_install/bears-church.zip'
+			),
+			array(
+				'name' => 'Ninja Forms',
+				'slug' => 'ninja-forms',
+			),
+			array(
+				'name' => 'WooCommerce',
+				'slug' => 'woocommerce',
+			),
+		),	
 	),
 	'plugins' =>
 		array(
