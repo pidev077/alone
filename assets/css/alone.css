@@ -2528,10 +2528,17 @@ fw-shortcode-calendar-wrapper
   background-color: #eba53a !important; }
 
 .fw_theme_bg_color_2 {
+<<<<<<< HEAD
   background-color: #f1bd6e !important; }
 
 .fw_theme_hover_bg_color_2 {
   background-color: #f1bd6e !important; }
+=======
+  background-color: #d45f44 !important; }
+
+.fw_theme_hover_bg_color_2 {
+  background-color: #d45f44 !important; }
+>>>>>>> origin/alone-church-package
 
 .fw_theme_bg_color_3 {
   background-color: #1c1c1c !important; }
@@ -2555,7 +2562,11 @@ fw-shortcode-calendar-wrapper
   color: #eba53a !important; }
 
 .fw_theme_text_color_2 {
+<<<<<<< HEAD
   color: #f1bd6e !important; }
+=======
+  color: #d45f44 !important; }
+>>>>>>> origin/alone-church-package
 
 .fw_theme_text_color_3 {
   color: #1c1c1c !important; }
@@ -2570,7 +2581,11 @@ fw-shortcode-calendar-wrapper
   border: 1px solid #eba53a !important; }
 
 .fw_theme_border_color_2 {
+<<<<<<< HEAD
   border: 1px solid #f1bd6e !important; }
+=======
+  border: 1px solid #d45f44 !important; }
+>>>>>>> origin/alone-church-package
 
 .fw_theme_border_color_3 {
   border: 1px solid #1c1c1c !important; }
@@ -2585,7 +2600,11 @@ fw-shortcode-calendar-wrapper
   border-color: #eba53a !important; }
 
 .fw_theme_border_only_color_2 {
+<<<<<<< HEAD
   border-color: #f1bd6e !important; }
+=======
+  border-color: #d45f44 !important; }
+>>>>>>> origin/alone-church-package
 
 .fw_theme_border_only_color_3 {
   border-color: #1c1c1c !important; }
@@ -2600,7 +2619,11 @@ fw-shortcode-calendar-wrapper
   background-color: #eba53a !important; }
 
 .fw_hover_bg_color_2:hover {
+<<<<<<< HEAD
   background-color: #f1bd6e !important; }
+=======
+  background-color: #d45f44 !important; }
+>>>>>>> origin/alone-church-package
 
 .fw_hover_bg_color_3:hover {
   background-color: #1c1c1c !important; }
@@ -3278,7 +3301,11 @@ body #select2-drop {
   border-color: #eba53a; }
 
 body {
+<<<<<<< HEAD
   font-family: 'Work Sans';
+=======
+  font-family: 'Open Sans';
+>>>>>>> origin/alone-church-package
   font-size: 18px;
   line-height: 28px;
   font-weight: 400;
@@ -3289,7 +3316,11 @@ body {
 a {
   color: #f1bd6e; }
   a:hover {
+<<<<<<< HEAD
     color: #eba53a; }
+=======
+    color: #d45f44; }
+>>>>>>> origin/alone-church-package
   a:focus, a:active {
     color: #f1bd6e; }
 
@@ -3323,7 +3354,11 @@ h3, .h3 {
 h4, .h4 {
   font-family: 'Montserrat';
   font-style: normal;
+<<<<<<< HEAD
   font-weight: 700;
+=======
+  font-weight: 600;
+>>>>>>> origin/alone-church-package
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0.16px;
@@ -3332,7 +3367,11 @@ h4, .h4 {
 h5, .h5 {
   font-family: 'Montserrat';
   font-style: normal;
+<<<<<<< HEAD
   font-weight: 700;
+=======
+  font-weight: 500;
+>>>>>>> origin/alone-church-package
   font-size: 16px;
   line-height: 18px;
   letter-spacing: 0.16px;
@@ -3352,7 +3391,11 @@ hr {
 
 blockquote {
   color: #282828;
+<<<<<<< HEAD
   font-family: 'Work Sans';
+=======
+  font-family: 'Open Sans';
+>>>>>>> origin/alone-church-package
   font-weight: 400;
   /*Responsive*/
   /*Screen 568px*/ }
@@ -3360,7 +3403,11 @@ blockquote {
     color: #282828; }
   blockquote cite {
     color: #1c1c1c;
+<<<<<<< HEAD
     font-family: 'Montserrat';
+=======
+    font-family: 'Open Sans';
+>>>>>>> origin/alone-church-package
     font-weight: 700;
     font-style: normal;
     font-size: 20px; }
@@ -3547,7 +3594,11 @@ body #cs-content .x-btn {
   #page .vc_tta-container .vc_tta-tabs {
     /* vc accordion */ }
     #page .vc_tta-container .vc_tta-tabs h4.vc_tta-panel-title {
+<<<<<<< HEAD
       font-family: 'Work Sans';
+=======
+      font-family: 'Open Sans';
+>>>>>>> origin/alone-church-package
       font-size: 18px;
       line-height: 28px;
       font-weight: 400;
@@ -3556,7 +3607,11 @@ body #cs-content .x-btn {
     #page .vc_tta-container .vc_tta-tabs .vc_tta-tab a > * {
       vertical-align: middle; }
   #page .vc_tta-container .vc_tta-accordion .vc_tta-panel-title {
+<<<<<<< HEAD
     font-family: 'Work Sans';
+=======
+    font-family: 'Open Sans';
+>>>>>>> origin/alone-church-package
     font-size: 18px;
     line-height: 28px;
     font-weight: 400;
@@ -6334,7 +6389,11 @@ body {
     border-radius: 2px;
     text-decoration: none; }
     #page #bbpress-forums, #page #bbpress-forums ul.bbp-lead-topic, #page #bbpress-forums ul.bbp-topics, #page #bbpress-forums ul.bbp-forums, #page #bbpress-forums ul.bbp-replies, #page #bbpress-forums ul.bbp-search-results, #page #bbpress-forums .bbp-forum-info .bbp-forum-content, #page #bbpress-forums p.bbp-topic-meta, #page div.bbp-breadcrumb, #page div.bbp-topic-tags {
+<<<<<<< HEAD
       font-family: 'Work Sans';
+=======
+      font-family: 'Open Sans';
+>>>>>>> origin/alone-church-package
       font-size: 18px;
       line-height: 28px;
       font-weight: 400;
@@ -6410,7 +6469,11 @@ body {
   .rtb-booking-form legend {
     font-family: 'Montserrat';
     font-style: normal;
+<<<<<<< HEAD
     font-weight: 700;
+=======
+    font-weight: 600;
+>>>>>>> origin/alone-church-package
     line-height: 24px;
     letter-spacing: 0.16px;
     color: #282828;
@@ -6524,7 +6587,11 @@ body {
     padding-left: calc(80px + 30px);
     font-family: 'Montserrat';
     font-style: normal;
+<<<<<<< HEAD
     font-weight: 700;
+=======
+    font-weight: 500;
+>>>>>>> origin/alone-church-package
     line-height: 18px;
     letter-spacing: 0.16px;
     color: #282828;
@@ -6572,7 +6639,11 @@ body {
     padding-left: calc(22% + 30px);
     font-family: 'Montserrat';
     font-style: normal;
+<<<<<<< HEAD
     font-weight: 700;
+=======
+    font-weight: 500;
+>>>>>>> origin/alone-church-package
     line-height: 18px;
     letter-spacing: 0.16px;
     color: #282828; }
@@ -6750,20 +6821,32 @@ body {
   -webkit-transition: 0.3s;
   transition: 0.3s; }
   .aboutus-html-style-1 a.bt-btn.bt-btn-default, .bearsthemes-button-element.bt-btn-default {
+<<<<<<< HEAD
     background: #eba53a;
     font-family: 'Montserrat';
     font-weight: 700;
     font-size: 11px;
+=======
+    background: #d45f44;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 13px;
+>>>>>>> origin/alone-church-package
     line-height: 28px;
     color: #fff;
     letter-spacing: 0px;
     font-style: normal; }
   .aboutus-html-style-1 a.bt-btn.bt-btn-default:hover, .bearsthemes-button-element.bt-btn-default:hover {
+<<<<<<< HEAD
     background: #f1bd6e;
+=======
+    background: #d45f44;
+>>>>>>> origin/alone-church-package
     color: #fff;
     text-decoration: none; }
   .aboutus-html-style-1 a.bt-btn.bt-btn-border-line, .bearsthemes-button-element.bt-btn-border-line {
     border: solid 2px;
+<<<<<<< HEAD
     border-color: #eba53a;
     font-family: 'Montserrat';
     font-weight: 700;
@@ -6775,6 +6858,19 @@ body {
   .aboutus-html-style-1 a.bt-btn.bt-btn-border-line:hover, .bearsthemes-button-element.bt-btn-border-line:hover {
     border-color: #f1bd6e;
     background: #f1bd6e;
+=======
+    border-color: #d45f44;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 28px;
+    color: 'Open Sans';
+    letter-spacing: 0px;
+    font-style: normal; }
+  .aboutus-html-style-1 a.bt-btn.bt-btn-border-line:hover, .bearsthemes-button-element.bt-btn-border-line:hover {
+    border-color: #d45f44;
+    background: #d45f44;
+>>>>>>> origin/alone-church-package
     color: #fff;
     text-decoration: none; }
 
@@ -7215,10 +7311,17 @@ section {
     text-decoration: none;
     font-weight: normal; }
   .woocommerce .products .product-item a.button, .bearsthemes-products-element.bearsthemes-products-element-layout-default .product-item a.button, .bearsthemes-products-element.bearsthemes-products-element-layout-masonry .product-item a.button, .woocommerce .products .product-item a.added_to_cart, .bearsthemes-products-element.bearsthemes-products-element-layout-default .product-item a.added_to_cart, .bearsthemes-products-element.bearsthemes-products-element-layout-masonry .product-item a.added_to_cart {
+<<<<<<< HEAD
     background: rgba(235, 165, 58, 0.95);
     font-family: 'Montserrat';
     font-weight: 700;
     font-size: 11px;
+=======
+    background: rgba(212, 95, 68, 0.95);
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 13px;
+>>>>>>> origin/alone-church-package
     line-height: 28px;
     color: #fff;
     letter-spacing: 0px;
@@ -7230,7 +7333,11 @@ section {
     -webkit-transition: 0.3s;
     transition: 0.3s; }
   .woocommerce .products .product-item a.button:hover, .bearsthemes-products-element.bearsthemes-products-element-layout-default .product-item a.button:hover, .bearsthemes-products-element.bearsthemes-products-element-layout-masonry .product-item a.button:hover, .woocommerce .products .product-item a.added_to_cart:hover, .bearsthemes-products-element.bearsthemes-products-element-layout-default .product-item a.added_to_cart:hover, .bearsthemes-products-element.bearsthemes-products-element-layout-masonry .product-item a.added_to_cart:hover {
+<<<<<<< HEAD
     background: #f1bd6e;
+=======
+    background: #d45f44;
+>>>>>>> origin/alone-church-package
     color: #fff;
     text-decoration: none; }
   .woocommerce .products .product-item .compare, .bearsthemes-products-element.bearsthemes-products-element-layout-default .product-item .compare, .bearsthemes-products-element.bearsthemes-products-element-layout-masonry .product-item .compare {
@@ -9402,8 +9509,13 @@ menu style inline
     display: block;
     text-decoration: none;
     color: #1c1c1c;
+<<<<<<< HEAD
     line-height: 24px;
     font-size: 14px;
+=======
+    line-height: 87px;
+    font-size: 15px;
+>>>>>>> origin/alone-church-package
     -webkit-transition: 0.3s;
     transition: 0.3s; }
   .bt-header.header-1 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item a span, .bt-header.header-2 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item a span, .bt-header.header-3 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item a span, .bt-header-mobi.header-mobi .bt-header-mobi-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item a span {
@@ -9412,7 +9524,11 @@ menu style inline
     font-family: 'Raleway';
     letter-spacing: 0px;
     font-style: normal;
+<<<<<<< HEAD
     font-weight: 800; }
+=======
+    font-weight: 700; }
+>>>>>>> origin/alone-church-package
   .bt-header.header-1 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item a sup, .bt-header.header-2 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item a sup, .bt-header.header-3 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item a sup, .bt-header-mobi.header-mobi .bt-header-mobi-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item a sup {
     padding: 2px 6px;
     border-radius: 10px;
@@ -9433,12 +9549,21 @@ menu style inline
       background: #eba53a;
       -webkit-transition: 0.4s ease;
       transition: 0.4s ease;
+<<<<<<< HEAD
       line-height: 24px;
       font-size: 14px;
       font-family: 'Raleway';
       letter-spacing: 0px;
       font-style: normal;
       font-weight: 800; }
+=======
+      line-height: 87px;
+      font-size: 15px;
+      font-family: 'Open Sans';
+      letter-spacing: 0px;
+      font-style: normal;
+      font-weight: 700; }
+>>>>>>> origin/alone-church-package
     .bt-header.header-1 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-button_donate .give-form-wrap form.give-form .give-btn:hover, .bt-header.header-2 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-button_donate .give-form-wrap form.give-form .give-btn:hover, .bt-header.header-3 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-button_donate .give-form-wrap form.give-form .give-btn:hover, .bt-header-mobi.header-mobi .bt-header-mobi-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-button_donate .give-form-wrap form.give-form .give-btn:hover {
       background: #e99a23; }
   .bt-header.header-1 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-notification_center > a, .bt-header.header-2 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-notification_center > a, .bt-header.header-3 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-notification_center > a, .bt-header-mobi.header-mobi .bt-header-mobi-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-notification_center > a, .bt-header.header-1 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-notification_center .notification-center-icon, .bt-header.header-2 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-notification_center .notification-center-icon, .bt-header.header-3 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-notification_center .notification-center-icon, .bt-header-mobi.header-mobi .bt-header-mobi-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-custom-type-notification_center .notification-center-icon {
@@ -9601,7 +9726,11 @@ menu style inline
       line-height: 30px;
       color: #fff; }
     .bt-header.header-1 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item ul.sub-menu li.menu-item a span, .bt-header.header-2 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item ul.sub-menu li.menu-item a span, .bt-header.header-3 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item ul.sub-menu li.menu-item a span, .bt-header-mobi.header-mobi .bt-header-mobi-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item ul.sub-menu li.menu-item a span {
+<<<<<<< HEAD
       font-family: 'Work Sans';
+=======
+      font-family: 'Open Sans';
+>>>>>>> origin/alone-church-package
       letter-spacing: -0.6px;
       font-style: normal;
       font-weight: 400; }
@@ -9637,7 +9766,11 @@ menu style inline
       font-size: 14.5px;
       line-height: 30px;
       color: rgba(255, 255, 255, 0.7);
+<<<<<<< HEAD
       font-family: 'Work Sans';
+=======
+      font-family: 'Open Sans';
+>>>>>>> origin/alone-church-package
       letter-spacing: -0.6px;
       font-style: normal;
       font-weight: 400; }
@@ -9661,7 +9794,11 @@ menu style inline
       .bt-header.header-1 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-has-mega-menu .mega-menu .mega-menu-row .mega-menu-col > .sub-menu li.mega-menu-item-custom-type-sidebar ul.fw-side-posts-list li .posts-content .post-date, .bt-header.header-2 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-has-mega-menu .mega-menu .mega-menu-row .mega-menu-col > .sub-menu li.mega-menu-item-custom-type-sidebar ul.fw-side-posts-list li .posts-content .post-date, .bt-header.header-3 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-has-mega-menu .mega-menu .mega-menu-row .mega-menu-col > .sub-menu li.mega-menu-item-custom-type-sidebar ul.fw-side-posts-list li .posts-content .post-date, .bt-header-mobi.header-mobi .bt-header-mobi-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-has-mega-menu .mega-menu .mega-menu-row .mega-menu-col > .sub-menu li.mega-menu-item-custom-type-sidebar ul.fw-side-posts-list li .posts-content .post-date {
         color: rgba(255, 255, 255, 0.7);
         font-size: 14.5px;
+<<<<<<< HEAD
         font-family: 'Work Sans'; }
+=======
+        font-family: 'Open Sans'; }
+>>>>>>> origin/alone-church-package
       .bt-header.header-1 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-has-mega-menu .mega-menu .mega-menu-row .mega-menu-col > .sub-menu li .menu-item-custom-wrap, .bt-header.header-2 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-has-mega-menu .mega-menu .mega-menu-row .mega-menu-col > .sub-menu li .menu-item-custom-wrap, .bt-header.header-3 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-has-mega-menu .mega-menu .mega-menu-row .mega-menu-col > .sub-menu li .menu-item-custom-wrap, .bt-header-mobi.header-mobi .bt-header-mobi-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item.menu-item-has-mega-menu .mega-menu .mega-menu-row .mega-menu-col > .sub-menu li .menu-item-custom-wrap {
         position: relative;
         background: transparent;
@@ -9675,7 +9812,11 @@ menu style inline
           line-height: normal;
           font-size: 14.5px;
           color: #fff;
+<<<<<<< HEAD
           font-family: 'Work Sans';
+=======
+          font-family: 'Open Sans';
+>>>>>>> origin/alone-church-package
           letter-spacing: -0.6px;
           font-style: normal;
           font-weight: 400; }
@@ -9879,7 +10020,11 @@ menu style offcanvas
     line-height: 30px;
     color: #fff; }
   .bt-header.header-1 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item > .menu-item-custom-wrap.off-canvas-menu-wrap > div ul.menu li a span, .bt-header.header-2 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item > .menu-item-custom-wrap.off-canvas-menu-wrap > div ul.menu li a span, .bt-header.header-3 .bt-header-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item > .menu-item-custom-wrap.off-canvas-menu-wrap > div ul.menu li a span, .bt-header-mobi.header-mobi .bt-header-mobi-main .bt-nav-wrap .bt-site-navigation > ul.bt-nav-menu li.menu-item > .menu-item-custom-wrap.off-canvas-menu-wrap > div ul.menu li a span, .bt-header-top-bar .header-top-sidebar-item .widget.widget_nav_menu ul.menu li.menu-item-type-custom > .menu-item-custom-wrap.off-canvas-menu-wrap > div ul.menu li a span, .header-3-top .bt-header-logo-sidebar-wrap .header-sidebar-item .widget.widget_nav_menu ul.menu li.menu-item-type-custom > .menu-item-custom-wrap.off-canvas-menu-wrap > div ul.menu li a span {
+<<<<<<< HEAD
     font-family: 'Work Sans';
+=======
+    font-family: 'Open Sans';
+>>>>>>> origin/alone-church-package
     letter-spacing: -0.6px;
     font-style: normal;
     font-weight: 400; }
@@ -10125,11 +10270,19 @@ body.is-header-sticky.admin-bar .fw-sticky-header {
   body.is-header-sticky .bt-header-container.fw-sticky-header .bt-site-navigation > ul.bt-nav-menu > li.menu-item:not(.menu-item-custom-type-button) > a {
     color: #1c1c1c !important; }
     body.is-header-sticky .bt-header-container.fw-sticky-header .bt-site-navigation > ul.bt-nav-menu > li.menu-item:not(.menu-item-custom-type-button):hover > a, body.is-header-sticky .bt-header-container.fw-sticky-header .bt-site-navigation > ul.bt-nav-menu > li.menu-item:not(.menu-item-custom-type-button).current-menu-ancestor > a, body.is-header-sticky .bt-header-container.fw-sticky-header .bt-site-navigation > ul.bt-nav-menu > li.menu-item:not(.menu-item-custom-type-button).current-menu-item > a {
+<<<<<<< HEAD
       color: #eba53a !important; }
     body.is-header-sticky .bt-header-container.fw-sticky-header .bt-site-navigation > ul.bt-nav-menu > li.menu-item.menu-item-custom-type-notification_center .notification-center-icon .notification-center-item a {
       color: #1c1c1c !important; }
       body.is-header-sticky .bt-header-container.fw-sticky-header .bt-site-navigation > ul.bt-nav-menu > li.menu-item.menu-item-custom-type-notification_center .notification-center-icon .notification-center-item a:hover {
         color: #eba53a !important; }
+=======
+      color: #d45f44 !important; }
+    body.is-header-sticky .bt-header-container.fw-sticky-header .bt-site-navigation > ul.bt-nav-menu > li.menu-item.menu-item-custom-type-notification_center .notification-center-icon .notification-center-item a {
+      color: #1c1c1c !important; }
+      body.is-header-sticky .bt-header-container.fw-sticky-header .bt-site-navigation > ul.bt-nav-menu > li.menu-item.menu-item-custom-type-notification_center .notification-center-icon .notification-center-item a:hover {
+        color: #d45f44 !important; }
+>>>>>>> origin/alone-church-package
   body.is-header-sticky.bt-side-boxed .bt-header-container.fw-sticky-header {
     margin-left: calc((100% - 1170px) / 2);
     max-width: 1170px; }
@@ -10160,7 +10313,11 @@ body.is-header-sticky.admin-bar .fw-sticky-header {
     display: inline-block !important; }
 
 .bt-logo-retina .fw-wrap-logo .fw-site-logo img.main-logo {
+<<<<<<< HEAD
   width: calc(500px / 2); }
+=======
+  width: calc(167px / 2); }
+>>>>>>> origin/alone-church-package
   .bt-logo-retina .fw-wrap-logo .fw-site-logo img.sticky-logo {
     width: calc( / 2);
     display: none; }
@@ -10169,13 +10326,18 @@ body.is-header-sticky.admin-bar .fw-sticky-header {
   background: #1c1c1c;
   padding: 6px 0; }
   .bt-header-top-bar *:not(.fa) {
+<<<<<<< HEAD
     font-family: 'Work Sans';
     font-size: 11px;
+=======
+    font-family: 'Open Sans';
+    font-size: 12px;
+>>>>>>> origin/alone-church-package
     line-height: 45px;
     letter-spacing: 2px;
     color: #fff;
     font-style: normal;
-    font-weight: 400; }
+    font-weight: 700; }
   .bt-header-top-bar .menu-item a, .bt-header-top-bar a {
     color: #fff; }
   .bt-header-top-bar .menu-item a:hover, .bt-header-top-bar a:hover {
@@ -10191,13 +10353,18 @@ body.is-header-sticky.admin-bar .fw-sticky-header {
     left: auto; }
   .bt-header-top-bar .header-top-sidebar-item .widget.widget_text a, .bt-header-top-bar .header-top-sidebar-item .widget a {
     text-decoration: none;
+<<<<<<< HEAD
     font-family: 'Work Sans';
     font-size: 11px;
+=======
+    font-family: 'Open Sans';
+    font-size: 12px;
+>>>>>>> origin/alone-church-package
     line-height: 45px;
     letter-spacing: 2px;
     color: #fff;
     font-style: normal;
-    font-weight: 400; }
+    font-weight: 700; }
   .bt-header-top-bar .header-top-sidebar-item .widget.widget_nav_menu ul.menu > li a {
     padding-top: 0;
     padding-bottom: 0; }
@@ -10215,13 +10382,18 @@ body.is-header-sticky.admin-bar .fw-sticky-header {
         box-shadow: 0 7px 0 0 #eba53a, 0 -7px 0 0 #eba53a;
         -webkit-transition: 0.4s ease;
         transition: 0.4s ease;
+<<<<<<< HEAD
         font-family: 'Work Sans';
         font-size: 11px;
+=======
+        font-family: 'Open Sans';
+        font-size: 12px;
+>>>>>>> origin/alone-church-package
         line-height: 45px;
         letter-spacing: 2px;
         color: #fff;
         font-style: normal;
-        font-weight: 400; }
+        font-weight: 700; }
       .bt-header-top-bar .header-top-sidebar-item .widget.widget_nav_menu ul li.menu-item-custom-type-button_donate .give-form-wrap form.give-form .give-btn:hover {
         background: #e99a23;
         box-shadow: 0 7px 0 0 #e99a23, 0 -7px 0 0 #e99a23; }
@@ -10369,8 +10541,8 @@ responsive Menu Item Type Custom On Mobi 525px
   position: relative; }
   .bt-header .bt-header-main .bt-header-container {
     background: #fff;
-    padding-top: 15px;
-    padding-bottom: 15px; }
+    padding-top: 0px;
+    padding-bottom: 0px; }
   .bt-header.fw-menu-position-left .bt-nav-wrap {
     text-align: left; }
   .bt-header.fw-menu-position-center .bt-nav-wrap {
@@ -12889,7 +13061,11 @@ body.single .post-single-creative-layout-blog-2 .entry-content .post-single-entr
   .mfp-wrap.give-modal .mfp-content form.give-form .give-goal-progress .raised .income {
     font-size: 150%; }
   .give-btn {
+<<<<<<< HEAD
     background: #eba53a;
+=======
+    background: #d45f44;
+>>>>>>> origin/alone-church-package
     color: #fff;
     border: medium none;
     border-radius: 3px;
@@ -12898,7 +13074,11 @@ body.single .post-single-creative-layout-blog-2 .entry-content .post-single-entr
     padding: 13px 20px;
     text-transform: uppercase; }
   .give-btn:hover {
+<<<<<<< HEAD
     background: #f1bd6e;
+=======
+    background: #d45f44;
+>>>>>>> origin/alone-church-package
     color: #fff;
     text-decoration: none; }
 
@@ -14116,7 +14296,11 @@ body.single .post-single-creative-layout-blog-2 .entry-content .post-single-entr
     line-height: ;
     color: #353535;
     background-color: rgba(255, 255, 255, 0.93);
+<<<<<<< HEAD
     font-family: 'Montserrat';
+=======
+    font-family: 'Open Sans';
+>>>>>>> origin/alone-church-package
     font-weight: 700;
     font-style: normal;
     font-size: 13.5px;
@@ -14390,7 +14574,11 @@ body.single .post-single-creative-layout-blog-2 .entry-content .post-single-entr
 .widget_tag_cloud .tagcloud a, .fw-tag-links a, .post-tags a, .woocommerce.widget_product_tag_cloud .tagcloud a {
   display: inline-block;
   font-size: 11px !important;
+<<<<<<< HEAD
   font-family: 'Montserrat';
+=======
+  font-family: 'Open Sans';
+>>>>>>> origin/alone-church-package
   font-weight: 700;
   font-style: normal;
   color: #fff !important;
@@ -14488,7 +14676,11 @@ body.single .post-single-creative-layout-blog-2 .entry-content .post-single-entr
     line-height: ;
     color: #353535;
     background-color: rgba(255, 255, 255, 0.93);
+<<<<<<< HEAD
     font-family: 'Montserrat';
+=======
+    font-family: 'Open Sans';
+>>>>>>> origin/alone-church-package
     font-weight: 700;
     font-style: normal;
     font-size: 13.5px;
@@ -14527,7 +14719,11 @@ body.single .post-single-creative-layout-blog-2 .entry-content .post-single-entr
     line-height: ;
     color: #353535;
     background-color: rgba(255, 255, 255, 0.93);
+<<<<<<< HEAD
     font-family: 'Montserrat';
+=======
+    font-family: 'Open Sans';
+>>>>>>> origin/alone-church-package
     font-weight: 700;
     font-style: normal;
     font-size: 13.5px;
@@ -15053,18 +15249,18 @@ body.single .post-single-creative-layout-blog-2 .entry-content .post-single-entr
   /*Responsive*/
   /* Screen 768px */ }
   .bt-footer-widgets .widget, .bt-footer-widgets .widget li {
-    color: #898d8e; }
+    color: #555; }
   .bt-footer-widgets .widget a, .bt-footer-widgets .widget .comment-author-link a {
-    color: #636767; }
+    color: #2f2f2f; }
   .bt-footer-widgets .widget a:hover, .bt-footer-widgets .widget .comment-author-link a:hover {
-    color: #707374; }
+    color: #3c3c3c; }
   .bt-footer-widgets .widget-title {
     font-weight: ;
     font-style: ;
-    color: #fff;
+    color: #222;
     font-size: ; }
   .bt-footer-widgets .widget-title span {
-    color: #fff; }
+    color: #222; }
   .bt-footer-widgets .widget_text .textwidget {
     font-size: 16.2px; }
 
@@ -15089,7 +15285,11 @@ body.single .post-single-creative-layout-blog-2 .entry-content .post-single-entr
   /* copyright and social area background & space */ }
 
 .bt-footer-bar {
+<<<<<<< HEAD
   background-color: #181818;
+=======
+  background-color: #282828;
+>>>>>>> origin/alone-church-package
   padding-top: 15px;
   padding-bottom: 15px;
   color: ; }
@@ -15100,8 +15300,13 @@ body.single .post-single-creative-layout-blog-2 .entry-content .post-single-entr
 .bt-copyright {
   font-size: 13px;
   font-style: normal;
+<<<<<<< HEAD
   font-weight: 300;
   font-family: 'Work Sans';
+=======
+  font-weight: 400;
+  font-family: 'Open Sans';
+>>>>>>> origin/alone-church-package
   line-height: 20px;
   letter-spacing: 0px;
   color: #fff; }
