@@ -1524,7 +1524,7 @@ if(! function_exists('_the_bears_filter_fw_ext_backups_demos')) :
 			'alone-church' => array(
 				'title' => esc_html__('Alone Church', 'alone'),
 				'screenshot' => 'http://theme.bearsthemes.com/import_demo/alone/alone-church/screenshot.png',
-				'preview_link' => 'http://theme.bearsthemes.com/wordpress/alone-autismdemo/',
+				'preview_link' => 'http://theme.bearsthemes.com/wordpress/alone-church/',
 			),
 			'alone-autism' => array(
 				'title' => esc_html__('Alone Autism', 'alone'),
