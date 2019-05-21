@@ -8,9 +8,10 @@ class vcFeaturedBox extends WPBakeryShortCode {
 
     // Element Init
     function __construct() {
-        global $__VcShadowWPBakeryVisualComposerAbstract;
+        //global $__VcShadowWPBakeryVisualComposerAbstract;
         add_action( 'init', array( $this, 'vc_featured_box_mapping' ) );
-        $__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_featured_box', array( $this, 'vc_featured_box_html' ));
+        add_shortcode( 'vc_featured_box', array( $this, 'vc_featured_box_html' ) );
+        //$__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_featured_box', array( $this, 'vc_featured_box_html' ));
     }
 
     // Element Mapping

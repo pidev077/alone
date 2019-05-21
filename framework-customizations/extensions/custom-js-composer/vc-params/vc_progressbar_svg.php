@@ -8,9 +8,10 @@ class vcProgressbarSvg extends WPBakeryShortCode {
 
     // Element Init
     function __construct() {
-        global $__VcShadowWPBakeryVisualComposerAbstract;
+        //global $__VcShadowWPBakeryVisualComposerAbstract;
         add_action( 'init', array( $this, 'vc_progressbar_svg_mapping' ) );
-        $__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_progressbar_svg', array($this, 'vc_progressbar_svg_html'));
+        add_shortcode( 'vc_progressbar_svg', array( $this, 'vc_progressbar_svg_html' ) );
+        //$__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_progressbar_svg', array($this, 'vc_progressbar_svg_html'));
     }
 
     // Element Mapping

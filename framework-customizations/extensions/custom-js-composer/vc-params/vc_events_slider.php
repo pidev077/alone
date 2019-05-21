@@ -8,9 +8,10 @@ class vcEventsSlider extends WPBakeryShortCode {
 
     // Element Init
     function __construct() {
-        global $__VcShadowWPBakeryVisualComposerAbstract;
+        //global $__VcShadowWPBakeryVisualComposerAbstract;
         add_action( 'init', array( $this, 'vc_events_slider_mapping' ) );
-        $__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_events_slider', array( $this, 'vc_events_slider_html' ));
+        add_shortcode( 'vc_events_slider', array( $this, 'vc_events_slider_html' ) );
+        //$__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_events_slider', array( $this, 'vc_events_slider_html' ));
     }
 
     // Element Mapping

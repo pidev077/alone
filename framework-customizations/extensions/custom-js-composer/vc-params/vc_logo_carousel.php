@@ -8,9 +8,10 @@ class vcLogoBanner extends WPBakeryShortCode {
 
     // Element Init
     function __construct() {
-        global $__VcShadowWPBakeryVisualComposerAbstract;
+        //global $__VcShadowWPBakeryVisualComposerAbstract;
         add_action( 'init', array( $this, 'vc_logo_banner_mapping' ) );
-        $__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_logo_banner', array( $this, 'vc_logo_banner_html' ));
+        add_shortcode( 'vc_logo_banner', array( $this, 'vc_logo_banner_html' ) );
+        //$__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_logo_banner', array( $this, 'vc_logo_banner_html' ));
     }
 
     // Element Mapping

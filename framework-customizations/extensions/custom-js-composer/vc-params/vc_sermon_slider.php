@@ -8,9 +8,10 @@ class vcSermonSlider extends WPBakeryShortCode {
 
     // Element Init
     function __construct() {
-        global $__VcShadowWPBakeryVisualComposerAbstract;
+        //global $__VcShadowWPBakeryVisualComposerAbstract;
         add_action( 'init', array( $this, 'vc_sermon_slider_mapping' ) );
-        $__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_sermon_slider', array( $this, 'vc_sermon_slider_html' ));
+        add_shortcode( 'vc_sermon_slider', array( $this, 'vc_sermon_slider_html' ) );
+      //  $__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_sermon_slider', array( $this, 'vc_sermon_slider_html' ));
     }
 
     // Element Mapping
@@ -332,10 +333,10 @@ class vcSermonSlider extends WPBakeryShortCode {
         '{author_name}'   => '',
         '{comment_count}' => 0,
       ), $params);
-		
+
       $output = '';
       $template = array();
-	  
+
       /* layout default */
       $template['default'] = implode('', array(
         '<div class="item-inner sermon_slider_template_default">',
@@ -345,7 +346,7 @@ class vcSermonSlider extends WPBakeryShortCode {
             '<div class="church-speaker">Speaker:<span> {peaker_sm}</span></div>',
 			'<a class="post-title-link" href="{post_link}"><h2 class="post-title" title="{post_title}">{post_title}</h2></a>',
             '<span class="church-date">{date}</span>',
-			
+
           '</div>',
 			'<a class="sermon-media" href="#sm-modal-media-{rand_id}" data-semon-trigger-modal data-semon-id="{pid}" data-toggle="modal"><span class="video"><img src="'.get_template_directory_uri() . '/assets/images/video.png'.'"></span><span class="audio"><img src="'.get_template_directory_uri() . '/assets/images/head.png'.'"></span><span class="cloud"><img src="'.get_template_directory_uri() . '/assets/images/cloud.png'.'"></span><span class="book"><img src="'.get_template_directory_uri() . '/assets/images/book.png'.'"></span></a>',
         '</div>',

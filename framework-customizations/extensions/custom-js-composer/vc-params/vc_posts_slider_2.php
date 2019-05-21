@@ -8,9 +8,10 @@ class vcPostsSlider2 extends WPBakeryShortCode {
 
     // Element Init
     function __construct() {
-        global $__VcShadowWPBakeryVisualComposerAbstract;
+        //global $__VcShadowWPBakeryVisualComposerAbstract;
         add_action( 'init', array( $this, 'vc_posts_slider2_mapping' ) );
-        $__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_posts_slider2', array( $this, 'vc_posts_slider2_html' ));
+        add_shortcode( 'vc_posts_slider2', array( $this, 'vc_posts_slider2_html' ) );
+        //$__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_posts_slider2', array( $this, 'vc_posts_slider2_html' ));
     }
 
     // Element Mapping
@@ -360,7 +361,7 @@ class vcPostsSlider2 extends WPBakeryShortCode {
           '</div>',
         '</div>',
       ));
-	  
+
 	  /* layout blog-image-3 */
       $template['block-image-3'] = implode('', array(
         '<div class="item-inner posts_slider_2_template_style_austim">',
@@ -380,7 +381,7 @@ class vcPostsSlider2 extends WPBakeryShortCode {
           '<div class="post-caption">',
             (! empty($params['{term_list_html}'])) ? '<div class="post-term-date">{date}</div>' : '',
             '<div class="bt-church-meta">',
-				'<a class="post-title-link" href="{post_link}"><h2 class="post-title" title="{post_title}">{post_title}</h2></a>',     
+				'<a class="post-title-link" href="{post_link}"><h2 class="post-title" title="{post_title}">{post_title}</h2></a>',
 				'<div class="post-comment"><i class="fa fa-commenting-o" aria-hidden="true"></i> {comment_count} Comments</div>',
 				'<div class="post-more">{readmore_html}</div>',
 			'</div>',

@@ -8,9 +8,10 @@ class vcEventsChurch extends WPBakeryShortCode {
 
     // Element Init
     function __construct() {
-        global $__VcShadowWPBakeryVisualComposerAbstract;
+      //  global $__VcShadowWPBakeryVisualComposerAbstract;
         add_action( 'init', array( $this, 'vc_events_church_mapping' ) );
-        $__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_events_church', array( $this, 'vc_events_church_html' ));
+        add_shortcode( 'vc_events_church', array( $this, 'vc_events_church_html' ) );
+        //$__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_events_church', array( $this, 'vc_events_church_html' ));
     }
 
     // Element Mapping
@@ -196,7 +197,7 @@ class vcEventsChurch extends WPBakeryShortCode {
         'image_height' => 'auto',
         'image_post' => false,
       );
-		
+
       switch ($type) {
         case 'recent':
           $args['sort'] = 'recent';
@@ -218,7 +219,7 @@ class vcEventsChurch extends WPBakeryShortCode {
       $venue =  fw_akg('general-event/event_location/venue', $event_options);
       $limit_space = fw_akg('total_space', $event_options);
 	  $adress_event = get_post_meta($event_id, '_ctc_event_address', true);
-		
+
       $variables = array(
         '{ID}'                => $event_id,
         '{post_title}'        => fw_akg('post_title', $item_data),
@@ -235,14 +236,14 @@ class vcEventsChurch extends WPBakeryShortCode {
       );
 
       return $variables;
-	  
+
     }
-		
+
     public function _template($temp = 'default', $item = array(), $atts = array()) {
       $output = '';
       $event_id = fw_akg('post_id', $item);
       $variables = $this->variables($event_id, $item);
-	  
+
 	//var_dump($variables);
       /* check featured image exist */
       if ( has_post_thumbnail($event_id) ) {

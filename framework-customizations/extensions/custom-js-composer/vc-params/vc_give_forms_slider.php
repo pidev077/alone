@@ -8,9 +8,10 @@ class vcGiveFormsSlider extends WPBakeryShortCode {
 
     // Element Init
     function __construct() {
-        global $__VcShadowWPBakeryVisualComposerAbstract;
+        //global $__VcShadowWPBakeryVisualComposerAbstract;
         add_action( 'init', array( $this, 'vc_give_forms_slider_mapping' ) );
-        $__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_give_forms_slider', array( $this, 'vc_give_forms_slider_html' ));
+        add_shortcode( 'vc_give_forms_slider', array( $this, 'vc_give_forms_slider_html' ) );
+        //$__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_give_forms_slider', array( $this, 'vc_give_forms_slider_html' ));
     }
 
     // Element Mapping
@@ -350,7 +351,7 @@ class vcGiveFormsSlider extends WPBakeryShortCode {
         '{goal_progress_bar_default}' => '',
         '{button_donate}' => $button_donate,
       );
-		
+
       //Sanity check - ensure form has goal set to output
       if ( empty( $form->ID )
       	|| ( is_singular( 'give_forms' ) && ! give_is_setting_enabled( $goal_option ) )
@@ -508,7 +509,7 @@ class vcGiveFormsSlider extends WPBakeryShortCode {
           '</div>',
         '</div>',
       ));
-	  
+
 	  /* style-3 */
       $template['style-3'] = implode('', array(
         '<div class="item-inner give-forms-slider-layout-style-3">',
@@ -541,7 +542,7 @@ class vcGiveFormsSlider extends WPBakeryShortCode {
       ));
 
       $template = apply_filters('vc_give_forms_slider:template', $template);
-	
+
       return str_replace(array_keys($params), array_values($params), fw_akg($temp, $template));
     }
 
