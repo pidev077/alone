@@ -9,7 +9,8 @@ class vcEventsChurch extends WPBakeryShortCode {
     // Element Init
     function __construct() {
       //  global $__VcShadowWPBakeryVisualComposerAbstract;
-        add_action( 'init', array( $this, 'vc_events_church_mapping' ) );
+        //add_action( 'init', array( $this, 'vc_events_church_mapping' ) );
+        $this->vc_events_church_mapping();
         add_shortcode( 'vc_events_church', array( $this, 'vc_events_church_html' ) );
         //$__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_events_church', array( $this, 'vc_events_church_html' ));
     }

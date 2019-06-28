@@ -9,7 +9,8 @@ class vcChurchLocation extends WPBakeryShortCode {
     // Element Init
     function __construct() {
         //global $__VcShadowWPBakeryVisualComposerAbstract;
-        add_action( 'init', array( $this, 'vc_church_location_mapping' ) );
+        //add_action( 'init', array( $this, 'vc_church_location_mapping' ) );
+        $this->vc_church_location_mapping();
         add_shortcode( 'vc_church_location', array( $this, 'vc_church_location_html' ) );
         //$__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_church_location', array( $this, 'vc_church_location_html' ));
     }

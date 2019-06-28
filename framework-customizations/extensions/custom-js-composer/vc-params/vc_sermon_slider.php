@@ -9,7 +9,8 @@ class vcSermonSlider extends WPBakeryShortCode {
     // Element Init
     function __construct() {
         //global $__VcShadowWPBakeryVisualComposerAbstract;
-        add_action( 'init', array( $this, 'vc_sermon_slider_mapping' ) );
+        //add_action( 'init', array( $this, 'vc_sermon_slider_mapping' ) );
+        $this->vc_sermon_slider_mapping();
         add_shortcode( 'vc_sermon_slider', array( $this, 'vc_sermon_slider_html' ) );
       //  $__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_sermon_slider', array( $this, 'vc_sermon_slider_html' ));
     }

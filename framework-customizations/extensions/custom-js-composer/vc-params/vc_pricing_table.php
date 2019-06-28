@@ -9,7 +9,8 @@ class vcPricingTable extends WPBakeryShortCode {
     // Element Init
     function __construct() {
         //global $__VcShadowWPBakeryVisualComposerAbstract;
-        add_action( 'init', array( $this, 'vc_pricing_table_mapping' ) );
+        //add_action( 'init', array( $this, 'vc_pricing_table_mapping' ) );
+        $this->vc_pricing_table_mapping();
         add_shortcode( 'vc_pricing_table', array( $this, 'vc_pricing_table_html' ) );
         //$__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_pricing_table', array( $this, 'vc_pricing_table_html' ));
     }

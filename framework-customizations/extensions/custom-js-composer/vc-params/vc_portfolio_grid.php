@@ -9,7 +9,8 @@ class vcPortfolioGrid extends WPBakeryShortCode {
     // Element Init
     function __construct() {
         //global $__VcShadowWPBakeryVisualComposerAbstract;
-        add_action( 'init', array( $this, 'vc_portfolio_grid_mapping' ) );
+        //add_action( 'init', array( $this, 'vc_portfolio_grid_mapping' ) );
+        $this->vc_portfolio_grid_mapping();
         add_shortcode( 'vc_portfolio_grid', array( $this, 'vc_portfolio_grid_html' ) );
         //$__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_portfolio_grid', array( $this, 'vc_portfolio_grid_html' ));
     }

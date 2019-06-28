@@ -9,7 +9,8 @@ class vcBaseTestimonial extends WPBakeryShortCode {
     // Element Init
     function __construct() {
         //global $__VcShadowWPBakeryVisualComposerAbstract;
-        add_action( 'init', array( $this, 'vc_base_testimonial_mapping' ) );
+        //add_action( 'init', array( $this, 'vc_base_testimonial_mapping' ) );
+        $this->vc_base_testimonial_mapping();
         add_shortcode( 'vc_base_testimonial', array( $this, 'vc_base_testimonial_html' ) );
         //$__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_base_testimonial', array( $this, 'vc_base_testimonial_html' ));
     }

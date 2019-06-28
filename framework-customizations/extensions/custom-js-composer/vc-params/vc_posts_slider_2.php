@@ -9,7 +9,8 @@ class vcPostsSlider2 extends WPBakeryShortCode {
     // Element Init
     function __construct() {
         //global $__VcShadowWPBakeryVisualComposerAbstract;
-        add_action( 'init', array( $this, 'vc_posts_slider2_mapping' ) );
+        //add_action( 'init', array( $this, 'vc_posts_slider2_mapping' ) );
+        $this->vc_posts_slider2_mapping();
         add_shortcode( 'vc_posts_slider2', array( $this, 'vc_posts_slider2_html' ) );
         //$__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_posts_slider2', array( $this, 'vc_posts_slider2_html' ));
     }

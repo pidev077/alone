@@ -9,7 +9,8 @@ class vcCounterUp extends WPBakeryShortCode {
     // Element Init
     function __construct() {
       //  global $__VcShadowWPBakeryVisualComposerAbstract;
-        add_action( 'init', array( $this, 'vc_counter_up_mapping' ) );
+        //add_action( 'init', array( $this, 'vc_counter_up_mapping' ) );
+        $this->vc_counter_up_mapping();
         add_shortcode( 'vc_counter_up', array( $this, 'vc_counter_up_html' ) );
         //$__VcShadowWPBakeryVisualComposerAbstract->addShortCode('vc_counter_up', array( $this, 'vc_counter_up_html' ));
     }
